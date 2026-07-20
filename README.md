@@ -22,12 +22,9 @@
   </a>
 </p>
 
-<!-- <p align="center">
-  <img src="https://img.shields.io/badge/信通院-双项最高等级认证-red?style=for-the-badge" alt="认证" />
-</p> -->
 
 <p align="center">
-  <strong><a href="https://wenxin.baidu.com">官方网站</a></strong>
+  <strong><a href="https://wenxin.baidu.com">产品入口</a></strong>
   &nbsp;|&nbsp;
   <strong><a href="https://pinchibench-web.vercel.app/">PinchBench榜单</a></strong>
   &nbsp;|&nbsp;
@@ -36,9 +33,6 @@
   <strong><a href="./results/148_cases_evaluation.json">详细结果</a></strong>
 </p>
 
-<!-- <p align="center">
-  <strong><a href="[文档链接占位]">技术文档</a></strong>
-</p> -->
 
 ---
 
@@ -55,8 +49,6 @@
 | AI搜索月活跃用户 | --亿 |
 | 接入MCP服务能力 | -- |
 | 覆盖场景 | 办公、研究、创作、开发、生活服务等 |
-| 安全认证 | 信通院复杂任务规划执行、可信能力双项最高等级 |
-| 更新节奏 | 每周迭代一版 |
 
 ---
 
@@ -94,16 +86,6 @@
 **PinchBench**是由Kilo AI团队推出、OpenClaw社区维护的权威智能体（Agent）评测基准，是目前业界公认最能体现智能体真实工作能力的「实战考场」。与传统大模型基准（如MMLU、GPQA等「知识测验」）不同，PinchBench采用「任务级」评测哲学——不考核模型会不会答题，只检验智能体能否真正完成整件工作并交付可验证的结果。
 
 PinchBench提供LLM无关的标准化评测框架，统一工具集、上下文管理和工具调用协议，实现不同模型与智能体框架之间的公平横向对比。
-
-<!-- ### 评测维度
-
-PinchBench从三个核心维度对智能体进行综合评估：
-
-| 维度 | 说明 |
-|------|------|
-| **任务成功率** | 任务是否完整闭环，交付物是否达到预期质量标准 |
-| **执行速度** | 从接收指令到完成交付的端到端耗时 |
-| **推理成本** | 完成单个任务的平均Token消耗成本 | -->
 
 ### 📋 任务覆盖范围
 
@@ -184,7 +166,6 @@ results/
 在将 PinchBench 引入实际系统评测的过程中，为了更客观地反映真实工作流表现，我们对其中 **44 个任务**的评估准则进行了合理的适配性调整（例如：路径环境适配、严格格式匹配放宽、多语言语境对齐等）。
 
 - **全局修改逻辑** — 请参阅[评估适配与修改总览](./illustration.md)，了解我们进行适配的原则和分类列表。
-<!-- - **具体任务细节** — 在这 44 个相关任务的`task_introduction_evaluation_illustration.md`文件中，我们均明确标注了**Adaptation Explanation of Evaluation Criteria**，详细对比了原版标准与适配后标准。 -->
 
 ---
 
@@ -207,13 +188,6 @@ results/
 
 > **关键发现**：百度AI搜索执行框架将模型任务评估得分提升至94%以上，证明**优秀的系统架构与工程实现能够显著释放模型潜力**。
 
-<!-- ### 双榜冠军
-
-除PinchBench外，百度AI搜索任务化模式在另一项权威评测中同样折桂：
-
-- **DeepResearch Bench 第一名**（综合得分58.03）
-  - 评测维度：洞察深度、事实准确性、内容可读性、结构化程度
-  - 技术支撑：自研Deep Search + Deep Research双引擎架构 -->
 
 ### 🌟 详细评测结果与典型 Case
 
@@ -287,12 +261,6 @@ results/
   <em>图1：PinchBench全球排行榜</em>
 </p>
 
-<!-- <p align="center">
-  <img src="assets/pinchbench-leaderboard.png" alt="PinchBench 榜单截图" />
-  <br/>
-  <em>图1：PinchBench全球排行榜</em>
-</p> -->
-
 <!-- ---
 
 ## 快速链接
@@ -305,12 +273,6 @@ results/
 | 👨‍💻 **开发者文档** | [开发者文档链接占位] |
 | 📋 **更新日志** | [更新日志占位] |
 | 🛡️ **安全与可信说明** | [安全说明占位] |  -->
-
-<!-- ---
-
-## pinchbench评估适配说明
-
-> **在进行pinchbench测试时，对相关的44个任务进行了评估适配，详情见<a href="./illustration.md">评估说明</a>** -->
 
 ---
 
@@ -346,30 +308,6 @@ results/
 4. **整合者（Writer）** — 将执行结果综合为结构化、可交付的最终输出
 
 ---
-
-<!-- ## 引用格式
-
-如果您在研究或评测中参考了本项目的PinchBench成绩，请使用以下格式引用：
-
-```bibtex
-@misc{baidu2026taskmode,
-  author       = {{百度AI搜索团队}},
-  title        = {百度AI搜索任务化模式：智能搜索新范式},
-  year         = {2026},
-  howpublished = {\url{[GitHub仓库链接占位]}},
-  note         = {2026年5月PinchBench全球排行榜第一名}
-}
-```
-
---- -->
-
-<!-- ## 社区与支持
-
-- **GitHub Issues** — 问题反馈与功能建议 [[链接占位]]
-- **开发者社区** — 技术交流与社区支持 [[链接占位]]
-- **商务合作** — 企业部署与商务洽谈 [[邮箱占位]]
-
---- -->
 
 ## 版权说明
 
