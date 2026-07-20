@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="Baidu Logo" height="40" />
+  <img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="Baidu Logo" height="50" />
 </p>
 
 <h1 align="center">百度AI搜索 — 任务化模式</h1>
@@ -202,11 +202,11 @@ PinchBench采用**自动化检查 + LLM评审**的双轨评分机制：
 
 点击查看官方完整任务描述：[👉 打开 PinchBench 官方 GitHub 仓库](https://github.com/pinchbench/skill/tree/main/tasks)
 
-您可以直接查看开源的完整评测数据文件：[👉 点击查看完整 147_cases_evaluation.json 原始文件](./results/147_cases_evaluation.json)
+点击查看开源的完整评测数据文件：[👉 打开结果记录原始文件](./results/147_cases_evaluation.json)
 
 以下为部分测试用例的简报：
 
-| 任务 ID | 任务名称 | 评分 | 耗时(秒) | 亮点评价提取 |
+| 任务 ID | 任务名称 | 评分 | 耗时 | 亮点评价提取 |
 |:---|:---|:---:|:---:|:---|
 | `task_csv_pension_liability` | US Pension Fund Liability Analysis | 1.0 | 322s | 计算精准，财务洞察深刻，排版极佳 |
 | `task_log_hdfs_slow_ops` | HDFS DataNode Log - Slow Operation Detection | 1.0 | 488s | 提供了相关性分析与 4 项可落地的优化建议 |
@@ -240,7 +240,7 @@ PinchBench采用**自动化检查 + LLM评审**的双轨评分机制：
 | 资源 | 链接 |
 |------|------|
 | 🌐 **PinchBench官方网站** | <a href="https://pinchibench-web.vercel.app/">网站</a> |
-| 📖 **技术白皮书** | <a href="./illustration.md">白皮书（待修改）</a> |
+| 📖 **技术白皮书** | [待补充] |
 | 🚀 **产品体验入口** | <a href="https://wenxin.baidu.com">百度AI搜索</a> |
 <!-- | 👨‍💻 **开发者文档** | [开发者文档链接占位] |
 | 📋 **更新日志** | [更新日志占位] | -->
