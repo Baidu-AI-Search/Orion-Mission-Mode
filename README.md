@@ -27,9 +27,9 @@
   &nbsp;|&nbsp;
   <strong><a href="https://pinchibench-web.vercel.app/">PinchBench榜单</a></strong>
   &nbsp;|&nbsp;
-  <strong><a href="https://github.com/Baidu-AI-Search/Orion-Mission-Mode/blob/main/illustration.md">评估说明</a></strong>
+  <strong><a href="./illustration.md">评估说明</a></strong>
   &nbsp;|&nbsp;
-  <strong><a href="[Issues链接占位]">功能建议</a></strong>
+  <strong><a href="./results/147_cases_evaluation.json">详细结果</a></strong>
 </p>
 
 <!-- <p align="center">
@@ -134,10 +134,10 @@ PinchBench采用**自动化检查 + LLM评审**的双轨评分机制：
 
 在PinchBench公开评测中，百度AI搜索任务化模式与主流模型/框架的成绩对比如下：
 
-| 排名 | 系统/模型 | 评分 |
+| 排名 | 系统/模型 | 平均分数 |
 |:----:|-----------|:----------:|
 | 🥇 **1** | **百度AI搜索** | **94.4%** |
-| 🥈 2 | anthropic/claude-opus-4.8-fast | 93.5% |
+| 2 | anthropic/claude-opus-4.8-fast | 93.5% |
 | 3 | qwen/qwen3.7-max | 92.5% |
 | 4 | anthropic/claude-opus-4.8 | 90.5% |
 
@@ -163,7 +163,7 @@ PinchBench采用**自动化检查 + LLM评审**的双轨评分机制：
 |:---|:---:|:---:|:---|:---:|
 | **内容创作 (Writing Content)** | 12 | **96.8%** | 博客文章撰写、长文总结、README生成、文案重写 | 🥇 **全球第一** |
 | **创意与多媒体 (Creative)** | 3 | **87.5%** | AI 图像生成、图像识别分类、创意类工作流 | 🥇 **全球第一** |
-| **其他综合任务 (Other)** | 52 | - | 覆盖更多细分长尾工作流场景 | 🥇 **全球第一** |
+| **其他综合任务 (Other)** | 53 | **92.70%** | 覆盖更多细分长尾工作流场景 | 🥇 **全球第一** |
 | **数据与财务分析 (Data Analysis)** | 32 | **96.2%** | CSV/表格数据处理、市场分析、财报与金融数据挖掘 | - |
 | **核心智能体能力 (Core Agent)** | 9 | **96.2%** | 意图健全性检查、记忆提取、文件操作、工作流理解 | - |
 | **代码与开发运维 (Code DevOps)** | 15 | **93.0%** | 编码、自动化脚本、CI/CD流水线、K8s/Docker、测试与重构 | - |
@@ -236,7 +236,7 @@ PinchBench采用**自动化检查 + LLM评审**的双轨评分机制：
 | 资源 | 链接 |
 |------|------|
 | 🌐 **PinchBench官方网站** | <a href="https://pinchibench-web.vercel.app/">网站</a> |
-| 📖 **技术白皮书** | <a href="https://github.com/gzq17/benchmark_public/blob/main/illustration.md">白皮书（待修改）</a> |
+| 📖 **技术白皮书** | <a href="./illustration.md">白皮书（待修改）</a> |
 | 🚀 **产品体验入口** | <a href="https://wenxin.baidu.com">百度AI搜索</a> |
 <!-- | 👨‍💻 **开发者文档** | [开发者文档链接占位] |
 | 📋 **更新日志** | [更新日志占位] | -->
@@ -246,7 +246,7 @@ PinchBench采用**自动化检查 + LLM评审**的双轨评分机制：
 
 ## pinchbench评估适配说明
 
-> **在进行pinchbench测试时，对相关的44个任务进行了评估适配，详情见<a href="https://github.com/Baidu-AI-Search/Orion-Mission-Mode/blob/main/illustration.md">评估说明</a>**
+> **在进行pinchbench测试时，对相关的44个任务进行了评估适配，详情见<a href="./illustration.md">评估说明</a>**
 
 ---
 
