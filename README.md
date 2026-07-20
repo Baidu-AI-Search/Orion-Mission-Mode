@@ -88,7 +88,7 @@ results/
 在将 PinchBench 引入实际系统评测的过程中，为了更客观地反映真实工作流表现，我们对其中 **44 个任务**（对应`task_introduction_evaluation_illustration.md`文件命名为`task_introduction_evaluation_illustration_adapted.md`）的评估准则进行了合理的适配性调整（例如：路径环境适配、严格格式匹配放宽、多语言语境对齐等）。
 - 证据来源恢复：Agent 产出了正确的结果，因沙箱环境无法找到结果文件。-->从结果来源恢复证据。
 - 格式容差：Agent 的回答语义正确，但书写格式与评分脚本的刚性匹配模式不同导致评分较低。-->调整匹配模式，接受同一正确值的等价写法。
-- 后端不可达：部分任务需要与在线服务交互（GitHub API、Google Workspace、Kubernetes 集群），但这些服务在沙箱中不可用。-->对因后端不可达而受阻的步骤，上限给 0.5 分（认可正确意图）；成功完成的步骤仍获满分
+- 后端不可达：部分任务需要与在线服务交互（GitHub API、Google Workspace、Kubernetes 集群），但这些服务在沙箱中不可用。-->对因后端不可达而受阻的步骤，上限给 0.5 分（认可正确意图）；成功完成的步骤仍获满分。
 
 更详细适配信息请参阅[评估适配与修改总览](./illustration.md)。
 
