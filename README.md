@@ -14,8 +14,12 @@
   <a href="https://pinchibench-web.vercel.app/">
     <img src="https://img.shields.io/badge/PinchBench-全球%231-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTEyIDJMMiA3djEwYzAgNS41NSA0LjQ1IDEwIDEwIDEwczEwLTQuNDUgMTAtMTBWN2wtMTAtNXoiLz48L3N2Zz4=" alt="PinchBench排名" />
   </a>
-  <img src="https://img.shields.io/badge/任务平均得分-94.4%25-success?style=for-the-badge" alt="任务平均得分" />
-  <img src="https://img.shields.io/badge/评测任务-147个-orange?style=for-the-badge" alt="评测任务数" />
+  <a href="./results/147_cases_evaluation.json">
+    <img src="https://img.shields.io/badge/任务平均得分-94.4%25-success?style=for-the-badge" alt="任务平均得分" />
+  </a>
+  <a href="https://github.com/pinchbench/skill/tree/main/tasks">
+    <img src="https://img.shields.io/badge/评测任务-147个-orange?style=for-the-badge" alt="评测任务数" />
+  </a>
 </p>
 
 <!-- <p align="center">
