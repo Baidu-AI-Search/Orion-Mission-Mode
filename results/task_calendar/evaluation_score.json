@@ -1,0 +1,19 @@
+{
+    "task_id": "task_calendar",
+    "task_name": "Calendar Event Creation",
+    "category": "productivity",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "file_created": 1.0,
+        "attendee_present": 1.0,
+        "title_correct": 1.0,
+        "description_present": 1.0,
+        "time_correct": 1.0,
+        "date_correct": 1.0
+    },
+    "grading_type": "automated",
+    "timed_out": false,
+    "notes": "",
+    "execution_time_seconds": 57.69219493865967
+}

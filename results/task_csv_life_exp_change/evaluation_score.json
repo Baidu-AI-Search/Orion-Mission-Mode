@@ -1,0 +1,26 @@
+{
+    "task_id": "task_csv_life_exp_change",
+    "task_name": "Life Expectancy Change Over Time",
+    "category": "csv_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.global_averages": 1.0,
+        "automated.global_trend": 1.0,
+        "automated.continent_trends": 1.0,
+        "automated.top_improvers": 1.0,
+        "automated.oman_first": 1.0,
+        "automated.decliners": 1.0,
+        "automated.convergence_analysis": 1.0,
+        "automated.summary": 1.0,
+        "llm_judge.criterion_1_data_analysis_accuracy": 1.0,
+        "llm_judge.criterion_2_trend_analysis_depth": 1.0,
+        "llm_judge.criterion_3_comparative_insight": 1.0,
+        "llm_judge.criterion_4_completeness_and_presentation": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exemplary execution. All numerical values match expected results exactly (global averages, continent-level trends, top/bottom improvers). Comprehensive multi-level analysis spanning global, continent, and country perspectives. Sophisticated comparative insight explaining *why* patterns emerged (e.g., Gulf oil wealth driving Oman's +38 years; HIV/AIDS explaining Southern African declines; Norway's frontier effect explaining its small gain despite starting at 72.7). All six requested elements present with clear tables, narrative explanations, and historical context. Minor: created two markdown files (apparent duplicate) and the code was verbose, but these do not detract from the core deliverable quality.",
+    "execution_time_seconds": 217.556538105011
+}

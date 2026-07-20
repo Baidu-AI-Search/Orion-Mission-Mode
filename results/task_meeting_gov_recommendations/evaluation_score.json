@@ -1,0 +1,27 @@
+{
+    "task_id": "task_meeting_gov_recommendations",
+    "task_name": "NASA UAP Hearing Panel Recommendations",
+    "category": "meeting_analysis",
+    "score": 0.9875,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.recommendation_count": 1.0,
+        "automated.categorization": 1.0,
+        "automated.crowdsourcing": 1.0,
+        "automated.data_standards": 1.0,
+        "automated.sensor_eval": 1.0,
+        "automated.international": 1.0,
+        "automated.stigma": 1.0,
+        "automated.attribution": 1.0,
+        "automated.summary": 1.0,
+        "llm_judge.criterion_1_completeness": 1.0,
+        "llm_judge.criterion_2_categorization": 1.0,
+        "llm_judge.criterion_3_accuracy_attribution": 0.9,
+        "llm_judge.criterion_4_synthesis_summary": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional performance. Agent extracted 42 well-organized recommendations across all requested categories with accurate attributions and detailed context. Categorization perfectly matches requirements. Recommendations accurately reflect transcript content (verified on spot-checks of Kirkpatrick, Spergel, FAA sections). Comprehensive summary identifies major themes including data quality, stigma reduction, partnerships, and FAIR standards. Minor deduction on criterion 3 only because full speaker coverage (e.g., Bianco's complete section) could not be independently verified from provided transcript excerpt, though agent clearly accessed full source file appropriately. Deliverable quality is professional and publication-ready.",
+    "execution_time_seconds": 456.1184153556824
+}

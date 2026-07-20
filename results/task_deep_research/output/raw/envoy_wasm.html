@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wasm &mdash; envoy 1.40.0-dev-47d1ad documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=c8f67d13" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/envoy.css?v=3ec0219e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=26317ac2"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=db7b0edf"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Transform" href="transform_filter.html" />
+    <link rel="prev" title="Upstream Role Based Access Control (RBAC) Filter" href="upstream_rbac_filter.html" /> 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DXJEH1ZRXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DXJEH1ZRXX');
+</script>
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href='/docs/envoy/latest/'>
+            
+              <img src="../../../_static/envoy-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class='reference internal' href='/docs/envoy/latest/about_docs'>About the documentation</a></li>
+<li class="toctree-l1"><a class='reference internal' href='/docs/envoy/latest/intro/intro'>Introduction</a></li>
+<li class="toctree-l1"><a class='reference internal' href='/docs/envoy/latest/start/start'>Getting Started</a></li>
+<li class="toctree-l1 current"><a class='reference internal' href='/docs/envoy/latest/configuration/configuration'>Configuration reference</a><ul class="current">
+<li class="toctree-l2"><a class='reference internal' href='/docs/envoy/latest/configuration/overview/overview'>Overview</a></li>
+<li class="toctree-l2"><a class='reference internal' href='/docs/envoy/latest/configuration/listeners/listeners'>Listeners</a></li>
+<li class="toctree-l2 current"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http'>HTTP</a><ul class="current">
+<li class="toctree-l3"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_conn_man/http_conn_man'>HTTP connection manager</a></li>
+<li class="toctree-l3 current"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/http_filters'>HTTP filters</a><ul class="current">
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/a2a_filter'>A2A</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/adaptive_concurrency_filter'>Adaptive Concurrency</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/admission_control_filter'>Admission Control</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/ai_protocol_manager_filter'>AI Protocol Manager</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/aws_lambda_filter'>AWS Lambda</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/api_key_auth_filter'>API key auth</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/aws_request_signing_filter'>AWS Request Signing</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/bandwidth_limit_filter'>Bandwidth limit</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/bandwidth_share_filter'>Bandwidth share</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/basic_auth_filter'>Basic Auth</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/buffer_filter'>Buffer</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/cache_filter'>Cache filter</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/cache_v2_filter'>CacheV2 filter</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/cdn_loop_filter'>CDN-Loop header</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/checksum_filter'>Checksum</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/compressor_filter'>Compressor</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/composite_filter'>Composite Filter</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/connect_grpc_bridge_filter'>Connect-gRPC Bridge</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/cors_filter'>CORS</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/credential_injector_filter'>Credential injector</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/csrf_filter'>CSRF</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/custom_response_filter'>Custom Response Filter</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/decompressor_filter'>Decompressor</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/dynamic_forward_proxy_filter'>Dynamic forward proxy</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/dynamodb_filter'>DynamoDB</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/ext_authz_filter'>External Authorization</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/ext_proc_filter'>External Processing</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/fault_filter'>Fault Injection</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/file_server_filter'>File Server</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/file_system_buffer_filter'>File System Buffer</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/filter_chain_filter'>Filter Chain</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/gcp_authn_filter'>GCP Authentication Filter</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/geoip_filter'>IP Geolocation Filter</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/golang_filter'>Golang</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/grpc_field_extraction_filter'>gRPC Field Extraction</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/grpc_http1_bridge_filter'>gRPC HTTP/1.1 bridge</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/grpc_http1_reverse_bridge_filter'>gRPC HTTP/1.1 reverse bridge</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/grpc_json_reverse_transcoder_filter'>gRPC-JSON reverse transcoder</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/grpc_json_transcoder_filter'>gRPC-JSON transcoder</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/grpc_stats_filter'>gRPC Statistics</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/grpc_web_filter'>gRPC-Web</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/header_mutation_filter'>Header Mutation</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/health_check_filter'>Health check</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/header_to_metadata_filter'>Envoy Header-To-Metadata Filter</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/ip_tagging_filter'>IP Tagging</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/json_to_metadata_filter'>Envoy Json-To-Metadata Filter</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/jwt_authn_filter'>JWT Authentication</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/kill_request_filter'>Kill Request</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/language_filter'>Language</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/local_rate_limit_filter'>Local rate limit</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/lua_filter'>Lua</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/mcp_filter'>Model Context Protocol (MCP)</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/mcp_router_filter'>MCP Router</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/oauth2_filter'>OAuth2</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/on_demand_updates_filter'>On-demand VHDS, S/RDS and CDS Updates</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/original_src_filter'>Original Source</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/proto_api_scrubber_filter'>Proto API Scrubber</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/proto_message_extraction_filter'>Proto Message Extraction</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/rate_limit_filter'>Rate limit</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/rate_limit_quota_filter'>Rate Limit Quota (Work-In-Progress)</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/rbac_filter'>Role Based Access Control (RBAC) Filter</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/router_filter'>Router</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/set_filter_state'>Set-Filter-State HTTP Filter</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/set_metadata_filter'>Set Metadata</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/sse_to_metadata_filter'>SSE-To-Metadata Filter</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/stateful_session_filter'>Stateful session</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/sxg_filter'>SXG</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/tap_filter'>Tap</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/thrift_to_metadata_filter'>Envoy Thrift-To-Metadata Filter</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/upstream_codec_filter'>Upstream Codec</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/upstream_rbac_filter'>Upstream Role Based Access Control (RBAC) Filter</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Wasm</a></li>
+<li class="toctree-l4"><a class='reference internal' href='/docs/envoy/latest/configuration/http/http_filters/transform_filter'>Transform</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class='reference internal' href='/docs/envoy/latest/configuration/http/caches/caches'>HTTP caches</a></li>
+<li class="toctree-l3"><a class='reference internal' href='/docs/envoy/latest/configuration/http/caches_v2/caches'>HTTP caches</a></li>
+<li class="toctree-l3"><a class='reference internal' href='/docs/envoy/latest/configuration/http/cluster_specifier/cluster_specifier'>HTTP cluster specifier</a></li>
+<li class="toctree-l3"><a class='reference internal' href='/docs/envoy/latest/configuration/http/tcp_bridge/tcp_bridge'>HTTP TCP bridge</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class='reference internal' href='/docs/envoy/latest/configuration/upstream/upstream'>Upstream clusters</a></li>
+<li class="toctree-l2"><a class='reference internal' href='/docs/envoy/latest/configuration/observability/observability'>Observability</a></li>
+<li class="toctree-l2"><a class='reference internal' href='/docs/envoy/latest/configuration/security/security'>Security</a></li>
+<li class="toctree-l2"><a class='reference internal' href='/docs/envoy/latest/configuration/operations/operations'>Operations</a></li>
+<li class="toctree-l2"><a class='reference internal' href='/docs/envoy/latest/configuration/other_features/other_features'>Other features</a></li>
+<li class="toctree-l2"><a class='reference internal' href='/docs/envoy/latest/configuration/other_protocols/other_protocols'>Other protocols</a></li>
+<li class="toctree-l2"><a class='reference internal' href='/docs/envoy/latest/configuration/advanced/advanced'>Advanced</a></li>
+<li class="toctree-l2"><a class='reference internal' href='/docs/envoy/latest/configuration/best_practices/best_practices'>Configuration best practices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class='reference internal' href='/docs/envoy/latest/operations/operations'>Operations and administration</a></li>
+<li class="toctree-l1"><a class='reference internal' href='/docs/envoy/latest/extending/extending'>Extending Envoy for custom use cases</a></li>
+<li class="toctree-l1"><a class='reference internal' href='/docs/envoy/latest/api/api'>API</a></li>
+<li class="toctree-l1"><a class='reference internal' href='/docs/envoy/latest/faq/overview'>FAQ</a></li>
+<li class="toctree-l1"><a class='reference internal' href='/docs/envoy/latest/version_history/version_history'>Version history</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href='/docs/envoy/latest/'>envoy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a aria-label='Home' class='icon icon-home' href='/docs/envoy/latest/'></a></li>
+          <li class="breadcrumb-item"><a href='/docs/envoy/latest/configuration/configuration'>Configuration reference</a></li>
+          <li class="breadcrumb-item"><a href='/docs/envoy/latest/configuration/http/http'>HTTP</a></li>
+          <li class="breadcrumb-item"><a href='/docs/envoy/latest/configuration/http/http_filters/http_filters'>HTTP filters</a></li>
+      <li class="breadcrumb-item active">Wasm</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/configuration/http/http_filters/wasm_filter.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="wasm">
+<span id="config-http-filters-wasm"></span><h1>Wasm<a class="headerlink" href="#wasm" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class='reference internal' href='/docs/envoy/latest/api-v3/extensions/filters/http/wasm/v3/wasm.proto#envoy-v3-api-msg-extensions-filters-http-wasm-v3-wasm'><span class="std std-ref">v3 API reference</span></a></p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The Wasm filter is experimental and is currently under active development. Capabilities will
+be expanded over time and the configuration structures are likely to change.</p>
+</div>
+<p>The HTTP Wasm filter is used to implement an HTTP filter with a Wasm plugin.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This filter is not supported on Windows.</p>
+</div>
+<section id="example-configuration">
+<h2>Example configuration<a class="headerlink" href="#example-configuration" title="Link to this heading"></a></h2>
+<p>Example filter configuration:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><a class="reference download internal" download="" href="../../../_downloads/dc810b87bb1b9570c1b74a40d7ec8096/envoy.yaml"><code class="xref download docutils literal notranslate"><span class="pre">wasm</span> <span class="pre">envoy.yaml</span></code></a></span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos">24</span><span class="w">                </span><span class="nt">route</span><span class="p">:</span>
+<span class="linenos">25</span><span class="w">                  </span><span class="nt">cluster</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">web_service</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="w">         </span><span class="w w-Error"> </span><span class="nt">http_filters</span><span class="p">:</span>
+<span class="hll"><span class="linenos">28</span><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">envoy.filters.http.wasm</span>
+</span><span class="hll"><span class="linenos">29</span><span class="w">            </span><span class="nt">typed_config</span><span class="p">:</span>
+</span><span class="hll"><span class="linenos">30</span><span class="w">              </span><span class="s">&quot;@type&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type.googleapis.com/envoy.extensions.filters.http.wasm.v3.Wasm</span>
+</span><span class="hll"><span class="linenos">31</span><span class="w">              </span><span class="nt">config</span><span class="p">:</span>
+</span><span class="hll"><span class="linenos">32</span><span class="w">                </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_plugin&quot;</span>
+</span><span class="hll"><span class="linenos">33</span><span class="w">                </span><span class="nt">root_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_root_id&quot;</span>
+</span><span class="hll"><span class="linenos">34</span><span class="w">                </span><span class="c1"># if your wasm filter requires custom configuration you can add</span>
+</span><span class="hll"><span class="linenos">35</span><span class="w">                </span><span class="c1"># as follows</span>
+</span><span class="hll"><span class="linenos">36</span><span class="w">                </span><span class="nt">configuration</span><span class="p">:</span>
+</span><span class="hll"><span class="linenos">37</span><span class="w">                  </span><span class="s">&quot;@type&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;type.googleapis.com/google.protobuf.StringValue&quot;</span>
+</span><span class="hll"><span class="linenos">38</span><span class="w">                  </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span class="hll"><span class="linenos">39</span><span class="w">                    </span><span class="no">{}</span>
+</span><span class="hll"><span class="linenos">40</span><span class="w">                </span><span class="nt">vm_config</span><span class="p">:</span>
+</span><span class="hll"><span class="linenos">41</span><span class="w">                  </span><span class="nt">vm_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_vm_id&quot;</span>
+</span><span class="hll"><span class="linenos">42</span><span class="w">                  </span><span class="nt">code</span><span class="p">:</span>
+</span><span class="hll"><span class="linenos">43</span><span class="w">                    </span><span class="nt">local</span><span class="p">:</span>
+</span><span class="hll"><span class="linenos">44</span><span class="w">                      </span><span class="nt">filename</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;lib/envoy_filter_http_wasm_example.wasm&quot;</span>
+</span><span class="linenos">45</span><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">envoy.filters.http.router</span>
+<span class="linenos">46</span><span class="w">            </span><span class="nt">typed_config</span><span class="p">:</span>
+<span class="linenos">47</span><span class="w">              </span><span class="s">&quot;@type&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type.googleapis.com/envoy.extensions.filters.http.router.v3.Router</span>
+<span class="linenos">48</span><span class="w"> </span><span class="w w-Error"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">listener_1</span>
+<span class="linenos">49</span><span class="w">    </span><span class="nt">address</span><span class="p">:</span>
+</pre></div>
+</div>
+</div>
+<p>Example upstream filter configuration:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a class="reference download internal" download="" href="../../../_downloads/dc810b87bb1b9570c1b74a40d7ec8096/envoy.yaml"><code class="xref download docutils literal notranslate"><span class="pre">wasm</span> <span class="pre">envoy.yaml</span></code></a></span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 89</span><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">strict_dns</span>
+<span class="linenos"> 90</span><span class="w">    </span><span class="nt">lb_policy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">round_robin</span>
+<span class="linenos"> 91</span><span class="w">    </span><span class="nt">load_assignment</span><span class="p">:</span>
+<span class="linenos"> 92</span><span class="w">      </span><span class="nt">cluster_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service1</span>
+<span class="linenos"> 93</span><span class="w">      </span><span class="nt">endpoints</span><span class="p">:</span>
+<span class="linenos"> 94</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">lb_endpoints</span><span class="p">:</span>
+<span class="linenos"> 95</span><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">endpoint</span><span class="p">:</span>
+<span class="linenos"> 96</span><span class="w">            </span><span class="nt">address</span><span class="p">:</span>
+<span class="linenos"> 97</span><span class="w">              </span><span class="nt">socket_address</span><span class="p">:</span>
+<span class="linenos"> 98</span><span class="w">                </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">web_service</span>
+<span class="linenos"> 99</span><span class="w">                </span><span class="nt">port_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
+<span class="linenos">100</span><span class="w">    </span><span class="nt">typed_extension_protocol_options</span><span class="p">:</span>
+<span class="linenos">101</span><span class="w">      </span><span class="nt">envoy.extensions.upstreams.http.v3.HttpProtocolOptions</span><span class="p">:</span>
+<span class="linenos">102</span><span class="w">        </span><span class="s">&quot;@type&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type.googleapis.com/envoy.extensions.upstreams.http.v3.HttpProtocolOptions</span>
+<span class="linenos">103</span><span class="w">        </span><span class="nt">upstream_http_protocol_options</span><span class="p">:</span>
+<span class="linenos">104</span><span class="w">          </span><span class="nt">auto_sni</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="linenos">105</span><span class="w">          </span><span class="nt">auto_san_validation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="linenos">106</span><span class="w">        </span><span class="nt">explicit_http_config</span><span class="p">:</span>
+<span class="linenos">107</span><span class="w">          </span><span class="nt">http2_protocol_options</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="linenos">108</span><span class="w">        </span><span class="nt">http_filters</span><span class="p">:</span>
+<span class="hll"><span class="linenos">109</span><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">envoy.filters.http.wasm</span>
+</span><span class="hll"><span class="linenos">110</span><span class="w">          </span><span class="nt">typed_config</span><span class="p">:</span>
+</span><span class="hll"><span class="linenos">111</span><span class="w">            </span><span class="s">&quot;@type&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type.googleapis.com/envoy.extensions.filters.http.wasm.v3.Wasm</span>
+</span><span class="hll"><span class="linenos">112</span><span class="w">            </span><span class="nt">config</span><span class="p">:</span>
+</span><span class="hll"><span class="linenos">113</span><span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_plugin&quot;</span>
+</span><span class="hll"><span class="linenos">114</span><span class="w">              </span><span class="nt">root_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_root_id&quot;</span>
+</span><span class="hll"><span class="linenos">115</span><span class="w">              </span><span class="c1"># if your wasm filter requires custom configuration you can add</span>
+</span><span class="hll"><span class="linenos">116</span><span class="w">              </span><span class="c1"># as follows</span>
+</span><span class="hll"><span class="linenos">117</span><span class="w">              </span><span class="nt">configuration</span><span class="p">:</span>
+</span><span class="hll"><span class="linenos">118</span><span class="w">                </span><span class="s">&quot;@type&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;type.googleapis.com/google.protobuf.StringValue&quot;</span>
+</span><span class="hll"><span class="linenos">119</span><span class="w">                </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span class="hll"><span class="linenos">120</span><span class="w">                  </span><span class="no">{}</span>
+</span><span class="hll"><span class="linenos">121</span><span class="w">              </span><span class="nt">vm_config</span><span class="p">:</span>
+</span><span class="hll"><span class="linenos">122</span><span class="w">                </span><span class="nt">vm_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_vm_id&quot;</span>
+</span><span class="hll"><span class="linenos">123</span><span class="w">                </span><span class="nt">code</span><span class="p">:</span>
+</span><span class="hll"><span class="linenos">124</span><span class="w">                  </span><span class="nt">local</span><span class="p">:</span>
+</span><span class="hll"><span class="linenos">125</span><span class="w">                    </span><span class="nt">filename</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;lib/envoy_filter_http_wasm_example.wasm&quot;</span>
+</span><span class="linenos">126</span><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">envoy.filters.http.upstream_codec</span>
+<span class="linenos">127</span><span class="w">          </span><span class="nt">typed_config</span><span class="p">:</span>
+<span class="linenos">128</span><span class="w">            </span><span class="s">&quot;@type&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type.googleapis.com/envoy.extensions.filters.http.upstream_codec.v3.UpstreamCodec</span>
+</pre></div>
+</div>
+</div>
+<p>The preceding snippets configures a filter from a Wasm binary on local disk.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a accesskey='p' class='btn btn-neutral float-left' href='/docs/envoy/latest/configuration/http/http_filters/upstream_rbac_filter' rel='prev' title='Upstream Role Based Access Control (RBAC) Filter'><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a accesskey='n' class='btn btn-neutral float-right' href='/docs/envoy/latest/configuration/http/http_filters/transform_filter' rel='next' title='Transform'>Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2026, Envoy Project Authors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

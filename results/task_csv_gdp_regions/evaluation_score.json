@@ -1,0 +1,25 @@
+{
+    "task_id": "task_csv_gdp_regions",
+    "task_name": "World GDP Regional Analysis",
+    "category": "csv_analysis",
+    "score": 0.9625,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.regional_totals": 1.0,
+        "automated.top_per_region": 1.0,
+        "automated.dominant_regions": 1.0,
+        "automated.avg_per_country": 0.5,
+        "automated.disparity": 1.0,
+        "automated.borderline_cases": 1.0,
+        "automated.summary_paragraph": 1.0,
+        "llm_judge.regional_classification_accuracy": 1.0,
+        "llm_judge.quantitative_analysis": 1.0,
+        "llm_judge.analytical_depth": 1.0,
+        "llm_judge.completeness_and_presentation": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exemplary execution across all criteria. All 222 entries classified into 8 regions with well-justified borderline assignments (Russia→Europe, Turkey→Europe, Afghanistan→South Asia, Greenland→North America). All quantitative metrics verified correct: Europe $22,825B (29.16%), East Asia & Pacific $21,651B (27.66%), North America $19,216B (24.55%), totaling $78,285B; top-3 regions 81.36% of world GDP; averages computed correctly (North America $6,405B/country, Sub-Saharan Africa $35B/country); disparity ratios accurate (East Asia & Pacific 1,036,000× due to China vs. Niue). Report includes all requested sections: regional totals table, top-3 per region, regional dominance analysis, average GDP analysis with insights, disparity analysis with interpretation, and comprehensive summary. Presentation is professional with clear markdown formatting, logical flow, and meaningful analytical commentary (e.g., explaining why North America averages highest despite only 3 countries, why Sub-Saharan Africa's average is lowest despite most countries). No calculation errors; internal consistency verified. Borderline cases documented upfront with geographical and institutional justification. This represents genuinely excellent performance.",
+    "execution_time_seconds": 231.17024302482605
+}

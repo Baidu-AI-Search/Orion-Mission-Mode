@@ -1,0 +1,26 @@
+{
+    "task_id": "task_meeting_advisory_technical",
+    "task_name": "NTIA Advisory Board Technical Discussions",
+    "category": "meeting_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.weather_satellite": 1.0,
+        "automated.law_enforcement": 1.0,
+        "automated.satellite_uplink": 1.0,
+        "automated.electronic_warfare": 1.0,
+        "automated.airborne_operations": 1.0,
+        "automated.working_groups": 1.0,
+        "automated.sta_measurement": 1.0,
+        "automated.parameters_debate": 1.0,
+        "llm_judge.Technical Accuracy": 1.0,
+        "llm_judge.Completeness of Technical Topics": 1.0,
+        "llm_judge.Working Group Mapping": 1.0,
+        "llm_judge.Structure and Usefulness": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent performance. Agent accurately extracted all six technical topics with correct frequency bands, system descriptions, interference dynamics (including the critical reverse-direction satellite uplink case), and proposed solutions. All five working groups properly described with named personnel, scope, and target dates. Commercial parameters debate captured comprehensively with all key participants (Rush, Warren, Kahn, Calabrese, Gibson) and their positions clearly articulated. T-Mobile/CTIA STA measurement details included. Report structure is highly organized with clear sections, consistent formatting for each topic, and reference table. No errors detected; all expected content present.",
+    "execution_time_seconds": 161.66112780570984
+}

@@ -1,0 +1,25 @@
+{
+    "task_id": "task_csv_gdp_ranking",
+    "task_name": "World GDP Country Ranking",
+    "category": "csv_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.top_economy": 1.0,
+        "automated.bottom_economy": 1.0,
+        "automated.summary_stats": 1.0,
+        "automated.concentration": 1.0,
+        "automated.trillion_club": 1.0,
+        "automated.pct_shares": 1.0,
+        "automated.summary_paragraph": 1.0,
+        "llm_judge.data_accuracy": 1.0,
+        "llm_judge.analytical_depth": 1.0,
+        "llm_judge.report_completeness": 1.0,
+        "llm_judge.presentation_quality": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent execution. All key metrics verified: total GDP $78,285.45B, top rankings (US $17.42T, China $10.36T, Japan $4.77T), concentration shares (top 5: 50.17%, top 10: 64.63%, top 20: 79.18%), mean/median statistics ($352.64B/$21.52B), 15-country $1T club at 74.06% share, and bottom 10 correctly identified. Report includes all six required sections with professional markdown formatting, detailed tables, and meaningful interpretation of the extreme concentration pattern. Analysis explicitly discusses the 16x mean-to-median gap, bipolar US-China dominance, geographic concentration, and microstates' negligible contribution. No errors detected; data aligns precisely with expected values.",
+    "execution_time_seconds": 122.26283693313599
+}

@@ -1,0 +1,18 @@
+{
+    "task_id": "task_memory",
+    "task_name": "Memory Retrieval from Context",
+    "category": "memory",
+    "score": 0.9,
+    "max_score": 1.0,
+    "breakdown": {
+        "file_created": 1.0,
+        "correct_date": 1.0,
+        "clear_answer": 0.5,
+        "read_notes": 1.0,
+        "no_hallucination": 1.0
+    },
+    "grading_type": "automated",
+    "timed_out": false,
+    "notes": "",
+    "execution_time_seconds": 37.98833966255188
+}

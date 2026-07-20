@@ -1,0 +1,28 @@
+{
+    "task_id": "task_log_ssh_failed_logins",
+    "task_name": "SSH Auth Log - Failed Login Analysis",
+    "category": "log_analysis",
+    "score": 0.9199999999999999,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.output_created": 1.0,
+        "automated.failed_count": 1.0,
+        "automated.top_ips": 1.0,
+        "automated.invalid_usernames": 1.0,
+        "automated.attack_assessment": 1.0,
+        "llm_judge.file_creation": 1.0,
+        "llm_judge.total_failed_attempts": 1.0,
+        "llm_judge.top_attacking_ips": 0.55,
+        "llm_judge.invalid_usernames": 1.0,
+        "llm_judge.attack_assessment": 1.0,
+        "llm_judge.breakin_warnings": 1.0,
+        "llm_judge.successful_login": 1.0,
+        "llm_judge.date_range": 1.0,
+        "llm_judge.report_quality": 0.85,
+        "llm_judge.efficiency": 0.6
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Agent produced a well-structured, comprehensive markdown report with correct overall metrics (366 failed passwords, 85 break-in warnings, top invalid usernames, attack assessment). However, top IP counts are significantly off—reported 183.62.140.253 with 149 attempts vs. expected ~307 (off by ~52%). Also reported 187.141.143.180 with 80 vs. expected ~189. Created duplicate markdown files (failed_login_report.md and _1.md) unnecessarily, plus a parser script. Report quality is high with good tables, analysis, and recommendations, but parsing accuracy on IP distribution is notably deficient.",
+    "execution_time_seconds": 187.82165145874023
+}

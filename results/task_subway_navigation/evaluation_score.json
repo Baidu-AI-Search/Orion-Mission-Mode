@@ -1,0 +1,17 @@
+{
+    "task_id": "task_subway_navigation",
+    "task_name": "NYC Subway Navigation",
+    "category": "productivity",
+    "score": 0.96,
+    "max_score": 1.0,
+    "breakdown": {
+        "criterion_1_route_correctness": 1.0,
+        "criterion_2_practical_detail": 1.0,
+        "criterion_3_alternative_route": 0.85,
+        "criterion_4_map_interpretation": 1.0
+    },
+    "grading_type": "llm_judge",
+    "timed_out": false,
+    "notes": "Excellent execution. Primary route (L→4 via Union Sq) is optimal and correctly identified with accurate stop counts (3+6=9). Practical details are thorough: realistic travel times (~30–40 min), specific rush hour guidance, Yankees game-day considerations, car position advice, and transfer signage tips. Map reading is accurate—correctly sequenced all stations, identified express vs. local designations, and respected transfer connections per the provided map. Alternative route (L→2→4) is valid and addresses realistic service disruptions, though it's somewhat similar to primary route structurally. File saved successfully. Only minor deduction: alternative could have been more dramatically different or included additional creative options. Overall, this is genuinely excellent work suitable for actual traveler use.",
+    "execution_time_seconds": 148.71954345703125
+}

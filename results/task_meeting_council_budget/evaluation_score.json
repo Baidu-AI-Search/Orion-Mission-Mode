@@ -1,0 +1,27 @@
+{
+    "task_id": "task_meeting_council_budget",
+    "task_name": "Tampa City Council – Extract Budget Discussions",
+    "category": "meeting_analysis",
+    "score": 0.95,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.capacity_fee_amounts": 1.0,
+        "automated.three_billion": 1.0,
+        "automated.annual_revenue_increase": 0.0,
+        "automated.rome_yard_94m": 1.0,
+        "automated.annex_34m": 1.0,
+        "automated.phase1_7m": 1.0,
+        "automated.gas_settlement_650k": 1.0,
+        "automated.zion_8m": 1.0,
+        "automated.financial_summary": 1.0,
+        "llm_judge.financial_data_extraction": 1.0,
+        "llm_judge.context": 1.0,
+        "llm_judge.comprehensiveness": 1.0,
+        "llm_judge.summary": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent extraction and report. Agent captured all expected budget items with precise dollar amounts ($3B water investment, $170M grants, $1,020/$1,237/$1,530/$1,847 fees, $1.5-2M/yr revenue, $94M Rome Yard Phase 4, $34.2M Howard Annex, $8M Zion Cemetery, $650K FGT settlement, $8/$8 pipes program, GMP May 15 Fire Station, etc.). Each section includes detailed context, council concerns, debate, and actions. Financial summary table consolidates 29 distinct items. Well-organized, no omissions detected, and no extraneous content. Minor: duplicate files created (budget_report.md and budget_report_1.md appear identical), but deliverable fully meets and exceeds task requirements.",
+    "execution_time_seconds": 361.0778694152832
+}

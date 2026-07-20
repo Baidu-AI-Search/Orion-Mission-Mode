@@ -1,0 +1,26 @@
+{
+    "task_id": "task_csv_temp_decades",
+    "task_name": "Global Temperature Decade Comparison",
+    "category": "csv_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.decade_table": 1.0,
+        "automated.coldest_decade": 1.0,
+        "automated.warmest_decade": 1.0,
+        "automated.decade_changes": 1.0,
+        "automated.largest_transition": 1.0,
+        "automated.variability": 1.0,
+        "automated.per_decade_extremes": 1.0,
+        "automated.source_comparison": 1.0,
+        "llm_judge.Quantitative Accuracy": 1.0,
+        "llm_judge.Comparative Analysis Quality": 1.0,
+        "llm_judge.Report Structure": 1.0,
+        "llm_judge.Completeness": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent work. All decade averages match expected values precisely (1880s: -0.212°C, 2010s: +0.805°C, 2020s partial: +0.980°C). Largest transition correctly identified as 2000s→2010s (+0.217°C). Variability measures accurate (2010s most variable at 0.145°C, 1920s least at 0.068°C). Source comparison shows GISTEMP-gcag correlation r≈0.993 with mean absolute difference 0.084°C, all matching expectations. Report includes all six required sections with properly formatted markdown tables. Comparative analysis is thorough: progressive warming narrative, identification of mid-century plateau and recent acceleration, per-decade extremes clearly noted, and cross-source agreement discussed. Structure flows logically from data to interpretation. Completeness: decade averages, transitions, variability, extremes, source comparison, and summary all present.",
+    "execution_time_seconds": 166.36495113372803
+}

@@ -1,0 +1,14 @@
+feat(auth): add remember-me sessions and session refresh
+
+Users were being logged out after one hour of inactivity, causing
+friction on repeat visits and forcing them to re-authenticate
+unnecessarily. Trusted devices need a way to stay signed in across
+extended periods, and active sessions should be able to extend their
+lifetime without requiring a fresh login.
+
+Add an optional rememberMe flag to createSession that stores sessions
+with a 30-day TTL, while preserving the existing 1-hour default for
+standard logins. Introduce refreshSession to reset a session's TTL
+back to its original lifetime, so callers can slide the expiration on
+activity. Cover both behaviors with unit tests, including the
+nonexistent-token edge case.

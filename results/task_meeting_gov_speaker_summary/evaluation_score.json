@@ -1,0 +1,26 @@
+{
+    "task_id": "task_meeting_gov_speaker_summary",
+    "task_name": "NASA UAP Hearing Speaker Summary",
+    "category": "meeting_analysis",
+    "score": 0.97,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.dan_evans": 1.0,
+        "automated.nicola_fox": 1.0,
+        "automated.david_spergel": 1.0,
+        "automated.sean_kirkpatrick": 1.0,
+        "automated.faa_speaker": 1.0,
+        "automated.additional_panelists": 1.0,
+        "automated.quotes_included": 1.0,
+        "automated.speaker_order": 1.0,
+        "llm_judge.speaker_identification_completeness": 0.95,
+        "llm_judge.key_point_accuracy": 0.93,
+        "llm_judge.quote_quality": 0.9,
+        "llm_judge.organization_and_readability": 0.97
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent work. Agent identified all 13 major substantive speakers in order of appearance with accurate roles and affiliations. Key points are specific and precise (e.g., 800+ AARO cases, 2-5% anomalous, 45,000 daily FAA flights, 3-5 monthly UAP reports historically, spike to 68 in Feb 2023). Quotes are well-chosen and capture core messages. Organization is exemplary with chronological ordering, clear headers, bulleted points, block quotes, and added value via Panel Q&A and Cross-Cutting Themes sections. Minor deductions only for slightly verbose output (though reflects completeness) and two speaker entries in the Q&A section could arguably have been elevated to full entries. Overall professional-quality summary that accurately reflects the meeting content.",
+    "execution_time_seconds": 720.6605622768402
+}

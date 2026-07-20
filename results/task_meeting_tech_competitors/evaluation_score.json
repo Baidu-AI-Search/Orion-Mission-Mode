@@ -1,0 +1,26 @@
+{
+    "task_id": "task_meeting_tech_competitors",
+    "task_name": "Meeting Competitor Analysis Extraction",
+    "category": "meeting_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.tier1_competitors": 1.0,
+        "automated.tier_system": 1.0,
+        "automated.stage_relevance": 1.0,
+        "automated.platform_distinction": 1.0,
+        "automated.gitlab_line_item": 1.0,
+        "automated.market_lens": 1.0,
+        "automated.infographic_philosophy": 1.0,
+        "automated.tier1_focus": 1.0,
+        "llm_judge.Competitor Identification Completeness": 1.0,
+        "llm_judge.Strategic Positioning Analysis": 1.0,
+        "llm_judge.Stage-Specific Mapping": 1.0,
+        "llm_judge.Methodology Clarity": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent execution. All six Tier 1 competitors identified with accurate platform/non-platform classification and tier system explained. Strategic positioning captured all nuances: market-lens feature selection, green-only visual tone, honest comparison philosophy, GitLab row inclusion, platform-gap call-outs, and coopetition approach. Stage-specific mapping clearly articulated with concrete examples (GitHub/CloudBees not on Monitor tab) and the copy-paste error noted. Methodology documented comprehensively with 10 specific decisions including tiered rollout, per-stage filtering, and data/presentation separation. Minor inefficiency: duplicate file created (competitor_analysis.md and competitor_analysis_1.md) when one was requested. Content quality is comprehensive and well-organized.",
+    "execution_time_seconds": 153.3570840358734
+}

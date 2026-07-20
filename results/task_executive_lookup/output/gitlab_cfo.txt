@@ -1,0 +1,22 @@
+GitLab CFO as of April 7, 2026
+==============================
+
+Chief Financial Officer (CFO): Jessica Ross
+
+Source note / currency reference (as of April 7, 2026):
+- Brian Robins, GitLab's long-serving CFO, announced his departure alongside the
+  company's FY2026 Q2 (calendar Q3 2025) earnings release on September 4, 2025,
+  with an effective departure date of September 19, 2025.
+- Jessica Ross was introduced as GitLab's new Chief Financial Officer on
+  GitLab's FY2026 Q4 (fiscal year ending January 31, 2026) earnings call,
+  held on March 3, 2026 and publicly summarized on March 5, 2026. She was
+  explicitly identified as CFO and "首次作为CFO出席" (attending for the first
+  time as CFO), presenting FY2026 Q4 / full-year results (full-year revenue
+  $955M, +26% YoY; free cash flow $220M, +83% YoY) and FY2027 guidance
+  alongside CEO Bill Staples.
+- She continued to serve as CFO in subsequent public appearances, including
+  the May 26, 2026 investor Q&A session where she again spoke on record as
+  GitLab's Chief Financial Officer.
+- No subsequent CFO transition announcement was found between March 3, 2026
+  and April 7, 2026, confirming Jessica Ross as the sitting CFO of GitLab
+  as of April 7, 2026.

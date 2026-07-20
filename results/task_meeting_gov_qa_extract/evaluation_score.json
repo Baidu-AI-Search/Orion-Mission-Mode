@@ -1,0 +1,26 @@
+{
+    "task_id": "task_meeting_gov_qa_extract",
+    "task_name": "NASA UAP Hearing Q&A Extraction",
+    "category": "meeting_analysis",
+    "score": 0.975,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.exchange_count": 1.0,
+        "automated.section_separation": 1.0,
+        "automated.drake_kirkpatrick": 1.0,
+        "automated.case_numbers": 1.0,
+        "automated.faa_qa": 1.0,
+        "automated.nhi_question": 1.0,
+        "automated.attribution": 1.0,
+        "automated.numbering": 1.0,
+        "llm_judge.exchange_completeness": 0.95,
+        "llm_judge.attribution_accuracy": 0.95,
+        "llm_judge.summary_quality": 0.92,
+        "llm_judge.organization": 0.98
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent work. Agent extracted all 33 expected exchanges with accurate speaker attribution, concise summaries capturing key details and specific numbers, and exceptional organization (chronological order, clear separation of panel vs. public Q&A, numbered sequences, topic labels). All major expected exchanges present: Spergel/Fox on calibration, Drake on database size, Fox on P-3 video, multiple Kirkpatrick exchanges on definition/stigma/AI-ML, Freie exchanges on radar data/balloons/reporting, and comprehensive public Q&A. Minor: a few summaries could include slightly more supporting detail or technical depth, but overall highly efficient and well-structured extraction.",
+    "execution_time_seconds": 814.6550271511078
+}

@@ -1,0 +1,107 @@
+{
+  "date_range": "2005-06-09 to 2005-06-16",
+  "daily_summary": [
+    {
+      "date": "2005-06-09",
+      "day_of_week": "Thursday",
+      "error_count": 52,
+      "notable_events": [
+        "Apache started/resumed normal operations 1 time(s) (first at 06:07:19).",
+        "Startup configuration errors: 8 errors creating JNI/channels (mod_jk2 initialization failure).",
+        "Error breakdown: 23× file_not_found, 16× dir_forbidden, 8× config_error.",
+        "Notable intra-day burst: 27 errors in 1s starting at 19:23:31.",
+        "IP 81.199.21.119 generated 23 error requests (possible scan/attack)."
+      ]
+    },
+    {
+      "date": "2005-06-10",
+      "day_of_week": "Friday",
+      "error_count": 81,
+      "notable_events": [
+        "Apache started/resumed normal operations 1 time(s) (first at 11:32:39).",
+        "Startup configuration errors: 8 errors creating JNI/channels (mod_jk2 initialization failure).",
+        "Error breakdown: 50× file_not_found, 17× dir_forbidden, 8× config_error, 5× bad_request.",
+        "Notable intra-day burst: 23 errors in 3s starting at 03:37:39.",
+        "IP 194.116.250.2 generated 23 error requests (possible scan/attack).",
+        "IP 61.142.136.20 generated 13 error requests (possible scan/attack)."
+      ]
+    },
+    {
+      "date": "2005-06-11",
+      "day_of_week": "Saturday",
+      "error_count": 305,
+      "notable_events": [
+        "mod_jk2 worker shutdowns: 51 (indicates worker respawns, usually triggered by load/crashes).",
+        "Error breakdown: 124× file_not_found, 89× script_not_found, 15× dir_forbidden, 7× bad_request.",
+        "Notable intra-day burst: 254 errors in 11s starting at 03:03:03.",
+        "IP 202.133.98.6 generated 184 error requests (possible scan/attack).",
+        "IP 212.238.198.203 generated 20 error requests (possible scan/attack)."
+      ]
+    },
+    {
+      "date": "2005-06-12",
+      "day_of_week": "Sunday",
+      "error_count": 88,
+      "notable_events": [
+        "Apache started/resumed normal operations 1 time(s) (first at 04:04:33).",
+        "Server shutdown/restart signals 1 time(s).",
+        "mod_jk2 worker shutdowns: 20 (indicates worker respawns, usually triggered by load/crashes).",
+        "Startup configuration errors: 8 errors creating JNI/channels (mod_jk2 initialization failure).",
+        "Error breakdown: 45× file_not_found, 21× dir_forbidden, 8× config_error, 2× bad_request.",
+        "Notable intra-day burst: 20 errors in 4s starting at 04:04:29.",
+        "IP 203.112.195.156 generated 13 error requests (possible scan/attack).",
+        "IP 24.163.159.161 generated 13 error requests (possible scan/attack).",
+        "IP 68.251.32.120 generated 13 error requests (possible scan/attack)."
+      ]
+    },
+    {
+      "date": "2005-06-13",
+      "day_of_week": "Monday",
+      "error_count": 111,
+      "notable_events": [
+        "Error breakdown: 86× dir_forbidden, 13× file_not_found, 1× bad_request.",
+        "Notable intra-day burst: 24 errors in 9s starting at 18:38:25.",
+        "IP 195.23.79.241 generated 22 error requests (possible scan/attack).",
+        "IP 219.133.246.207 generated 15 error requests (possible scan/attack).",
+        "IP 218.82.188.130 generated 13 error requests (possible scan/attack)."
+      ]
+    },
+    {
+      "date": "2005-06-14",
+      "day_of_week": "Tuesday",
+      "error_count": 72,
+      "notable_events": [
+        "Error breakdown: 36× file_not_found, 33× dir_forbidden, 3× bad_request.",
+        "Notable intra-day burst: 23 errors in 3s starting at 15:57:00.",
+        "IP 81.214.165.213 generated 23 error requests (possible scan/attack).",
+        "IP 60.191.134.226 generated 19 error requests (possible scan/attack).",
+        "IP 85.226.115.57 generated 13 error requests (possible scan/attack)."
+      ]
+    },
+    {
+      "date": "2005-06-15",
+      "day_of_week": "Wednesday",
+      "error_count": 42,
+      "notable_events": [
+        "Error breakdown: 35× dir_forbidden, 4× file_not_found, 3× bad_request.",
+        "Notable intra-day burst: 18 errors in 7s starting at 08:39:00.",
+        "IP 219.133.247.159 generated 18 error requests (possible scan/attack)."
+      ]
+    },
+    {
+      "date": "2005-06-16",
+      "day_of_week": "Thursday",
+      "error_count": 2,
+      "notable_events": [
+        "Error breakdown: 1× bad_request, 1× dir_forbidden."
+      ]
+    }
+  ],
+  "peak_burst": {
+    "start_time": "2005-06-11 03:03:03",
+    "end_time": "2005-06-11 03:03:14",
+    "duration_seconds": 11,
+    "error_count": 254,
+    "description": "254 error-level entries logged in 11 seconds. Error types during this window: 115× file_not_found, 70× mod_jk_noise, 69× script_not_found. Top source IP was 202.133.98.6 with 184 hits (appears to be a scanner/attacker). This is a mass-vulnerability scan / worm probe from 202.133.98.6, hammering AWStats and CGI paths (115 awstats hits, 115 cgi-related hits). The flood triggered repeated mod_jk child spawn/respawn failures (70 jk errors) and a cascade of 'mod_jk2 Shutting down' notices immediately after, indicating the attack load caused worker processes to die off and restart en masse."
+  }
+}

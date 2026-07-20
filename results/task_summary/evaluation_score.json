@@ -1,0 +1,18 @@
+{
+    "task_id": "task_summary",
+    "task_name": "Document Summarization",
+    "category": "analysis",
+    "score": 0.95,
+    "max_score": 1.0,
+    "breakdown": {
+        "Accuracy and Completeness": 1.0,
+        "Conciseness": 0.75,
+        "Structure and Coherence": 1.0,
+        "Writing Quality": 1.0,
+        "Task Completion": 1.0
+    },
+    "grading_type": "llm_judge",
+    "timed_out": false,
+    "notes": "Excellent performance. Summary captures all major themes (AI applications, benefits, challenges, future outlook) with accuracy. Structure perfectly follows the 3-paragraph format with clear logical flow. Writing is professional with no errors. At ~325 words, slightly above optimal conciseness (150-250 range) but still reasonable. Task completed correctly with proper file creation. Minor inefficiency: agent created duplicate file (summary_output_1.txt) and unnecessary zip archive, but this does not impact core task completion. Strong work overall.",
+    "execution_time_seconds": 75.73985004425049
+}

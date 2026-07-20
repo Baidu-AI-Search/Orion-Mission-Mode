@@ -1,0 +1,23 @@
+{
+    "task_id": "task_log_apache_client_issues",
+    "task_name": "Apache Error Log - Identify Problematic Client IPs",
+    "category": "log_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.output_created": 1.0,
+        "automated.top_client_identified": 1.0,
+        "automated.awstats_scanning_noted": 1.0,
+        "automated.top5_accuracy": 1.0,
+        "automated.invalid_method_ips": 1.0,
+        "llm_judge.report_created": 1.0,
+        "llm_judge.top_ip_identified": 1.0,
+        "llm_judge.awstats_scanning_identified": 1.0,
+        "llm_judge.top_5_ips_with_counts": 1.0,
+        "llm_judge.invalid_method_ips_identified": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent execution. Agent correctly identified all top 5 IPs with accurate error counts (202.133.98.6 with 184 errors as #1, followed by three IPs with 23 errors each, and one with 22). Properly characterized 202.133.98.6 as AWStats exploit worm. Identified and detailed all 13 invalid-method IPs as Nimda/Code Red Unicode traversal exploitation attempts. Report is well-structured with summary table, detailed per-IP analysis, and dedicated high-severity section. All expected findings present with no significant omissions.",
+    "execution_time_seconds": 257.48051476478577
+}

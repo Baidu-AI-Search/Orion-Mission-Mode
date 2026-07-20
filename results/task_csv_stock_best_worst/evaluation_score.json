@@ -1,0 +1,26 @@
+{
+    "task_id": "task_csv_stock_best_worst",
+    "task_name": "Apple Stock 2014 Best and Worst Days",
+    "category": "csv_analysis",
+    "score": 0.99,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.best_days_dates": 1.0,
+        "automated.best_days_values": 1.0,
+        "automated.worst_days_dates": 1.0,
+        "automated.worst_days_values": 1.0,
+        "automated.dollar_changes": 1.0,
+        "automated.clustering_analysis": 1.0,
+        "automated.distribution": 1.0,
+        "automated.summary_analysis": 1.0,
+        "llm_judge.analytical_accuracy": 1.0,
+        "llm_judge.pattern_analysis": 1.0,
+        "llm_judge.report_structure_and_presentation": 0.9,
+        "llm_judge.context_and_distribution": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional work. All top 5 best and worst days are correctly identified with exact matching values, percentages, and dollar changes. Clustering analysis is thorough and insightful, connecting extreme days to earnings reports and product events (earnings-driven Jan 28 and Apr 24, iPhone 6 launch in September, December volatility). Report structure is professional with well-formatted markdown tables containing all requested columns. Distribution context is comprehensive (53.97% up-days, 46.03% down-days, +0.158% average daily return, +42.07% annual return, 1.471% std dev). Minor deduction (−0.1) for creating two identical markdown files (best_worst_days_report.md and best_worst_days_report_1.md) rather than a single output; this is unnecessary file duplication and slightly inefficient.",
+    "execution_time_seconds": 190.986319065094
+}

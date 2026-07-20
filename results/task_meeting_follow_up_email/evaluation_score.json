@@ -1,0 +1,25 @@
+{
+    "task_id": "task_meeting_follow_up_email",
+    "task_name": "Meeting Follow-Up Email",
+    "category": "meeting_analysis",
+    "score": 0.9637222222222221,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.file_created": 1.0,
+        "automated.has_subject": 1.0,
+        "automated.decisions_section": 1.0,
+        "automated.decisions_count": 1.0,
+        "automated.action_items_with_owners": 1.0,
+        "automated.action_items_count": 1.0,
+        "automated.deadline_mentioned": 1.0,
+        "automated.tone_appropriate": 1.0,
+        "automated.concise": 0.5,
+        "llm_judge.accuracy_of_content": 1.0,
+        "llm_judge.email_format_and_professionalism": 0.95,
+        "llm_judge.actionability_and_clarity": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent work. Email accurately captures all five decisions (event assignments, announcement bundling approach, excitement ranking constraint, competitive sheet scope/style, messaging pillars), all action items with specific owners and deadlines, and all open items. Format is professional with proper subject line, greeting, structured sections, and closing. Table-based action items are exceptionally scannable. Tone matches team's collaborative-but-direct style. Content is highly actionable—team members know exactly what to do and when. Minor deduction: email length slightly exceeds ideal \"under a minute\" scan time for very busy readers, though formatting mitigates this. Agent created duplicate file (`follow_up_email_1.md`), showing minor inefficiency, but this does not affect email quality itself.",
+    "execution_time_seconds": 125.5307445526123
+}

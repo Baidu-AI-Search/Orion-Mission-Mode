@@ -1,0 +1,57 @@
+GitLab (GTLB) — Q3 Fiscal Year 2026 (quarter ended October 31, 2025)
+Margin Guidance vs. Actual (Non-GAAP Operating Margin)
+================================================================
+
+Quarter identification
+----------------------
+GitLab's fiscal year ends January 31. "Q3 2025" in calendar terms
+corresponds to GitLab's fiscal Q3 FY2026 (three months ended October 31,
+2025), reported on December 2, 2025. The guidance for this quarter was
+issued alongside Q2 FY2026 results on September 3, 2025.
+
+Sources
+-------
+1. GitLab Q2 FY2026 earnings press release (SEC Exhibit 99.1, filed
+   2025-09-03; accession 0001653482-25-000008, file
+   gitlab-ex99120250731fy26.htm) — Q3 FY2026 outlook.
+2. GitLab Q3 FY2026 earnings press release (SEC Exhibit 99.1, filed
+   2025-12-02; accession 0001628280-25-054758, file
+   gitlab-ex99120251031fy26.htm) — Q3 FY2026 actual results.
+
+Guided margin (Q3 FY2026, issued 9/3/2025)
+------------------------------------------
+GitLab guides to non-GAAP operating income in dollars (not to an explicit
+margin percentage), alongside a revenue range:
+  - Revenue guidance:          $238.0M – $239.0M  (midpoint $238.5M)
+  - Non-GAAP operating income:  $31.0M –  $32.0M  (midpoint  $31.5M)
+  - Implied non-GAAP operating margin (midpoint): $31.5M / $238.5M ≈ 13.2%
+  - High end of implied guidance: $32.0M / $238.0M ≈ 13.4%
+  - Rounded (consistent with GitLab's whole-percent presentation): ~13%
+
+Actual margin (Q3 FY2026, reported 12/2/2025)
+---------------------------------------------
+  - Revenue:                   $244.4M
+  - Non-GAAP operating income:  $43.7M
+  - Non-GAAP operating margin as reported by GitLab in the Q3 highlights
+    table: 18%
+  - Calculated: $43.7M / $244.4M ≈ 17.9% (rounds to 18% using GitLab's
+    rounding convention)
+
+Beat / (miss) versus guidance
+-----------------------------
+  - Actual non-GAAP operating margin: 18%
+  - Guided non-GAAP operating margin (implied): ~13%
+  - Beat: approximately 5 percentage points, i.e., ~500 basis points
+    (~467 bps versus the unrounded midpoint; ~444 bps versus the high end
+    of the implied dollar range; ~500 bps on the rounded basis that GitLab
+    uses in its reported tables and that analyst write-ups cite).
+
+Summary
+-------
+  Metric                         | Value
+  -------------------------------+---------------------------
+  Actual non-GAAP operating margin | 18%
+  Guided non-GAAP operating margin | ~13% (implied from $31–32M
+                                   |  non-GAAP op income on
+                                   |  $238–239M revenue)
+  Beat vs. guidance              | ~500 basis points (a beat)

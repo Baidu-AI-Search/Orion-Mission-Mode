@@ -1,0 +1,19 @@
+{
+  "id": "draft_003",
+  "threadId": "thread_002",
+  "inReplyTo": "msg_002",
+  "labelIds": ["DRAFT"],
+  "draft": true,
+  "payload": {
+    "headers": {
+      "From": "me@ourcompany.com",
+      "To": "margaret.chen@acme-corp.com",
+      "Cc": "support@ourcompany.com, ceo@ourcompany.com, sre-oncall@ourcompany.com",
+      "Subject": "Re: URGENT: Production outage on Acme order #A-78421 — costing us $50k/hour",
+      "Date": "Thu, 16 Jul 2026 14:45:00 -0400"
+    },
+    "body": {
+      "text": "Margaret,\n\nThank you for the clear escalation — and I want to apologize directly: we have missed our 1-hour P1 SLA on first response, and that is entirely on us. I am taking ownership of this incident as of this message and will stay personally engaged until your production line is fully restored.\n\nImmediate commitments:\n\n1. **Acknowledgment:** Ticket is acknowledged and classified SEV-1 / P1 as of now. I am the named incident commander — reach me directly at +1 (415) 555-0101 (cell) at any time, day or night, for the duration of this incident.\n\n2. **War room:** Our lead SRE (Ravi Shah) and the v3.8.2 release engineer are on a dedicated bridge right now. I have sent the bridge details (Meet link + dial-in) to your calendar; please feel free to join at any point, and we will have a status update every 15 minutes until resolution.\n\n3. **Current technical picture:** Trace ID ord-7f3a2c9b-e1 has been correlated. The 500s on order submission trace to a schema-validation regression in the order service introduced in last night's v3.8.2 push. We have frozen the rollout to your tenant and are executing a targeted rollback of the order service now.\n\n4. **Root-cause assessment + ETA:** You will receive a written root-cause assessment and a firm restoration ETA from me within the next 60 minutes (by 15:45 ET). If the rollback validates sooner, I will call you directly before that.\n\n5. **Post-incident review:** A full PIR — root cause, timeline, remediation items, and applicable SLA credits — will be delivered to you within 48 hours of service restoration.\n\nI know two of your customers have already canceled deliveries because of this; please log all impact (lost throughput, canceled deliveries, downstream costs) and we will work with your account team to make this right.\n\nPlease do not escalate to David — I own this now, and I will loop him in directly if I cannot resolve it to your satisfaction. You have my cell; call or text with anything.\n\nAgain, I'm sorry for the slow start. We are fully focused on getting Acme back online.\n\nBest regards,\n[My Name]\nDirector of Engineering, Customer Reliability\nOurCompany\n+1 (415) 555-0101"
+    }
+  }
+}

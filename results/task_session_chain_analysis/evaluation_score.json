@@ -1,0 +1,20 @@
+{
+    "task_id": "task_session_chain_analysis",
+    "task_name": "Session Chain Analysis & Design Review",
+    "category": "analysis",
+    "score": 0.33333333333333337,
+    "max_score": 1.0,
+    "breakdown": {
+        "chain_map_stages": 0.3333333333333333,
+        "evidence_index": 1.0,
+        "function_references": 0.0,
+        "design_targeting_e2": 0.0,
+        "code_evidence": 0.0,
+        "traceability": 1.0,
+        "json_validity": 0.0
+    },
+    "grading_type": "automated",
+    "timed_out": false,
+    "notes": "",
+    "execution_time_seconds": 334.7866122722626
+}

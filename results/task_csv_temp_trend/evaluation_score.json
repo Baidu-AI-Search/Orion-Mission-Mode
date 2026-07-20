@@ -1,0 +1,26 @@
+{
+    "task_id": "task_csv_temp_trend",
+    "task_name": "Global Temperature Trend Analysis",
+    "category": "csv_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.overall_rate": 1.0,
+        "automated.pre1950_rate": 1.0,
+        "automated.post1950_rate": 1.0,
+        "automated.acceleration": 1.0,
+        "automated.first_05": 1.0,
+        "automated.first_10": 1.0,
+        "automated.decade_comparison": 1.0,
+        "automated.summary": 1.0,
+        "llm_judge.Quantitative Accuracy": 1.0,
+        "llm_judge.Trend Analysis Depth": 1.0,
+        "llm_judge.Report Quality": 1.0,
+        "llm_judge.Completeness": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional execution. All quantitative values (slopes, R², decade means, milestone years) match expected results precisely. Acceleration analysis is thorough (4.1× post-1950 vs pre-1950) with clear statistical interpretation. All six required sections present and well-developed. Markdown formatting is professional with clear tables, bold emphasis, and logical narrative flow. Coldest/warmest decades correctly identified (1903–1912, 2014–2023). Milestone crossings accurate (1998, 2016). Decade bookend comparison compelling (+1.14°C difference). Python script and processed CSV provided for reproducibility. No significant deficiencies identified.",
+    "execution_time_seconds": 188.7340383529663
+}

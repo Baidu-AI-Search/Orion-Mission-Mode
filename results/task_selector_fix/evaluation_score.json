@@ -1,0 +1,32 @@
+{
+    "task_id": "task_selector_fix",
+    "task_name": "Test Maintenance / Selector Fix",
+    "category": "coding",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.file_exists": 1.0,
+        "automated.valid_python": 1.0,
+        "automated.sidebar_selectors": 1.0,
+        "automated.header_selectors": 1.0,
+        "automated.user_menu_selectors": 1.0,
+        "automated.metric_selectors": 1.0,
+        "automated.search_selector": 1.0,
+        "automated.table_selectors": 1.0,
+        "automated.sort_header_selector": 1.0,
+        "automated.status_badge_selectors": 1.0,
+        "automated.edit_button_selector": 1.0,
+        "automated.toast_selectors": 1.0,
+        "automated.pagination_selectors": 1.0,
+        "automated.modal_selectors": 1.0,
+        "automated.no_old_selectors": 1.0,
+        "llm_judge.criterion_1_selector_accuracy": 1.0,
+        "llm_judge.criterion_2_consistency": 1.0,
+        "llm_judge.criterion_3_test_logic_preservation": 1.0,
+        "llm_judge.criterion_4_code_quality": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent execution. Every selector in dashboard_tests.py was accurately updated to match the new markup in dashboard_component.html. The agent correctly applied all 18+ mappings from the reference table (e.g., `.sidebar-nav`, `[aria-current=\"page\"]`, `.metric-card`, `[data-sort]`, `[data-action=\"edit-member\"]`, `.toast-container .toast-message`, `.modal-overlay`, etc.). Selector style is consistent throughout—data attributes for interactive elements, classes for structure, ARIA attributes for semantics, with balanced specificity. All test logic, assertions, expected counts (4 nav links, 4 metric cards, 3 active badges, etc.), docstrings, and control flow remain unchanged—only locator strings were updated. Code is syntactically clean, properly formatted, and would execute without errors. Minor note: both dashboard_tests.py and dashboard_tests_1.py were created, but the primary file dashboard_tests.py is correct.",
+    "execution_time_seconds": 160.82243752479553
+}

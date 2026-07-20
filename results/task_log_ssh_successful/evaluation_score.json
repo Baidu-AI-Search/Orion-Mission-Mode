@@ -1,0 +1,25 @@
+{
+    "task_id": "task_log_ssh_successful",
+    "task_name": "SSH Auth Log - Successful Authentication Summary",
+    "category": "log_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.output_created": 1.0,
+        "automated.login_identified": 1.0,
+        "automated.ratio_calculated": 1.0,
+        "automated.ip_checked": 1.0,
+        "automated.legitimacy_assessed": 1.0,
+        "llm_judge.successful_login_identification": 1.0,
+        "llm_judge.success_failure_ratio_calculation": 1.0,
+        "llm_judge.legitimate_user_profile_analysis": 1.0,
+        "llm_judge.session_activity_tracking": 1.0,
+        "llm_judge.source_ip_validation": 1.0,
+        "llm_judge.anomaly_assessment": 1.0,
+        "llm_judge.report_format_and_completeness": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent execution. Agent correctly identified the single successful login (fztu, 119.137.62.142, Dec 10 09:32:20), calculated accurate success/failure ratio (1/371 = 0.27%) by properly expanding syslog 'message repeated' entries, provided comprehensive user profile analysis with session lifecycle tracking, thoroughly validated the source IP against all attack sources with zero false positives, and assessed the login as legitimate based on multiple corroborating signals. Report is well-structured markdown with tables, raw log references, detailed methodology, and hardening recommendations. Supporting Python analysis scripts demonstrate rigorous validation approach. All required elements present and thoroughly addressed.",
+    "execution_time_seconds": 290.38843631744385
+}

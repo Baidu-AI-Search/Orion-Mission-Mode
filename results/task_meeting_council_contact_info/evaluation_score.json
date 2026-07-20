@@ -1,0 +1,27 @@
+{
+    "task_id": "task_meeting_council_contact_info",
+    "task_name": "Tampa City Council – Extract Contact Information",
+    "category": "meeting_analysis",
+    "score": 0.98,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.council_members": 1.0,
+        "automated.shelby_attorney": 1.0,
+        "automated.hamilton_raftelis": 1.0,
+        "automated.bercaw_chief": 1.0,
+        "automated.mcneil_officer": 1.0,
+        "automated.public_speakers": 1.0,
+        "automated.tpd_promotions": 1.0,
+        "automated.organized_sections": 1.0,
+        "automated.milo_related": 1.0,
+        "llm_judge.person_identification": 1.0,
+        "llm_judge.role_accuracy": 0.9,
+        "llm_judge.categorization": 1.0,
+        "llm_judge.context": 0.95
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Agent identified 100+ named individuals (exceeds 60+ requirement). All 7 council members, 24+ city staff, 14+ presenters, and 21+ public speakers correctly listed with accurate titles, organizations, and substantive context. Perfect five-section categorization with table format. Minor gaps: one unidentified business representative, some staff titles inferred rather than explicitly stated. Extensive meeting-specific context provided throughout (e.g., Officer McNeil's detailed actions, Stephanie Poynor's Rome Yard critique, Michael Randolph's CBA remarks). Report is comprehensive and well-organized.",
+    "execution_time_seconds": 1408.622659444809
+}

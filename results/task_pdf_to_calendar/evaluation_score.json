@@ -1,0 +1,21 @@
+{
+    "task_id": "task_pdf_to_calendar",
+    "task_name": "PDF to Calendar Import",
+    "category": "productivity",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "file_created": 1.0,
+        "valid_ics": 1.0,
+        "min_events": 1.0,
+        "first_day_of_school": 1.0,
+        "last_day_of_school": 1.0,
+        "labor_day": 1.0,
+        "christmas_break": 1.0,
+        "spring_break": 1.0
+    },
+    "grading_type": "automated",
+    "timed_out": false,
+    "notes": "",
+    "execution_time_seconds": 101.74603724479675
+}

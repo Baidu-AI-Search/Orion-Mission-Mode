@@ -1,0 +1,26 @@
+{
+    "task_id": "task_meeting_council_public_comment",
+    "task_name": "Tampa City Council – Summarize Public Comments",
+    "category": "meeting_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.williams_zion": 1.0,
+        "automated.iman_8million": 1.0,
+        "automated.cannella_stormwater": 1.0,
+        "automated.poole_tpd": 1.0,
+        "automated.poynor_romeyard": 1.0,
+        "automated.speaker_count": 1.0,
+        "automated.thematic_summary": 1.0,
+        "automated.zion_multiple": 1.0,
+        "llm_judge.speaker_identification": 1.0,
+        "llm_judge.summary_quality": 1.0,
+        "llm_judge.thematic_grouping": 1.0,
+        "llm_judge.organization": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional performance. All 16 speakers correctly identified with accurate topics and agenda items. Each summary includes speaker name, topic/item, key points, and specific requests/demands with precise detail. Thematic grouping is sophisticated and well-justified (e.g., identifying historical preservation as highest-interest topic with 5 coordinated speakers on Zion/Colon cemeteries). Document organization is professional: clear header, consistent formatting, chronological speaker summaries, followed by comprehensive thematic analysis. Agent went beyond minimum requirements by providing detailed context and cross-referencing related speakers. No errors or omissions detected.",
+    "execution_time_seconds": 204.93726348876953
+}

@@ -1,0 +1,27 @@
+{
+    "task_id": "task_meeting_gov_data_sources",
+    "task_name": "NASA UAP Hearing Data Sources Extraction",
+    "category": "meeting_analysis",
+    "score": 0.9125000000000001,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.aaro_database": 1.0,
+        "automated.faa_radar": 1.0,
+        "automated.adsb": 1.0,
+        "automated.nasa_satellites": 1.0,
+        "automated.citizen_data": 1.0,
+        "automated.nasa_portal": 0.0,
+        "automated.limitations": 1.0,
+        "automated.categorization": 1.0,
+        "automated.summary_table": 1.0,
+        "llm_judge.source_identification_completeness": 1.0,
+        "llm_judge.technical_accuracy": 0.9,
+        "llm_judge.limitation_analysis": 0.95,
+        "llm_judge.organization_and_presentation": 0.85
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent extraction of 35 data sources across all categories with technically accurate descriptions (FAA radar specs, ADS-B coverage, balloon parameters, Five Eyes definition all correct). Limitations thoroughly analyzed: DOD sensor artifacts, FAA filtering effects, iPhone imagery limitations, NASA asset constraints clearly stated. Strong categorical organization with summary table and cross-cutting themes. Minor deductions: duplicate identical files created (data_sources.md and data_sources_1.md), and transcript file included in workspace appears unnecessary. Content is comprehensive and exceeds expectations; presentation is professional. The agent's summary preamble (absent in JSON task) demonstrates good understanding but was unnecessary prose outside the JSON requirement.",
+    "execution_time_seconds": 364.920930147171
+}

@@ -1,0 +1,18 @@
+{
+    "task_id": "task_blog",
+    "task_name": "Blog Post Writing",
+    "category": "writing",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "content_quality_and_relevance": 1.0,
+        "structure_and_organization": 1.0,
+        "writing_quality": 1.0,
+        "word_count_compliance": 1.0,
+        "task_completion": 1.0
+    },
+    "grading_type": "llm_judge",
+    "timed_out": false,
+    "notes": "Excellent execution. Blog post covers 6 distinct, developer-specific benefits (deep focus, flexible hours, global opportunities, work-life integration, cost savings, balanced caveats) with clear reasoning and examples. Structure is professional with engaging intro, well-organized body sections with clear headings, and strong conclusion. Writing is polished, conversational, and error-free with varied sentence structure. Word count is ~543 words (within target range of 450-550). File correctly named and saved as blog_post.md with complete, properly formatted markdown content. All requirements met.",
+    "execution_time_seconds": 183.46736359596252
+}

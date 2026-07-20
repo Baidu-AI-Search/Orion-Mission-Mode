@@ -1,0 +1,28 @@
+{
+    "task_id": "task_cve_security_triage",
+    "task_name": "CVE/Security Triage",
+    "category": "analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.triage_report_created": 1.0,
+        "automated.remediation_plan_created": 1.0,
+        "automated.all_cves_covered": 1.0,
+        "automated.priorities_assigned": 1.0,
+        "automated.express_rce_is_p0": 1.0,
+        "automated.jwt_bypass_is_p0": 1.0,
+        "automated.build_only_lower_priority": 1.0,
+        "automated.pci_scope_mentioned": 1.0,
+        "automated.deploy_windows_in_plan": 1.0,
+        "automated.major_version_flagged": 1.0,
+        "automated.executive_summary_exists": 1.0,
+        "llm_judge.Priority Assignment Accuracy": 1.0,
+        "llm_judge.Contextual Security Reasoning": 1.0,
+        "llm_judge.Remediation Plan Quality": 1.0,
+        "llm_judge.Report Completeness and Structure": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent execution across all dimensions. Priority assignments are perfectly aligned with expected behavior: both Criticals (express RCE, JWT bypass) correctly assigned P0; pg SQL injection P1 with clear reasoning on authenticated-access prerequisite; High-severity runtime issues appropriately tiered; build-only vulnerabilities correctly segregated; P3 items properly justified on conditional exploitability. Contextual reasoning is sophisticated—recognizes active JWT exploitation as urgent, flags PCI DSS scope for payment/auth/db paths, acknowledges WAF limitations on SSRF, distinguishes runtime vs. build-time exposure, references deployment context throughout. Remediation plan is operationally sound: 5-batch grouping with specific deploy windows (April 12 hotfix, April 14 P1, April 17 P2+build), major-version risk register for 4 breaking upgrades with reviewer checklists, testing requirements per batch, timeline table with rollback procedures, team capacity considerations, SOC 2 audit context. Both deliverables professionally formatted with consistent structure, complete CVE coverage, and actionable guidance. No material deficiencies.",
+    "execution_time_seconds": 285.79112243652344
+}

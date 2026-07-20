@@ -1,0 +1,18 @@
+{
+    "task_id": "task_email",
+    "task_name": "Professional Email Drafting",
+    "category": "writing",
+    "score": 0.96,
+    "max_score": 1.0,
+    "breakdown": {
+        "professional_tone_and_courtesy": 1.0,
+        "completeness_and_clarity": 1.0,
+        "structure_and_format": 1.0,
+        "conciseness_and_appropriateness": 0.95,
+        "task_completion": 0.85
+    },
+    "grading_type": "llm_judge",
+    "timed_out": false,
+    "notes": "Excellent professional email with appropriate tone, complete information, and proper structure. Clear decline with reason and multiple alternatives offered. Minor deductions: (1) Created two files (email_draft.txt and email_draft_1.txt) when only one was requested—slightly inefficient; (2) Email is marginally longer than optimal (approximately 160 words vs. 50-150 range) though still well within professional standards. Overall near-perfect execution of the task.",
+    "execution_time_seconds": 34.80570697784424
+}

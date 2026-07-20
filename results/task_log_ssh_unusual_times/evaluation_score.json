@@ -1,0 +1,26 @@
+{
+    "task_id": "task_log_ssh_unusual_times",
+    "task_name": "SSH Auth Log - Unusual Hour Login Detection",
+    "category": "log_analysis",
+    "score": 0.99,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.output_created": 1.0,
+        "automated.hourly_distribution": 1.0,
+        "automated.off_hours_identified": 1.0,
+        "automated.successful_timing": 1.0,
+        "automated.timing_patterns": 1.0,
+        "llm_judge.report_creation": 1.0,
+        "llm_judge.hourly_distribution_accuracy": 1.0,
+        "llm_judge.off_hours_activity_identification": 1.0,
+        "llm_judge.early_morning_analysis": 1.0,
+        "llm_judge.successful_login_timing": 1.0,
+        "llm_judge.attack_pattern_analysis": 0.95,
+        "llm_judge.temporal_risk_assessment": 0.95,
+        "llm_judge.report_quality_and_structure": 0.95
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent analysis with all required sections completed accurately. Hourly distribution matches expected values precisely (06:7, 07:169, 08:118, 09:676, 10:530). Off-hours activity correctly identified (176 events, 100% malicious). Successful login (fztu 09:32:20) properly noted as business-hours. Attack patterns analyzed comprehensively with clear escalation narrative and IP-level detail. Temporal risk assessment provides practical monitoring priorities. Minor deductions: created unnecessary duplicate file (unusual_hours_report_1.md), included Python script not explicitly requested (though beneficial), referenced external chart that may not be accessible. Report structure and content quality are exemplary; appropriate for production use.",
+    "execution_time_seconds": 294.08966279029846
+}

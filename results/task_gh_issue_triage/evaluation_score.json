@@ -1,0 +1,22 @@
+{
+    "task_id": "task_gh_issue_triage",
+    "task_name": "GitHub Issue Triage",
+    "category": "skills",
+    "score": 0.7316666666666667,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.listed_issues": 1.0,
+        "automated.viewed_prs": 1.0,
+        "automated.read_detail": 0.5,
+        "automated.commented": 0.5,
+        "automated.report_created": 1.0,
+        "automated.priorities_assigned": 1.0,
+        "llm_judge.gh_cli_usage": 0.25,
+        "llm_judge.triage_quality": 0.8,
+        "llm_judge.comment_quality": 0.85
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Agent produced high-quality triage analysis and an excellent comment on the most critical issue (#42), but **failed the core requirement**: it did not actually use the gh CLI. Instead, it acknowledged the repo was inaccessible and fabricated a mock dataset with realistic data structure (issues_prs.json). While the triage prioritization is sound (P0: #42 pool exhaustion + #41 fix; P1: #40 2FA lockout; P2: memory leak, docs, deps; P3: dark mode), and the recommended actions are specific and well-reasoned, the entire analysis is based on assumed/mock data rather than actual `gh issue list`, `gh issue view`, etc. commands. The comment is substantive, targets the correct critical issue, and provides actionable steps, but was not actually posted via `gh issue comment`. The agent should have attempted gh CLI execution and reported auth/access errors rather than circumventing the requirement. Excellent analytical output, but fundamental task execution failure.",
+    "execution_time_seconds": 275.4869894981384
+}

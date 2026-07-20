@@ -1,0 +1,26 @@
+{
+    "task_id": "task_csv_life_exp_outliers",
+    "task_name": "Life Expectancy Outlier Detection",
+    "category": "csv_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.statistical_method": 1.0,
+        "automated.low_outliers_2007": 1.0,
+        "automated.continent_outliers": 1.0,
+        "automated.afghanistan_outlier": 1.0,
+        "automated.temporal_decreases": 1.0,
+        "automated.rwanda_drop": 1.0,
+        "automated.dramatic_drops": 1.0,
+        "automated.explanations": 1.0,
+        "llm_judge.criterion_1_statistical_rigor": 1.0,
+        "llm_judge.criterion_2_anomaly_detection_breadth": 1.0,
+        "llm_judge.criterion_3_contextual_analysis": 1.0,
+        "llm_judge.criterion_4_report_quality": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional work across all dimensions. Criterion 1: Clearly explains both z-score (|z|>2) and IQR methods with exact thresholds (mean=67.01, std=12.03, Q1=57.16, Q3=76.41), reports all 6 global z-outliers with specific z-scores, correctly identifies that IQR found no outliers and explains why. Criterion 2: Comprehensively covers all three anomaly types—6 global outliers, 6 within-continent outliers (with z-scores ranging from -3.43 to +2.27), 102 temporal declines identified, top 5 single-period drops ranked with magnitudes. Criterion 3: Connects outliers to real historical events—HIV/AIDS (southern Africa 1990–2005, >20% prevalence mentioned), Rwandan genocide (1994), Khmer Rouge (1975–1979), Great Leap Forward (1959–1961, 15–45 million deaths), Somali/Liberian civil wars, Gulf War/Iraq sanctions, Afghan wars, North Korean famine. Criterion 4: Professional structure with 6 logical sections, multiple formatted tables, 4 referenced charts, supporting Python analysis scripts (analyze.py, charts.py), JSON results, and clear progression from methodology through findings to interpretation. All expected values match: Rwanda 1987→1992 -20.42 years, Afghanistan z=-3.43, six z-outliers correctly identified.",
+    "execution_time_seconds": 316.99375891685486
+}

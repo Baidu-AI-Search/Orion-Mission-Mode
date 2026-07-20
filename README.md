@@ -18,7 +18,7 @@
     <img src="https://img.shields.io/badge/任务平均得分-94.4%25-success?style=for-the-badge" alt="任务平均得分" />
   </a>
   <a href="https://github.com/pinchbench/skill/tree/main/tasks">
-    <img src="https://img.shields.io/badge/评测任务-147个-orange?style=for-the-badge" alt="评测任务数" />
+    <img src="https://img.shields.io/badge/评测任务-148个-orange?style=for-the-badge" alt="评测任务数" />
   </a>
 </p>
 
@@ -128,7 +128,38 @@ PinchBench采用**自动化检查 + LLM评审**的双轨评分机制：
 
 ---
 
-## 评测结果
+## 📂 评测数据与可复现性保证
+
+为了确保评测结果的完全透明和 100% 可复现，在 `results` 目录下开源了全量 147 个任务的执行快照与评分明细。您可以深入每一个 Case，查看系统是如何理解复杂指令、调度工具并生成最终交付物的。
+
+### 目录结构说明
+
+`results/` 目录按任务 ID 划分为 147 个独立的子文件夹，每个子文件夹均采用标准化的结构：
+
+```text
+results/
+├── task_browser_automation/            # 任务独立目录
+│   ├── input/                          # 任务初始环境：包含输入数据、背景文档、待处理文件等
+│   ├── output/                         # 系统交付物：Agent 运行结束后生成的代码、报告或最终结果
+│   ├── task_introduction_evaluation_illustration.md  # 任务背景、操作步骤与具体评估细则
+│   └── evaluation_score.json           # 机器判分与 LLM Judge 的多维度打分明细及评审理由
+├── task_cve_security_triage/
+│   ├── input/
+│   ├── output/
+│   ├── ...
+├── ... (共 148 个目录)
+```
+
+### 💡 评估准则适配说明 (Adaptations)
+
+在将 PinchBench 引入实际系统评测的过程中，为了更客观地反映真实工作流表现，我们对其中 **44 个任务**的评估准则进行了合理的适配性调整（例如：路径环境适配、严格格式匹配放宽、多语言语境对齐等）。
+
+- **全局修改逻辑** — 请参阅[评估适配与修改总览](./illustration.md)，了解我们进行适配的原则和分类列表。
+<!-- - **具体任务细节** — 在这 44 个相关任务的`task_introduction_evaluation_illustration.md`文件中，我们均明确标注了**Adaptation Explanation of Evaluation Criteria**，详细对比了原版标准与适配后标准。 -->
+
+---
+
+## 评测结果汇总
 
 ### 🏆 全球第一
 
@@ -157,7 +188,7 @@ PinchBench采用**自动化检查 + LLM评审**的双轨评分机制：
 
 ### 详细评测结果与典型 Case
 
-为了保证评测的透明度与可追溯性，对 147 个真实工作场景任务的评估结果进行了全量开源。Orion-Mission-Mode系统在各大核心业务流中均表现出顶级的任务闭环能力。
+为了保证评测的透明度与可追溯性，对 148 个真实工作场景任务的评估结果进行了全量开源。Orion-Mission-Mode系统在各大核心业务流中均表现出顶级的任务闭环能力。
 
 #### 📊 按核心场景能力表现
 
@@ -175,7 +206,7 @@ PinchBench采用**自动化检查 + LLM评审**的双轨评分机制：
 | **办公与生产力 (Productivity)** | 13 | **90.3%** | 日程日历管理、邮件批处理、待办事项整理、每日工作简报 | - |
 | **研究与知识获取 (Research Knowledge)** | 14 | **79.5%** | 竞品与市场调研、信息检索、合同法务分析、前沿技术追踪 | - |
 
-*(注：以上大类基于 147 个 Case 的 `category` 聚合统计得出)*
+*(注：以上大类基于 148 个 Case 的 `category` 聚合统计得出)*
 
 #### 🌟 高光任务展示
 
@@ -194,10 +225,10 @@ PinchBench采用**自动化检查 + LLM评审**的双轨评分机制：
     *   **综合得分**: 0.95 / 1.0 (生产级可用文档)
     *   **评审亮点**: 输出了长达 5800 字的专业安全指南。精准对齐主流大模型厂商（OpenAI, Anthropic 等）的底层 API 差异，指出了 10 个极易踩坑的安全陷阱，并附带可运行的代码级防护方案。
 
-#### 📂 全量 147 项评估结果明细
+#### 📂 全量 148 项评估结果明细
 
 <details>
-<summary><b>点击展开查看所有 147 个评测任务的 JSON 结果概览</b></summary>
+<summary><b>点击展开查看所有 148 个评测任务的 JSON 结果概览</b></summary>
 <br>
 
 点击查看官方完整任务描述：[👉 打开 PinchBench 官方 GitHub 仓库](https://github.com/pinchbench/skill/tree/main/tasks)
@@ -246,11 +277,11 @@ PinchBench采用**自动化检查 + LLM评审**的双轨评分机制：
 | 📋 **更新日志** | [更新日志占位] | -->
 <!-- | 🛡️ **安全与可信说明** | [安全说明占位] | -->
 
----
+<!-- ---
 
 ## pinchbench评估适配说明
 
-> **在进行pinchbench测试时，对相关的44个任务进行了评估适配，详情见<a href="./illustration.md">评估说明</a>**
+> **在进行pinchbench测试时，对相关的44个任务进行了评估适配，详情见<a href="./illustration.md">评估说明</a>** -->
 
 ---
 

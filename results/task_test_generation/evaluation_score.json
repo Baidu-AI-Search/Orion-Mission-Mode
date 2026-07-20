@@ -1,0 +1,29 @@
+{
+    "task_id": "task_test_generation",
+    "task_name": "Test Generation",
+    "category": "coding",
+    "score": 0.58,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.file_created": 1.0,
+        "automated.valid_python": 1.0,
+        "automated.imports_pytest": 1.0,
+        "automated.imports_module": 1.0,
+        "automated.tests_validate_order": 1.0,
+        "automated.tests_calculate_subtotal": 1.0,
+        "automated.tests_apply_discount": 0.0,
+        "automated.tests_calculate_tax": 1.0,
+        "automated.tests_check_stock": 0.0,
+        "automated.tests_estimate_delivery": 0.0,
+        "automated.tests_process_order": 1.0,
+        "automated.tests_pass": 0.0,
+        "llm_judge.edge_case_coverage": 0.2,
+        "llm_judge.organization_and_readability": 0.85,
+        "llm_judge.fixtures_and_helpers": 0.95,
+        "llm_judge.assertion_quality": 0.8
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "CRITICAL FAILURE: Tests import and test a completely different API than what exists in order_processor.py. Tests reference OrderReceipt (does not exist), methods like check_inventory, get_item_price, apply_coupons, get_tax_rate, calculate_shipping (do not exist), and attributes like inventory, tax_rates, shipping_rates (do not exist). The source code has only 7 simpler methods (validate_order, calculate_subtotal, apply_discount, calculate_tax, check_stock, estimate_delivery, process_order) with different signatures. Tests will not run against the provided source. While the test suite itself shows excellent organization, fixture usage, and assertion quality, it completely fails the primary requirement of testing the actual provided module. The agent did not properly read and understand order_processor.py before writing tests.",
+    "execution_time_seconds": 218.49442982673645
+}

@@ -1,0 +1,26 @@
+{
+    "task_id": "task_meeting_advisory_acronyms",
+    "task_name": "NTIA Advisory Board Acronym Glossary",
+    "category": "meeting_analysis",
+    "score": 0.992,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.csmac_expanded": 1.0,
+        "automated.ntia_expanded": 1.0,
+        "automated.min_15_acronyms": 1.0,
+        "automated.min_20_acronyms": 1.0,
+        "automated.technical_acronyms": 1.0,
+        "automated.gov_agencies": 1.0,
+        "automated.categories_applied": 1.0,
+        "automated.alphabetical_sort": 1.0,
+        "llm_judge.criterion_1_acronym_coverage": 1.0,
+        "llm_judge.criterion_2_expansion_accuracy": 1.0,
+        "llm_judge.criterion_3_context_quality": 1.0,
+        "llm_judge.criterion_4_organization_categorization": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent performance across all criteria. The glossary identifies 37 acronyms (exceeds the ~25-30 expectation), with all expansions verified as accurate, including domain-specific terms like CSEA, ISART, and TSB 10-F. Context descriptions are substantive and meeting-specific rather than generic restatements. Alphabetical sorting, clear categorization (6 categories), and consistent table formatting are flawless. Minor deduction: agent created two identical output files (acronym_glossary.md and acronym_glossary_1.md) when only one was requested, representing unnecessary tool usage and verbosity. Core deliverable quality is genuinely excellent.",
+    "execution_time_seconds": 117.60209226608276
+}

@@ -1,0 +1,28 @@
+{
+    "task_id": "task_meeting_council_neighborhood",
+    "task_name": "Tampa City Council – Identify Neighborhood and District Mentions",
+    "category": "meeting_analysis",
+    "score": 0.9622727272727273,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.temple_crest": 1.0,
+        "automated.west_tampa": 1.0,
+        "automated.south_howard": 1.0,
+        "automated.east_tampa": 1.0,
+        "automated.highland_pines": 1.0,
+        "automated.rezoning_addresses": 0.5,
+        "automated.macdill": 1.0,
+        "automated.riverwalk": 1.0,
+        "automated.frequency_or_crossref": 1.0,
+        "automated.location_count": 1.0,
+        "llm_judge.completeness": 1.0,
+        "llm_judge.context": 0.9,
+        "llm_judge.organization": 1.0,
+        "llm_judge.breadth": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional delivery. Agent identified 89 distinct geographic entities across 291 total mentions, covering all expected districts, neighborhoods, specific addresses, and regional references. Organized with executive summary, frequency table, district-based overview, topic cross-reference, chronological index, and caveats. Context snippets are accurate though some speakers are marked unclear due to transcript format. Breadth spans specific street addresses through regional/national references. Minor deduction (0.9 vs 1.0 on context) for unavoidable speaker identification gaps in realtime caption source, but agent was transparent about this limitation.",
+    "execution_time_seconds": 449.0038208961487
+}

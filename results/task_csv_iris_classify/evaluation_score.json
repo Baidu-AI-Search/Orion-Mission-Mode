@@ -1,0 +1,25 @@
+{
+    "task_id": "task_csv_iris_classify",
+    "task_name": "Iris Species Classification Rules",
+    "category": "csv_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.discriminating_feature": 1.0,
+        "automated.setosa_separable": 1.0,
+        "automated.explicit_rules": 1.0,
+        "automated.accuracy_reported": 1.0,
+        "automated.high_accuracy": 1.0,
+        "automated.misclassification_analysis": 1.0,
+        "automated.confusion_matrix": 1.0,
+        "llm_judge.criterion_1_classification_rule_quality": 1.0,
+        "llm_judge.criterion_2_data_analysis_depth": 1.0,
+        "llm_judge.criterion_3_evaluation_rigor": 1.0,
+        "llm_judge.criterion_4_report_clarity": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent submission exceeding all requirements. Rules are clear, specific (PetalLength < 2.5 → setosa; PetalWidth < 1.7 → versicolor; else virginica), and achieve 96% accuracy (144/150), surpassing the 95% target. Feature analysis thoroughly compares all four features with per-species statistics, correctly identifying PetalLength/PetalWidth as discriminators and explaining separability. Evaluation includes complete per-rule accuracy, per-species accuracy table, properly formatted confusion matrix, and detailed misclassification analysis for all 6 errors with row indices and explanations. Report is well-organized into logical sections with professional markdown formatting, clear decision tree presentation, and intuitive flow. Setosa is perfectly classified (100%), all errors occur in versicolor/virginica boundary zone as expected. Minor note: duplicate markdown files created (not harmful). Work demonstrates strong data analysis methodology.",
+    "execution_time_seconds": 229.463205575943
+}

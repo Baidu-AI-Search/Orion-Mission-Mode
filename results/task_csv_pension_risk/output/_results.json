@@ -1,0 +1,309 @@
+{
+  "grand": {
+    "amount": 5711533247.0,
+    "payees": "877305",
+    "deferred": "483720",
+    "ratio": 0.5513703900011968
+  },
+  "top10_ratio": [
+    {
+      "abbr": "DC",
+      "name": "WASHINGTON DC",
+      "payees": 544,
+      "deferred": 3093,
+      "amount": 3675062.0,
+      "ratio": 5.685661764705882
+    },
+    {
+      "abbr": "NJ",
+      "name": "NEW JERSEY",
+      "payees": 23635,
+      "deferred": 25187,
+      "amount": 148148931.0,
+      "ratio": 1.0656653268457796
+    },
+    {
+      "abbr": "AK",
+      "name": "ALASKA",
+      "payees": 671,
+      "deferred": 663,
+      "amount": 4255260.0,
+      "ratio": 0.9880774962742176
+    },
+    {
+      "abbr": "ND",
+      "name": "NORTH DAKOTA",
+      "payees": 160,
+      "deferred": 158,
+      "amount": 595977.0,
+      "ratio": 0.9875
+    },
+    {
+      "abbr": "UT",
+      "name": "UTAH",
+      "payees": 2846,
+      "deferred": 2508,
+      "amount": 22130089.0,
+      "ratio": 0.8812368236120871
+    },
+    {
+      "abbr": "CA",
+      "name": "CALIFORNIA",
+      "payees": 44586,
+      "deferred": 35564,
+      "amount": 357704351.0,
+      "ratio": 0.7976494863858611
+    },
+    {
+      "abbr": "NY",
+      "name": "NEW YORK",
+      "payees": 51688,
+      "deferred": 40592,
+      "amount": 338720440.0,
+      "ratio": 0.7853273487076304
+    },
+    {
+      "abbr": "CO",
+      "name": "COLORADO",
+      "payees": 11959,
+      "deferred": 9104,
+      "amount": 116137831.0,
+      "ratio": 0.7612676645204448
+    },
+    {
+      "abbr": "CT",
+      "name": "CONNECTICUT",
+      "payees": 8922,
+      "deferred": 6733,
+      "amount": 47692611.0,
+      "ratio": 0.7546514234476575
+    },
+    {
+      "abbr": "HI",
+      "name": "HAWAII",
+      "payees": 4605,
+      "deferred": 3475,
+      "amount": 44406428.0,
+      "ratio": 0.754614549402823
+    }
+  ],
+  "top5_states": [
+    {
+      "abbr": "OH",
+      "name": "OHIO",
+      "amount": 536200568.0,
+      "payees": 77679,
+      "deferred": 32855,
+      "ratio": 0.4229585859756176
+    },
+    {
+      "abbr": "PA",
+      "name": "PENNSYLVANIA",
+      "amount": 456366987.0,
+      "payees": 78119,
+      "deferred": 34285,
+      "ratio": 0.43888170611502964
+    },
+    {
+      "abbr": "FL",
+      "name": "FLORIDA",
+      "amount": 429006153.0,
+      "payees": 59857,
+      "deferred": 19632,
+      "ratio": 0.3279816896937702
+    },
+    {
+      "abbr": "MI",
+      "name": "MICHIGAN",
+      "amount": 389726463.0,
+      "payees": 48363,
+      "deferred": 25387,
+      "ratio": 0.5249260798544342
+    },
+    {
+      "abbr": "CA",
+      "name": "CALIFORNIA",
+      "amount": 357704351.0,
+      "payees": 44586,
+      "deferred": 35564,
+      "ratio": 0.7976494863858611
+    }
+  ],
+  "top10_states": [
+    {
+      "abbr": "OH",
+      "name": "OHIO",
+      "amount": 536200568.0
+    },
+    {
+      "abbr": "PA",
+      "name": "PENNSYLVANIA",
+      "amount": 456366987.0
+    },
+    {
+      "abbr": "FL",
+      "name": "FLORIDA",
+      "amount": 429006153.0
+    },
+    {
+      "abbr": "MI",
+      "name": "MICHIGAN",
+      "amount": 389726463.0
+    },
+    {
+      "abbr": "CA",
+      "name": "CALIFORNIA",
+      "amount": 357704351.0
+    },
+    {
+      "abbr": "NY",
+      "name": "NEW YORK",
+      "amount": 338720440.0
+    },
+    {
+      "abbr": "IL",
+      "name": "ILLINOIS",
+      "amount": 304558510.0
+    },
+    {
+      "abbr": "IN",
+      "name": "INDIANA",
+      "amount": 291501620.0
+    },
+    {
+      "abbr": "NC",
+      "name": "NORTH CAROLINA",
+      "amount": 209398385.0
+    },
+    {
+      "abbr": "GA",
+      "name": "GEORGIA",
+      "amount": 189143311.0
+    }
+  ],
+  "top5_pct": 37.97587142015283,
+  "top10_pct": 61.320255639579926,
+  "districts_top5": [
+    {
+      "STATE_ABBREV_NAME": "OH-OHIO",
+      "DISTRICT": "13",
+      "amount": 111171352.0,
+      "payees": 14270,
+      "deferred": 5653
+    },
+    {
+      "STATE_ABBREV_NAME": "IN-INDIANA",
+      "DISTRICT": "1",
+      "amount": 99231495.0,
+      "payees": 10268,
+      "deferred": 2822
+    },
+    {
+      "STATE_ABBREV_NAME": "MI-MICHIGAN",
+      "DISTRICT": "5",
+      "amount": 97822484.0,
+      "payees": 6351,
+      "deferred": 3116
+    },
+    {
+      "STATE_ABBREV_NAME": "PA-PENNSYLVANIA",
+      "DISTRICT": "7",
+      "amount": 72016117.0,
+      "payees": 8919,
+      "deferred": 2784
+    },
+    {
+      "STATE_ABBREV_NAME": "OH-OHIO",
+      "DISTRICT": "6",
+      "amount": 71732509.0,
+      "payees": 10647,
+      "deferred": 3309
+    }
+  ],
+  "high": [
+    {
+      "abbr": "DC",
+      "name": "WASHINGTON DC",
+      "payees": 544,
+      "deferred": 3093,
+      "amount": 3675062.0,
+      "ratio": 5.685661764705882
+    },
+    {
+      "abbr": "NJ",
+      "name": "NEW JERSEY",
+      "payees": 23635,
+      "deferred": 25187,
+      "amount": 148148931.0,
+      "ratio": 1.0656653268457796
+    },
+    {
+      "abbr": "AK",
+      "name": "ALASKA",
+      "payees": 671,
+      "deferred": 663,
+      "amount": 4255260.0,
+      "ratio": 0.9880774962742176
+    },
+    {
+      "abbr": "ND",
+      "name": "NORTH DAKOTA",
+      "payees": 160,
+      "deferred": 158,
+      "amount": 595977.0,
+      "ratio": 0.9875
+    },
+    {
+      "abbr": "UT",
+      "name": "UTAH",
+      "payees": 2846,
+      "deferred": 2508,
+      "amount": 22130089.0,
+      "ratio": 0.8812368236120871
+    },
+    {
+      "abbr": "CA",
+      "name": "CALIFORNIA",
+      "payees": 44586,
+      "deferred": 35564,
+      "amount": 357704351.0,
+      "ratio": 0.7976494863858611
+    },
+    {
+      "abbr": "NY",
+      "name": "NEW YORK",
+      "payees": 51688,
+      "deferred": 40592,
+      "amount": 338720440.0,
+      "ratio": 0.7853273487076304
+    },
+    {
+      "abbr": "CO",
+      "name": "COLORADO",
+      "payees": 11959,
+      "deferred": 9104,
+      "amount": 116137831.0,
+      "ratio": 0.7612676645204448
+    },
+    {
+      "abbr": "CT",
+      "name": "CONNECTICUT",
+      "payees": 8922,
+      "deferred": 6733,
+      "amount": 47692611.0,
+      "ratio": 0.7546514234476575
+    },
+    {
+      "abbr": "HI",
+      "name": "HAWAII",
+      "payees": 4605,
+      "deferred": 3475,
+      "amount": 44406428.0,
+      "ratio": 0.754614549402823
+    }
+  ],
+  "medium_count": 25,
+  "low_count": 17,
+  "high_count": 10,
+  "excluded_count": 9
+}

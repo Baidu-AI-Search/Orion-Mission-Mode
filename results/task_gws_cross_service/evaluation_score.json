@@ -1,0 +1,20 @@
+{
+    "task_id": "task_gws_cross_service",
+    "task_name": "GWS Cross-Service Workflow",
+    "category": "integrations",
+    "score": 0.88,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.read_email": 1.0,
+        "automated.found_drive_file": 1.0,
+        "automated.created_event": 0.5,
+        "automated.shared_file": 0.5,
+        "automated.actions_summary": 1.0,
+        "llm_judge.Cross-Service Coordination": 1.0,
+        "llm_judge.Task Completeness": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Agent executed all four required steps flawlessly: (1) located and read the Q3 Planning email from alice@company.com with all details extracted; (2) created calendar event with correct date (July 22, 2026), time (10:00–11:30 AM ET), location, attendees, and agenda; (3) found Q3 Planning Agenda document and shared with bob@company.com with reader access; (4) wrote comprehensive summary to actions.md. Cross-service workflow was logical and efficient, with data successfully flowing from Gmail through Calendar and Drive operations. No inefficiencies or missed steps detected.",
+    "execution_time_seconds": 104.45046997070312
+}

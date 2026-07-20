@@ -1,0 +1,26 @@
+{
+    "task_id": "task_meeting_tech_action_items",
+    "task_name": "Meeting Action Items Extraction",
+    "category": "meeting_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.min_action_items": 1.0,
+        "automated.owners_identified": 1.0,
+        "automated.events_actions": 1.0,
+        "automated.announcements_actions": 1.0,
+        "automated.competitive_actions": 1.0,
+        "automated.messaging_actions": 1.0,
+        "automated.grouped_by_topic": 1.0,
+        "automated.deadlines_noted": 1.0,
+        "llm_judge.completeness_of_action_item_extraction": 1.0,
+        "llm_judge.owner_attribution_accuracy": 1.0,
+        "llm_judge.organization_and_structure": 1.0,
+        "llm_judge.context_and_deadline_accuracy": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional execution. Agent extracted all 14 expected action items across all five topic areas (Corporate Events, Product Announcements, Competitive Analysis, Infographic, Messaging Framework). Owner attribution is 100% accurate (William, Cormac, Brian, Samia, All PMMs correctly identified). Organization is exemplary: summary count at top, consistent grouping by topic with explanatory headers, numbered items with uniform structure (Owner/Action/Deadline/Context). Deadlines are accurate (Tuesday June 29 for announcements, end of day June 28 for messaging, \"not specified\" where appropriate, \"ongoing\" where continuous). Context is thorough and helpful for follow-up. Minor issue: duplicate file creation (action_items.md and action_items_1.md appear identical), but this is negligible. Agent's note that Talladega Nights homework was omitted from formal action items is reasonable editorial judgment.",
+    "execution_time_seconds": 140.1151258945465
+}

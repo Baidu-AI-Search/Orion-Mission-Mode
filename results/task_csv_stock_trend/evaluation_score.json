@@ -1,0 +1,26 @@
+{
+    "task_id": "task_csv_stock_trend",
+    "task_name": "Apple Stock 2014 Trend Analysis",
+    "category": "csv_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.trend_direction": 1.0,
+        "automated.starting_price": 1.0,
+        "automated.ending_price": 1.0,
+        "automated.percentage_change": 1.0,
+        "automated.monthly_breakdown": 1.0,
+        "automated.up_streak": 1.0,
+        "automated.down_streak": 1.0,
+        "automated.trend_periods": 1.0,
+        "llm_judge.data_analysis_accuracy": 1.0,
+        "llm_judge.trend_identification_quality": 1.0,
+        "llm_judge.report_structure_and_presentation": 1.0,
+        "llm_judge.completeness": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exemplary execution. All numerical values correct (start: $77.45, end: $110.03, +42.07%, up streak: 9 days Aug 11-21, down streak: 5 days Jan 27-31, year high: $118.80, year low: $69.00). Trend analysis is detailed and insightful, with five distinct sustained movement periods correctly identified and dated. Report is professionally structured with clear markdown sections, multiple formatted tables, logical flow, and comprehensive narrative. All requested elements present: overall trend (bullish), price milestones, monthly progression, consecutive streaks with context, sustained movements with specific dates and percentages, and a well-written summary. Context provided (iPhone 6, 7-for-1 split, capital returns) enhances credibility. No material omissions or errors.",
+    "execution_time_seconds": 190.19409275054932
+}

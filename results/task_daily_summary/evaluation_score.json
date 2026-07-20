@@ -1,0 +1,18 @@
+{
+    "task_id": "task_daily_summary",
+    "task_name": "Daily Research Summary Generation",
+    "category": "productivity",
+    "score": 0.94,
+    "max_score": 1.0,
+    "breakdown": {
+        "information_coverage_and_accuracy": 1.0,
+        "synthesis_and_prioritization": 1.0,
+        "structure_and_organization": 1.0,
+        "writing_quality_and_tone": 0.95,
+        "conciseness_and_length": 0.75
+    },
+    "grading_type": "llm_judge",
+    "timed_out": false,
+    "notes": "Exceptional performance. Agent successfully discovered and synthesized all five source files with high accuracy. The briefing demonstrates excellent executive judgment: correctly prioritizes MegaCorp churn risk, Nexus competitive threat, and SwiftCloud opportunity at the top. Organization is exemplary with clear sections, priority flags, tables for scannability, and actionable role-based recommendations. Writing is professional and C-suite appropriate. Minor deductions: (1) output length (~1100 words) exceeds the 500–800 word target by ~35%, though information density remains high; (2) writing is nearly perfect but could trim some secondary details. Overall, this is genuinely excellent executive briefing work warranting high marks.",
+    "execution_time_seconds": 88.19147253036499
+}

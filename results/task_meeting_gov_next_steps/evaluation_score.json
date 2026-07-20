@@ -1,0 +1,27 @@
+{
+    "task_id": "task_meeting_gov_next_steps",
+    "task_name": "NASA UAP Hearing Next Steps Extraction",
+    "category": "meeting_analysis",
+    "score": 0.9875,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.final_report_timeline": 1.0,
+        "automated.aaro_annual_report": 1.0,
+        "automated.sensor_deployment": 1.0,
+        "automated.five_eyes": 1.0,
+        "automated.budget_status": 1.0,
+        "automated.open_questions": 1.0,
+        "automated.timeframe_org": 1.0,
+        "automated.responsible_parties": 1.0,
+        "automated.timeline_viz": 1.0,
+        "llm_judge.Action Item Completeness": 1.0,
+        "llm_judge.Timeline and Specificity": 1.0,
+        "llm_judge.Open Questions and Gaps": 1.0,
+        "llm_judge.Organization and Visualization": 0.9
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional performance. Agent extracted 39 distinct next steps across all four timeframes (Immediate, Near-Term, Longer-Term, Open Questions), far exceeding the minimum requirement. Specific dates noted (end of July, August 1), clear status distinctions (Planned/In progress/Recommended), and responsible parties assigned throughout. All 10 major open questions identified, including scope definition, budget commitment, raw data collection, and crowdsourcing implementation. Professional tabular formatting with source attribution. Timeline visualization included with legend. Minor deduction: image link appears broken in transcript output, though this may be a transmission artifact rather than agent error. Document is immediately usable as a reference guide and executive summary.",
+    "execution_time_seconds": 311.11966252326965
+}

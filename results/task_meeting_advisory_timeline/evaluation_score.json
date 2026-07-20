@@ -1,0 +1,26 @@
+{
+    "task_id": "task_meeting_advisory_timeline",
+    "task_name": "NTIA Advisory Board Timeline and Deadlines",
+    "category": "meeting_analysis",
+    "score": 0.978,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.presidential_memo": 1.0,
+        "automated.october_report": 1.0,
+        "automated.next_meeting": 1.0,
+        "automated.september_target": 1.0,
+        "automated.january_target": 1.0,
+        "automated.ten_year_transition": 1.0,
+        "automated.isart_meeting": 1.0,
+        "automated.chronological_order": 1.0,
+        "llm_judge.completeness_of_timeline_entries": 0.95,
+        "llm_judge.accuracy_of_dates_and_timeframes": 0.95,
+        "llm_judge.context_and_attribution": 0.93,
+        "llm_judge.organization_and_usability": 0.95
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional performance. The agent extracted 28 chronological timeline entries covering all major dates from the transcript (June 2010 memo, October 1 2011 report, May 30 2012 meeting, July 24 2012 next meeting, September/January 2012-13 targets, 5- and 10-year transitions). All dates verified as accurate with no fabrications. Each entry includes clear attribution (Tom Power, Karl Nebbia, etc.), event description, and conditions/caveats. Report is comprehensively organized into five sections (chronological timeline, working group deadlines, next meeting details, historical references, transition timelines) with proper markdown tables and clear formatting. Working group deadlines and transition timelines sections exceed task requirements. Minor deductions only for potential room to include slightly more granular detail on some conditional statements, though existing coverage is already thorough.",
+    "execution_time_seconds": 167.51246976852417
+}

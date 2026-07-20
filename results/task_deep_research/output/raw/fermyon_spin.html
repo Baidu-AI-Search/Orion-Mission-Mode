@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/static/image/icon/favicon.ico">
+    
+    <!-- OneTrust Cookies Consent Notice start for www.fermyon.com -->
+    <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="019b08a9-d070-725d-a68c-7db8a39f4d6b" ></script>
+    <script type="text/javascript">
+    function OptanonWrapper() { }
+    </script>
+    <!-- OneTrust Cookies Consent Notice end for www.fermyon.com -->
+    <style>
+        #onetrust-banner-sdk.ot-bnr-w-logo .ot-bnr-logo {
+            height: auto !important;
+        }
+    </style>
+
+    <script data-type="application/javascript" type="text/plain" data-name="google-tag-manager">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T28H3XL');</script>
+
+    <!-- meta tags: base -->
+    <title>Develop serverless WebAssembly apps with Spin</title>
+    <meta name="description" content="Develop serverless WebAssembly apps with Spin">
+    <meta name="author" content="page.head.extra.author">
+    <meta name="keywords"
+        content="webassembly, fermyon, spin, fermyon cloud, serverless, wasm, spin, deploy, next wave">
+
+    <!-- meta tags: open graph -->
+    <meta property="og:url" name="url" content="/spin">
+    <meta property="og:type" name="type" content="article">
+    <meta property="og:title" name="title" content="Develop serverless WebAssembly apps with Spin">
+    <meta property="og:description" name="description" content="Develop serverless WebAssembly apps with Spin">
+    <meta property="og:image" name="image" content="/static/image/twc-spin.png">
+    <meta property="og:locale" name="locale" content="en_US">
+    <meta property="og:site_name" name="site" content="Fermyon • Experience the next wave of cloud computing.">
+
+    <!-- meta tags: search engine -->
+    <meta itemprop="name" content="Develop serverless WebAssembly apps with Spin">
+    <meta itemprop="description" content="Develop serverless WebAssembly apps with Spin">
+    <meta itemprop="image" content="/static/image/twc-spin.png">
+
+    <!-- meta tags: twitter -->
+    <meta name="twitter:title" content="Develop serverless WebAssembly apps with Spin">
+    <meta name="twitter:description" content="Develop serverless WebAssembly apps with Spin">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="/static/image/twc-spin.png">
+    <meta property="twitter:url" content="/spin">
+
+    <!-- meta tags: rss -->
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content=" 2022-01-25T00:22:56Z">
+    <meta property="article:modified_time" content=" 2022-01-25T00:22:56Z">
+
+    <link rel="icon" type="image/png" href="/static/image/icon/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/image/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/image/icon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/image/icon/apple-touch-icon.png">
+    <link rel="manifest" href="/static/image/icon/site.webmanifest">
+    <link rel="mask-icon" href="/static/image/icon/safari-pinned-tab.svg" color="#0d203f">
+    <meta name="msapplication-TileColor" content="#0d203f">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="alternate" type="application/rss+xml" title="Fermyon • Experience the next wave of cloud computing." href="/atom.xml">
+    <link rel="canonical" href="/spin">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+        integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <!-- dak/light mode -->
+    <script>
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+
+        // The default theme is the system theme, unless the user has explicitly overridden it.
+        var savedTheme = localStorage.getItem("theme") || systemTheme;
+        setTheme(savedTheme);
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const btn = document.querySelector(".dark-mode");
+            btn.addEventListener("click", () => {
+                if (savedTheme === "dark") {
+                    setTheme("light");
+                } else if (savedTheme === "light") {
+                    setTheme("dark");
+                }
+            });
+        })
+
+        // Change the website theme when the system theme changes.
+        window
+            .matchMedia("(prefers-color-scheme: dark)")
+            .addEventListener("change", (event) => {
+                if (event.matches) {
+                    setTheme("dark");
+                } else {
+                    setTheme("light");
+                }
+            });
+
+        // Change the website theme when a different tab changed it.
+        window.onstorage = () => {
+            // When local storage changes, update the theme.
+            setTheme(localStorage.getItem("theme"));
+        };
+
+
+        function setTheme(mode) {
+            localStorage.setItem("theme", mode);
+            savedTheme = mode;
+            document.documentElement.classList.toggle('dark-theme', mode === "dark");
+        }
+    </script>
+    <!-- Start of Posthog script -->
+    <script data-type="application/javascript" data-name="posthog">
+        !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+        posthog.init('phc_tijPWaicFtBjDUcd4W6dRry7lSls4WUvj0tIBauVnQV', { api_host: 'https://us.i.posthog.com', persistence: 'memory' })
+    </script>
+
+</head>
+
+<body>
+
+    <aside class="columns announcement-banner">
+        <div class="column container is-hidden-touch">
+            <a href="https://www.akamai.com/newsroom/press-release/akamai-announces-acquisition-of-function-as-a-service-company-fermyon" class="plausible-event-name=menu-announcement">
+                <span>
+                    Announcement: Fermyon Joins Akamai&nbsp;
+                    <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.20439 0L4.55176 4.01547L0.20439 8.03095L0.20439 0Z" fill="#0E092D" />
+                    </svg>
+                </span>
+            </a>
+        </div>
+        <div class="column container is-hidden-desktop">
+            <a href="https://www.akamai.com/newsroom/press-release/akamai-announces-acquisition-of-function-as-a-service-company-fermyon" class="plausible-event-name=menu-announcement">
+                <span>
+                    Fermyon Joins Akamai&nbsp;
+                    <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.20439 0L4.55176 4.01547L0.20439 8.03095L0.20439 0Z" fill="#0E092D" />
+                    </svg </span>
+            </a>
+        </div>
+    
+        <div class="stars">
+            <li class="small"></li>
+            <li class="small"></li>
+            <li></li>
+            <li class="small"></li>
+            <li class="small"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="small"></li>
+            <li></li>
+            <li></li>
+            <li class="small"></li>
+            <li class="small"></li>
+            <li class="small"></li>
+            <li class="small"></li>
+            <li></li>
+            <li class="small"></li>
+            <li class="small"></li>
+            <li class="small"></li>
+            <li></li>
+            <li class="small"></li>
+            <li class="small"></li>
+            <li></li>
+            <li class="small"></li>
+            <li class="small"></li>
+            <li class="small"></li>
+            <li class="small"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="small"></li>
+            <li></li>
+            <li class="small"></li>
+            <li class="small"></li>
+            <li></li>
+            <li></li>
+            <li class="small"></li>
+            <li></li>
+            <li class="small"></li>
+            <li class="small"></li>
+            <li></li>
+            <li class="small"></li>
+            <li class="small"></li>
+            <li class="small"></li>
+            <li class="small"></li>
+            <li></li>
+            <li></li>
+    </aside>
+
+    <header class="navbar is-transparent" id="topbar">
+    
+        <div class="navbar-burger burger is-hidden-desktop" data-target="fermyonMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+        <div id="fermyonMenu">
+
+    <nav>
+            <section>
+                <em>01</em>
+                <span class="tag">Projects</span>
+                <a href="https://spinframework.dev">Spin <i><img src="/static/image/icon-external.svg" alt="external link" style="width: 0.75rem;" /></i></a>
+                <a href="/wasm-functions">Wasm Functions</a>
+                <a href="/cloud">Cloud</a>
+                <a href="https://spinkube.dev">SpinKube <i><img src="/static/image/icon-external.svg" alt="external link" style="width: 0.75rem;" /></i></a>
+                <a href="/platform">Platform</a>
+            </section>
+    
+
+            <section>
+                <em>02</em>
+                <span class="tag">Resources</span>
+                <a href="/about">About</a>
+                <a href="/blog">Blog</a>
+                <a href="/jobs">Careers</a>
+                <a href="https://developer.fermyon.com">Docs</a>
+                <a href="https://developer.fermyon.com/hub">Example Apps</a>
+            </section>
+    
+            <section>
+                <em>03</em>
+                <span class="tag">Engage</span>
+                <a href="/contact">Contact</a>
+                <a href="/demo">Get a Demo &#187;</a>
+                <a href="https://cloud.fermyon.com/login" class="is-success">Fermyon Cloud Login &#187;</a>
+            </section>
+        </nav>
+    </div>
+
+        <div class="navbar-wrapper">
+    
+            <div class="navbar-start">
+                <a class="navbar-item logo-wrap" href="/#" title="Fermyon.com">
+                    <div class="logo">
+                        <svg width="685" height="87" viewBox="0 0 685 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M84.5571 18.574H16.4092V36.0591H63.5585V52.5029H16.4092V85H0V2.13016H1.86173H16.4092H84.5571V18.574Z" />
+                            <path
+                                d="M186.767 18.574H118.619V36.0591H165.768V52.5029H118.619V68.5128H186.767V85H118.619H104.071H102.21V2.13016H118.619H186.767V18.574Z"
+                                fill="" />
+                            <path
+                                d="M288.89 85H263.475L234.554 60.5295H220.829V85H204.419V2.13016H259.838C265.063 2.13016 269.811 3.44625 274.083 6.07841C278.384 8.71058 281.804 12.2394 284.344 16.6649C286.913 21.0904 288.197 25.9787 288.197 31.3298C288.197 36.681 286.927 41.5693 284.387 45.9948C281.847 50.3914 278.456 53.8913 274.213 56.4945C269.97 59.0978 265.222 60.4428 259.968 60.5295L288.89 85ZM220.829 18.5306V44.1725H259.838C263.129 44.1725 265.943 42.9143 268.281 40.3978C270.619 37.8813 271.788 34.8587 271.788 31.3298C271.788 27.801 270.619 24.7928 268.281 22.3053C265.943 19.7888 263.129 18.5306 259.838 18.5306H220.829Z"
+                                fill="" />
+                            <path
+                                d="M382.787 2H391.013V84.8698H374.604V32.9786L354.082 68.9033H343.474L322.952 32.9786V84.8698H306.543V2H314.769H324.207L348.756 45.0403L373.348 2H382.787Z"
+                                fill="" />
+                            <path
+                                d="M492.833 2.13016L459.409 46.8191V85H443V46.5588L408.666 2.13016H429.448L451.226 30.2886L472.311 2.13016H492.833Z"
+                                fill="" />
+                            <path
+                                d="M541.053 85C546.826 85 552.238 83.9298 557.289 81.7893C562.369 79.62 566.814 76.6407 570.624 72.8515C574.463 69.0624 577.465 64.6658 579.63 59.6618C581.823 54.6289 582.92 49.2633 582.92 43.5651C582.92 37.838 581.823 32.4724 579.63 27.4684C577.465 22.4644 574.463 18.0678 570.624 14.2786C566.814 10.4895 562.369 7.52466 557.289 5.38421C552.238 3.21485 546.826 2.13016 541.053 2.13016C535.28 2.13016 529.854 3.21485 524.774 5.38421C519.722 7.52466 515.277 10.4895 511.438 14.2786C507.628 18.0678 504.626 22.4644 502.433 27.4684C500.268 32.4724 499.186 37.838 499.186 43.5651C499.186 49.2633 500.268 54.6289 502.433 59.6618C504.626 64.6658 507.628 69.0624 511.438 72.8515C515.277 76.6407 519.722 79.62 524.774 81.7893C529.854 83.9298 535.28 85 541.053 85ZM541.053 18.6607C545.671 18.6607 549.885 19.7888 553.695 22.045C557.505 24.2722 560.536 27.2804 562.787 31.0695C565.068 34.8298 566.208 38.9949 566.208 43.5651C566.208 48.1352 565.068 52.3149 562.787 56.104C560.536 59.8643 557.505 62.8725 553.695 65.1286C549.885 67.3558 545.671 68.4694 541.053 68.4694C536.435 68.4694 532.22 67.3558 528.41 65.1286C524.6 62.8725 521.555 59.8643 519.275 56.104C517.024 52.3149 515.898 48.1352 515.898 43.5651C515.898 38.9949 517.024 34.8298 519.275 31.0695C521.555 27.2804 524.6 24.2722 528.41 22.045C532.22 19.7888 536.435 18.6607 541.053 18.6607Z"
+                                fill="" />
+                            <path
+                                d="M668.591 2.13016H685V85H676.774H666.166L616.939 25.0821V85H600.529V2.13016H619.363L668.591 62.0481V2.13016Z"
+                                fill="" />
+                        </svg>
+                        <span class="spin-front"><em></em></span>
+                        <span class="spin-back"></span>
+                    </div>
+                </a>
+    
+                <div class="navbar-menu" aria-label="menu">
+                    <div class="dropdown navbar-item is-hoverable is-hidden-touch">
+                        <div class="dropdown-trigger">
+                            <a href="#projects" aria-haspopup="true" class="navbar-item-hover"
+                                aria-controls="dropdown-projects" aria-label="menuitem">
+                                <span>Products</span>&nbsp;
+                                <small class="caret">
+                                    <svg width="5" viewBox="0 0 368 203" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <path
+                                                d="M6.16,32.63 L171.02,197.49 C174.5161,200.9861 179.2583,202.9509 184.204,202.9509 C189.1493,202.9509 193.8915,200.9861 197.388,197.49 L362.248,32.63 C365.7441,29.1339 367.7089,24.3917 367.7089,19.446 C367.7089,14.5007 365.7441,9.7585 362.248,6.262 C358.7519,2.7659 354.0097,0.8011 349.064,0.8011 L19.354,0.8011 C14.4087,0.8011 9.6665,2.7659 6.166,6.262 C2.6699,9.7581 0.7051,14.5003 0.7051,19.446 C0.7051,24.3913 2.6699,29.1335 6.166,32.63 L6.16,32.63 Z"
+                                                id="Path" fill="#525776" fill-rule="nonzero"></path>
+                                        </g>
+                                    </svg>
+                                </small>
+                            </a>
+                        </div>
+    
+                        <!-- project dropdown menu -->
+                        <div id="dropdown-projects" class="navbar-dropdown mega-menu is-boxed is-active">
+                            <div class="columns">
+                                <!-- OSS Column -->
+                                <div class="column">
+                                    <p class="mega-menu-title"><span class="mono">01</span>Build Your Apps:</p>
+    
+                                    <div class="menu-item">
+                                        <div class="menu-icon">
+                                            <img src="/static/image/icon-spin.png" alt="Spin" />
+                                        </div>
+                                        <div class="menu-content">
+                                            <a href="https://spinframework.dev" target="_blank">
+                                                <h3>
+                                                    Spin
+                                                    <span class="tag tag-cncf">CNCF</span>
+                                                </h3>
+                                                <p>Developer framework and CLI for building fast Wasm apps.</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Managed Infrastructure Column -->
+                                <div class="column">
+                                    <p class="mega-menu-title"><span class="mono">02A</span>Deploy to a Fermyon Service:</p>
+    
+                                    <div class="menu-item">
+                                        <div class="menu-icon">
+                                            <img src="/static/image/icon-functions.png" alt="Fermyon Wasm Functions" />
+                                        </div>
+                                        <div class="menu-content">
+                                            <a href="/wasm-functions" class="">
+                                                <h3>Wasm Functions</h3>
+                                                <p>Powerful engine for edge apps and functions on Akamai Cloud.</p>
+                                            </a>
+                                        </div>
+                                    </div>
+    
+                                    <div class="menu-item">
+                                        <div class="menu-icon">
+                                            <img src="/static/image/icon-cloud.png" alt="Fermyon Cloud" />
+                                        </div>
+                                        <div class="menu-content">
+                                            <a href="/cloud" class="">
+                                                <h3>Cloud</h3>
+                                                <p>Deploy your Spin apps to Fermyon's serverless cloud.</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Open Source Column -->
+                                <div class="column">
+                                    <p class="mega-menu-title"><span class="mono">02B</span> Deploy to Your Kubernetes:</p>
+    
+                                    <div class="menu-item">
+                                        <div class="menu-icon">
+                                            <img src="/static/image/icon-spinkube.png" alt="SpinKube" />
+                                        </div>
+                                        <div class="menu-content">
+                                            <a class="" href="https://www.spinkube.dev/" target="_blank">
+                                                <h3>
+                                                    SpinKube
+                                                    <span class="tag tag-cncf">CNCF</span>
+                                                </h3>
+                                                <p>Develop and operate Spin apps in your Kubernetes cliuster.</p>
+                                            </a>
+                                        </div>
+                                    </div>
+    
+                                    <div class="menu-item">
+                                        <div class="menu-icon">
+                                            <img src="/static/image/icon-fp4k.png" alt="Fermyon Platform for Kubernetes" />
+                                        </div>
+                                        <div class="menu-content">
+                                            <a href="platform" target="_blank" class="external">
+                                                <h3>Platform for Kubernetes</h3>
+                                                <p>Solution for large-scale, high performance enterprise clusters.</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /list of projects -->
+    
+                    <div class="dropdown navbar-item is-hoverable is-hidden-touch">
+                        <div class="dropdown-trigger">
+                            <a href="https://developer.fermyon.com/" aria-haspopup="true" class="navbar-item-hover"
+                                aria-controls="dropdown-developer" aria-label="menuitem">
+                                <span>Developer</span>&nbsp;
+                                <small class="caret">
+                                    <svg width="5" viewBox="0 0 368 203" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <path
+                                                d="M6.16,32.63 L171.02,197.49 C174.5161,200.9861 179.2583,202.9509 184.204,202.9509 C189.1493,202.9509 193.8915,200.9861 197.388,197.49 L362.248,32.63 C365.7441,29.1339 367.7089,24.3917 367.7089,19.446 C367.7089,14.5007 365.7441,9.7585 362.248,6.262 C358.7519,2.7659 354.0097,0.8011 349.064,0.8011 L19.354,0.8011 C14.4087,0.8011 9.6665,2.7659 6.166,6.262 C2.6699,9.7581 0.7051,14.5003 0.7051,19.446 C0.7051,24.3913 2.6699,29.1335 6.166,32.63 L6.16,32.63 Z"
+                                                id="Path" fill="#525776" fill-rule="nonzero"></path>
+                                        </g>
+                                    </svg>
+                                </small>
+                            </a>
+                        </div>
+    
+                        <div id="dropdown-developer" class="navbar-dropdown is-boxed">
+                            <a class="dropdown-item" href="https://spinframework.dev/quickstart"
+                                title="Developer Docs">Documentation</a>
+                            <a class="dropdown-item" href="https://developer.fermyon.com/hub/"
+                                title="Spin Up Hub: Examples and Templates">Examples &amp; Templates</a>
+    
+                            <a class="dropdown-item"
+                                href="https://developer.fermyon.com/wasm-languages/webassembly-language-support"
+                                title="See support for compiling languages to WebAssembly">Supported Languages</a>
+                            <hr class="divider">
+                            <a class="dropdown-item" href="/discord"
+                                title="github.com/fermyon">Discord</a>
+                            <a class="dropdown-item" href="https://github.com/fermyon/"
+                                title="github.com/fermyon">GitHub</a>
+                        </div>
+                    </div>
+    
+                    <div class="dropdown navbar-item is-hoverable is-hidden-touch">
+                        <div class="dropdown-trigger">
+                            <a class="navbar-item navbar-item-hover" href="/blog/index"
+                                title="Read the latest articles from Fermyon Technologies"><span>Blog</span></a>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div class="navbar-end">
+    
+                <section class="navbar-ctas navbar-ctas-secondary is-hidden-touch">
+                    <a class="navbar-item plausible-event-name=menu-contact-sales" href="/demo" target="_blank"
+                        aria-label="menuitem" title="Connect with our team">Contact Sales</a>
+    
+                    <a class="navbar-item plausible-event-name=menu-cloud-login" href="https://cloud.fermyon.com/login"
+                        target="_blank" aria-label="menuitem" title="Fermyon Cloud Login &#8250;">Cloud Login</a>
+                </section>
+    
+                <section class="navbar-ctas navbar-ctas-primary is-hidden-touch">
+    
+                    <a class="dark-mode navbar-item plausible-event-name=menu-toggle-light">
+                        <svg width="1.125rem" height="1.125rem" viewBox="0 0 502 502" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>Toggle light/dark mode</title>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                <g id="dark-mode" transform="translate(0.168000, 0.168250)" fill-rule="nonzero">
+                                    <g id="Group">
+                                        <path
+                                            d="M385.003107,250.83175 C385.099656,207.97975 364.717,167.66375 330.15,142.34175 C295.58,117.02175 250.994,109.74375 210.17,122.75975 C169.342,135.77975 137.197,167.52175 123.666,208.18175 C123.32616,208.93956 123.02928,209.72085 122.77928,210.51375 C114.53708,236.71275 114.53708,264.81475 122.77928,291.01375 C123.02928,291.81062 123.32616,292.58795 123.666,293.34575 C137.193,333.99075 169.318,365.72475 210.123,378.75175 C250.928,391.77875 295.502,384.52905 330.073,359.23975 C364.647,333.95075 385.057,293.66575 385.003107,250.82975 L385.003107,250.83175 Z M151.672,250.83175 L151.668093,250.83175 C151.7345,244.95675 152.328253,239.10175 153.441493,233.33175 L233.336493,233.33175 L233.336493,268.33175 L153.441493,268.33175 C152.328193,262.56225 151.734493,256.70675 151.668093,250.83175 L151.672,250.83175 Z M233.34,153.43675 L233.336094,198.33175 L167.047094,198.33175 C181.836094,174.69875 205.902094,158.39775 233.336094,153.43675 L233.34,153.43675 Z M167.047,303.32675 L233.336,303.32675 L233.336,348.22175 C205.902,343.26085 181.836,326.95975 167.047,303.32675 Z M268.337,348.22175 L268.337,153.43175 C299.095,158.88095 325.474,178.54075 339.482,206.45875 C353.494,234.37675 353.494,267.27475 339.482,295.19275 C325.474,323.11075 299.095,342.77075 268.337,348.21975 L268.337,348.22175 Z"
+                                            id="Shape"></path>
+                                        <path
+                                            d="M268.332,64.16375 L268.332,17.49975 C268.332,11.24585 264.9961,5.46875 259.582,2.34375 C254.1679,-0.78125 247.496,-0.78125 242.082,2.34375 C236.668,5.46875 233.332,11.24605 233.332,17.49975 L233.332,64.16375 C233.332,70.41765 236.6679,76.19475 242.082,79.31975 C247.4961,82.44475 254.168,82.44475 259.582,79.31975 C264.996,76.19475 268.332,70.41745 268.332,64.16375 Z"
+                                            id="Path"></path>
+                                        <path
+                                            d="M428.162,73.50175 C424.8808,70.21655 420.4276,68.36895 415.783,68.36895 C411.1424,68.36895 406.6892,70.21665 403.408,73.50175 L370.459,106.47075 C366.0371,110.89265 364.3106,117.33775 365.9278,123.38075 C367.5489,129.41985 372.2676,134.13875 378.3068,135.75975 C384.3498,137.37695 390.7948,135.65037 395.2168,131.22855 L428.1618,98.20855 C431.4313,94.93125 433.2712,90.48585 433.2712,85.85655 C433.2712,81.22375 431.4314,76.77845 428.1618,73.50155 L428.162,73.50175 Z"
+                                            id="Path"></path>
+                                        <path
+                                            d="M484.162,233.33175 L437.498,233.33175 C431.2441,233.33175 425.467,236.66765 422.342,242.08175 C419.217,247.49585 419.217,254.16775 422.342,259.58175 C425.467,264.99575 431.2443,268.33175 437.498,268.33175 L484.166,268.33175 L484.162093,268.33175 C490.415993,268.33175 496.193093,264.99585 499.318093,259.58175 C502.443093,254.16765 502.443093,247.49575 499.318093,242.08175 C496.193093,236.66775 490.415793,233.33175 484.162093,233.33175 L484.162,233.33175 Z"
+                                            id="Path"></path>
+                                        <path
+                                            d="M403.452,428.16175 C407.9364,432.17345 414.175,433.59925 419.956,431.93125 C425.7412,430.26715 430.265,425.74375 431.929,419.95825 C433.597,414.17705 432.17119,407.93825 428.1595,403.45425 L395.1675,370.43825 L395.1675,370.434344 C390.7456,366.012444 384.3005,364.285944 378.2575,365.903144 C372.2184,367.524244 367.4995,372.242944 365.8785,378.282144 C364.2613,384.325144 365.98788,390.770144 370.4097,395.192144 L403.452,428.16175 Z"
+                                            id="Path"></path>
+                                        <path
+                                            d="M233.332,437.50175 L233.332,484.16975 L233.332,484.165843 C233.332,490.419743 236.6679,496.196843 242.082,499.321843 C247.4961,502.446843 254.168,502.446843 259.582,499.321843 C264.996,496.196843 268.332,490.419543 268.332,484.165843 L268.332,437.501843 C268.332,431.247943 264.9961,425.470843 259.582,422.345843 C254.1679,419.220843 247.496,419.220843 242.082,422.345843 C236.668,425.470843 233.332,431.248143 233.332,437.501843 L233.332,437.50175 Z"
+                                            id="Path"></path>
+                                        <path
+                                            d="M73.502,428.16175 C76.7872,431.43515 81.2403,433.27505 85.881,433.27505 C90.5177,433.27505 94.9708,431.43525 98.256,428.16175 L131.248,395.14575 L131.251907,395.14575 C135.544907,390.70435 137.177707,384.32575 135.548807,378.36475 C133.916007,372.40385 129.263607,367.74375 123.302807,366.10675 C117.345807,364.47005 110.962807,366.098937 106.517807,370.38795 L73.501807,403.45395 C70.232307,406.73125 68.392407,411.17665 68.392407,415.80595 C68.392407,420.43875 70.232207,424.88405 73.501807,428.16095 L73.502,428.16175 Z"
+                                            id="Path"></path>
+                                        <path
+                                            d="M0,250.83175 C0,255.47235 1.8438,259.92555 5.125,263.20675 C8.4062,266.48795 12.8555,268.33175 17.5,268.33175 L64.164,268.33175 C70.4179,268.33175 76.195,264.99585 79.32,259.58175 C82.445,254.16765 82.445,247.49575 79.32,242.08175 C76.195,236.66775 70.4177,233.33175 64.164,233.33175 L17.5,233.33175 C12.8555,233.33175 8.4062,235.17555 5.125,238.45675 C1.8438,241.73795 0,246.19115 0,250.83175 Z"
+                                            id="Path"></path>
+                                        <path
+                                            d="M131.202,131.22175 C134.4872,127.93655 136.3309,123.48735 136.3309,118.84275 C136.3309,114.19815 134.4871,109.74505 131.202,106.46375 L98.206,73.49475 C93.7216,69.48305 87.483,68.05725 81.702,69.72525 C75.9168,71.38935 71.393,75.91275 69.729,81.69825 C68.061,87.47945 69.48681,93.71825 73.4985,98.20225 L106.4675,131.22225 C109.7527,134.49175 114.198,136.32775 118.8345,136.32775 C123.4712,136.32775 127.9165,134.49185 131.2015,131.22225 L131.202,131.22175 Z"
+                                            id="Path"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+    
+                    <!-- conditionally show the button CTAs -->
+
+
+                <a class="navbar-item button is-secondary is-rounded is-medium plausible-event-name=cta-spin-star"
+                        href="https://github.com/fermyon/spin" target="_blank" aria-label="menuitem" title="Star on GitHub">
+                        <img src="/static/image/icon/icon-github.svg" alt="Star on GitHub" />
+                        Star on GitHub
+                    </a>
+                    <a class="navbar-item button is-primary is-rounded is-medium plausible-event-name=cta-spin-quickstart"
+                        href="https://spinframework.dev/quickstart" target="_blank" aria-label="menuitem"
+                        title="Follow our Quickstart Docs page to get up and running with a Spin application">
+                        <img src="/static/image/spin-icon.svg" alt="Quickstart building and deploying with Spin" />
+                        Spin Quickstart
+                    </a>
+
+            </section>
+    
+            </div>
+        </div>
+    </header>
+    <main>
+<div class="page-wrap platform-page">
+
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+
+                <nav class="product-submenu is-flex">
+                    <span class="is-align-content-flex-start is-flex is-inline-flex">
+                        <a href="/blog/introducing-spin-v2">Announcement</a>
+                        <a href="https://spinframework.dev">Docs</a>
+                        <a href="https://spinframework.dev/install">Install Spin</a>
+                        <a href="https://twitter.com/spinframework" target="_blank">
+                        @spinframework
+                    </a>
+                    </span>
+
+                    <a href="https://developer.fermyon.com/hub" target="_blank" class="is-align-content-flex-end is-flex is-inline-flex">
+                        Deploy a Sample App
+                        &nbsp;
+                        <svg class="external-icon" width="12" height="12" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-top: 4px">
+                            <path d="M5.33333 1.86667H3.77333C2.80267 1.86667 2.31733 1.86667 1.9464 2.0556C1.62023 2.22173 1.35506 2.4869 1.18893 2.81307C1 3.184 1 3.66933 1 4.64V11.2267C1 12.1973 1 12.6827 1.18893 13.0536C1.35511 13.3797 1.62027 13.6449 1.9464 13.8111C2.31647 14 2.8018 14 3.77073 14H10.3626C11.3315 14 11.816 14 12.1861 13.8111C12.5128 13.6447 12.778 13.3795 12.9444 13.0536C13.1333 12.6827 13.1333 12.1982 13.1333 11.2293V9.66667M14 5.33333V1M14 1H9.66667M14 1L7.93333 7.06667" stroke="#E7D3F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div id="project-intro" class="intro">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half">
+                    
+                    <h1>Develop serverless WebAssembly apps with Spin</h1>
+                    <h2>Create, build, test, and deploy an app in just a few minutes.</h2>
+                    <div class="buttons">
+                        <a class="main-button button is-primary is-rounded is-medium" href="https://spinframework.dev/quickstart"
+                            target="_blank" rel="noopener noreferrer">
+                            <span>Get Started</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="column spin-intro-img is-half">
+                    <img src="/static/image/spin-intro-image.png" alt="Spin CLI example" />
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+    <section id="project-highlights">
+        <div class="container">
+            <div class="top-content has-text-centered">
+                <h1>Spin is the developer tool for building WebAssembly microservices and web applications</h1>
+                <p>Do more, faster. Pick your favorite language and dive into the important part using Spin's serverless framework. Connect your application to Redis, PostgreSQL, and other data services. And skip the boilerplate.</p>
+
+                <p>
+                    <br><a class="learn-more is-ghost" href="https://github.com/fermyon/spin" target="_blank" style="margin: 1.5rem auto">
+                    <iframe src="https://ghbtns.com/github-btn.html?user=fermyon&repo=spin&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="fermyon/spin GitHub"></iframe>
+                </a>
+                </p>
+            </div>
+            <div class="columns is-vcentered">
+                <div class="column is-half text-content">
+                    <div>
+                        <h1>Choose your language</h1>
+                        <h2>Spin SDKs are available in Python, Go, JavaScript, Rust, Go and .NET. And all WASI-compatible languages are <a href="https://spinframework.dev/language-support-overview">supported</a>.
+                        </h2>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <img src="/static/image/spin-nameless-1.png" alt="Spin SDKs are available in Rust, Go and .NET. And all WASI-compatible languages are supported.">
+                </div>
+            </div>
+            <div class="columns is-vcentered is-flex-direction-row-reverse spin-three-commands-wrap">
+                <div class="column">
+                    <div>
+                        <h1>Three commands are all you need</h1>
+                        <h2>Keep the development loop simple. Create a project with 'spin new'. Build it with 'spin build'. And test it locally with 'spin up'.</h2>
+                    </div>
+                </div>
+                <div class="column spin-three-commands">
+                    <img src="/static/image/spin-nameless-2.png" alt="Keep the development loop simple. Create a project with 'spin new'. Build it with spin build. And test it locally with spin up.">
+                </div>
+            </div>
+            <div class="columns is-vcentered">
+                <div class="column text-content">
+                    <div>
+                        <h1>See it in action on the Cloud</h1>
+                        <h2>Ready for production? Pushing to the <a href="./cloud">Fermyon Cloud</a> is only a 'spin deploy' away.</h2>
+                    </div>
+                </div>
+                <div class="column">
+                    <a href="./cloud"><img src="/static/image/screenshot-cloud-ui.jpg" alt="Ready for production? Pushing to the Fermyon Cloud is only a 'spin deploy' away."></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container" id="spin-features">
+        <div class="columns is-multiline is-centered">
+
+            <div class="column has-text-centered is-full platform-features-list feature-grid">
+
+                <div class="has-text-centered projects-title">
+                    <h3>Build full-stack applications</h3>
+                </div>
+
+                <div class="columns is-multiline is-mobile is-centered">
+                    <!-- list of features -->
+                    <div class="column is-one-third-tablet is-half-mobile feature-grid-item feature-grid-item-stacked">
+                        <span class="tag is-success">New</span>
+                        <img src="/static/image/icon/feature-icon-serverless-ai.svg" alt="Serverless AI" />
+                        <h5>
+                            <a href="./serverless-ai">
+                                Serverless AI &nbsp;
+                                <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.20439 0L4.55176 4.01547L0.20439 8.03095L0.20439 0Z" fill="#44EBC2"/></svg>
+                            </a>
+                        </h5>
+                        <p>Execute inferencing for LLMs directly from serverless apps.</p>
+                    </div>
+
+                    <div class="column is-one-third-tablet is-half-mobile feature-grid-item feature-grid-item-stacked">
+                        <img src="/static/image/icon/feature-icon-no-ops-db.svg" alt="SQLite Database" />
+                        <h5>
+                            SQLite Databases
+                        </h5>
+                        <p>Spin has a built-in database, which is always available - no Ops required.</p>
+                    </div>
+                    
+                    <div class="column is-one-third-tablet is-half-mobile feature-grid-item feature-grid-item-stacked">
+                        <img src="/static/image/icon/feature-icon-kv-store.svg" alt="Key/Value Store" />
+                        <h5>
+                            Key/Value Store
+                        </h5>
+                        <p>Quickly persist data in your apps with Spin's in-built local KV store.</p>
+                    </div>
+                    <!-- /feature row -->
+                    <!-- list of features -->
+                    <div class="column is-one-third-tablet is-half-mobile feature-grid-item">
+                        <img src="/static/image/icon/feature-icon-routing.svg" alt="HTTP & Redis Triggers" />
+                        <h5>
+                            HTTP &amp; Redis Triggers
+                        </h5>
+                        <p>Spin has a built-in HTTP web server and pub-sub Redis triggers, routing requests and messages to components.</p>
+                    </div>
+                    <div class="column is-one-third-tablet is-half-mobile feature-grid-item">
+                        <img src="/static/image/icon/feature-icon-relational-dbs.svg" alt="Relational Database Storage" />
+                        <h5>
+                            Relational Database Storage
+                        </h5>
+                        <p>'Bring your own DB' support for MySQL and PostgreSQL, where you host and manage the database outside of Spin.</p>
+                    </div>
+                    <div class="column is-one-third-tablet is-half-mobile feature-grid-item">
+                        <img src="/static/image/icon/feature-icon-variables.svg" alt="Variables & Secrets" />
+                        <h5>
+                            Variables &amp; Secrets
+                        </h5>
+                        <p>Dynamic app variables mean a simpler experience for rotating secrets, updating API endpoints, and more.</p>
+                    </div>
+                    <!-- /feature row -->
+                </div>
+
+                <div class="has-text-centered projects-title">
+                    <h3>frictionless developer experience</h3>
+                </div>
+
+                <div class="columns is-multiline is-mobile is-centered">
+                    <!-- list of features -->
+                    <div class="column is-one-third-tablet is-half-mobile feature-grid-item">
+                        <img src="/static/image/icon/feature-icon-cli.svg" alt="Powerful CLI" />
+                        <h5>
+                            Powerful CLI
+                        </h5>
+                        <p>Start, run and deploy projects with ease. Blinking cursor to deployed app in 66 seconds.</p>
+                    </div>
+                    <div class="column is-one-third-tablet is-half-mobile feature-grid-item">
+                        <img src="/static/image/icon/feature-icon-coding.svg" alt="Languages & SDKs" />
+                        <h5>
+                            Languages &amp; SDKs
+                        </h5>
+                        <p>Spin works with many, many <a href="https://spinframework.dev/language-support-overview">different languages</a>. all WASI-compatible languages are supported.</p>
+                    </div>
+                    <div class="column is-one-third-tablet is-half-mobile feature-grid-item">
+                        <img src="/static/image/icon/feature-icon-cli.svg" alt="Powerful CLI" />
+                        <h5>
+                            Local Dev
+                        </h5>
+                        <p>In-built commands like <code>spin watch</code> and <code>spin doctor</code> simplify the writing and debugging of apps.</p>
+                    </div>
+                    <!-- /feature row -->
+                </div>
+
+                <div class="has-text-centered projects-title">
+                    <h3>Powered by WebAssembly</h3>
+                </div>
+
+                <div class="columns is-multiline is-mobile is-centered">
+                    <!-- list of features -->
+                    <div class="column is-one-third-tablet is-half-mobile feature-grid-item">
+                        <img src="/static/image/icon/feature-icon-wasm.svg" alt="Wasm logo" />
+                        <h5>
+                            WebAssembly
+                        </h5>
+                        <p>Run event-driven Wasm services and web applications.</p>
+                    </div>
+                    <div class="column is-one-third-tablet is-half-mobile feature-grid-item">
+                        <img src="/static/image/icon/feature-icon-secure.svg" alt="Secure by Default" />
+                        <h5>
+                            Secure by Default
+                        </h5>
+                        <p>Ensure clear separation of services with sandboxing.</p>
+                    </div>
+                    <div class="column is-one-third-tablet is-half-mobile feature-grid-item">
+                        <img src="/static/image/icon/feature-icon-open-source.svg" alt="Open Source" />
+                        <h5>
+                            Open Source
+                        </h5>
+                        <p>
+                            Open Source code written by long-time OSS contributors.
+                        </p>
+                    </div>
+                    <!-- /feature row -->
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="sign-up columns is-vcentered">
+            <div class="column has-text-centered-mobile">
+                <p class="has-text-black">Be among the first to discover tomorrow's technology</p>
+            </div>
+            <div class="column is-narrow has-text-centered-mobile">
+                <a class="main-button button is-primary is-rounded" href="https://github.com/fermyon/spin"
+                    target="_blank" rel="noopener noreferrer">
+                    <span class="icon">
+                        <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px"
+                            height="24px">
+                            <path
+                                d="M10.9,2.1c-4.6,0.5-8.3,4.2-8.8,8.7c-0.5,4.7,2.2,8.9,6.3,10.5C8.7,21.4,9,21.2,9,20.8v-1.6c0,0-0.4,0.1-0.9,0.1 c-1.4,0-2-1.2-2.1-1.9c-0.1-0.4-0.3-0.7-0.6-1C5.1,16.3,5,16.3,5,16.2C5,16,5.3,16,5.4,16c0.6,0,1.1,0.7,1.3,1c0.5,0.8,1.1,1,1.4,1 c0.4,0,0.7-0.1,0.9-0.2c0.1-0.7,0.4-1.4,1-1.8c-2.3-0.5-4-1.8-4-4c0-1.1,0.5-2.2,1.2-3C7.1,8.8,7,8.3,7,7.6c0-0.4,0-0.9,0.2-1.3 C7.2,6.1,7.4,6,7.5,6c0,0,0.1,0,0.1,0C8.1,6.1,9.1,6.4,10,7.3C10.6,7.1,11.3,7,12,7s1.4,0.1,2,0.3c0.9-0.9,2-1.2,2.5-1.3 c0,0,0.1,0,0.1,0c0.2,0,0.3,0.1,0.4,0.3C17,6.7,17,7.2,17,7.6c0,0.8-0.1,1.2-0.2,1.4c0.7,0.8,1.2,1.8,1.2,3c0,2.2-1.7,3.5-4,4 c0.6,0.5,1,1.4,1,2.3v2.6c0,0.3,0.3,0.6,0.7,0.5c3.7-1.5,6.3-5.1,6.3-9.3C22,6.1,16.9,1.4,10.9,2.1z" />
+                        </svg>
+                    </span>
+                    <span>Spin on GitHub</span>
+                </a>
+                <a class="main-button button is-outlined is-rounded" href="https://spinframework.dev/install"
+                    target="_blank" rel="noopener noreferrer">
+                    <span>Install Spin</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section id="projects_new">
+    <div class="container">
+        <div class="has-text-centered projects-title">
+            PRODUCTS &amp; PROJECTS
+        </div>
+        <div class="columns is-desktop">
+            <div class="column is-7-desktop">
+                <div class="project-box box-left">
+                    <div class="project-content">
+                        <div class="project-logo is-vcentered columns">
+                            <div class="column">
+                                <svg width="251" height="20" viewBox="0 0 251 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18.3514 4.88078H3.74715V8.63801H13.8514V12.1715H3.74715V19.1545H0.230621V1.34731H0.629595H3.74715H18.3514V4.88078Z" />
+                                    <path
+                                        d="M40.2553 4.88078H25.651V8.63801H35.7552V12.1715H25.651V15.6117H40.2553V19.1545H25.651H22.5334H22.1344V1.34731H25.651H40.2553V4.88078Z" />
+                                    <path
+                                        d="M62.1405 19.1545H56.6941L50.4961 13.8963H47.5548V19.1545H44.0383V1.34731H55.9147C57.0343 1.34731 58.0518 1.63011 58.9673 2.19571C59.889 2.76132 60.622 3.5196 61.1663 4.47056C61.7168 5.42152 61.9921 6.47193 61.9921 7.62179C61.9921 8.77164 61.7199 9.82205 61.1756 10.773C60.6312 11.7178 59.9044 12.4698 58.9951 13.0292C58.0858 13.5886 57.0683 13.8776 55.9425 13.8963L62.1405 19.1545ZM47.5548 4.87146V10.3814H55.9147C56.6199 10.3814 57.2229 10.1111 57.724 9.57032C58.225 9.02958 58.4755 8.38007 58.4755 7.62179C58.4755 6.8635 58.225 6.2171 57.724 5.68257C57.2229 5.14183 56.6199 4.87146 55.9147 4.87146H47.5548Z" />
+                                    <path
+                                        d="M82.2629 1.31934H84.0258V19.1266H80.5093V7.97607L76.1113 15.6956H73.8381L69.4401 7.97607V19.1266H65.9235V1.31934H67.6864H69.7091L74.97 10.5679L80.2402 1.31934H82.2629Z" />
+                                    <path
+                                        d="M105.846 1.34731L98.6831 10.9502V19.1545H95.1666V10.8942L87.8088 1.34731H92.2625L96.9295 7.39803L101.448 1.34731H105.846Z" />
+                                    <path
+                                        d="M116.18 19.1545C117.417 19.1545 118.577 18.9246 119.659 18.4646C120.748 17.9985 121.7 17.3583 122.517 16.544C123.34 15.7298 123.983 14.7851 124.447 13.7098C124.917 12.6283 125.152 11.4754 125.152 10.2509C125.152 9.02026 124.917 7.8673 124.447 6.79203C123.983 5.71676 123.34 4.77201 122.517 3.95779C121.7 3.14357 120.748 2.50648 119.659 2.04654C118.577 1.58038 117.417 1.34731 116.18 1.34731C114.943 1.34731 113.78 1.58038 112.691 2.04654C111.609 2.50648 110.656 3.14357 109.833 3.95779C109.017 4.77201 108.373 5.71676 107.903 6.79203C107.439 7.8673 107.207 9.02026 107.207 10.2509C107.207 11.4754 107.439 12.6283 107.903 13.7098C108.373 14.7851 109.017 15.7298 109.833 16.544C110.656 17.3583 111.609 17.9985 112.691 18.4646C113.78 18.9246 114.943 19.1545 116.18 19.1545ZM116.18 4.89943C117.169 4.89943 118.073 5.14183 118.889 5.62663C119.706 6.10522 120.355 6.75163 120.837 7.56585C121.326 8.37385 121.57 9.26888 121.57 10.2509C121.57 11.233 121.326 12.1311 120.837 12.9453C120.355 13.7533 119.706 14.3997 118.889 14.8845C118.073 15.3631 117.169 15.6024 116.18 15.6024C115.19 15.6024 114.287 15.3631 113.47 14.8845C112.654 14.3997 112.001 13.7533 111.513 12.9453C111.03 12.1311 110.789 11.233 110.789 10.2509C110.789 9.26888 111.03 8.37385 111.513 7.56585C112.001 6.75163 112.654 6.10522 113.47 5.62663C114.287 5.14183 115.19 4.89943 116.18 4.89943Z" />
+                                    <path
+                                        d="M143.511 1.34731H147.028V19.1545H145.265H142.992L132.442 6.27925V19.1545H128.926V1.34731H132.962L143.511 14.2226V1.34731Z" />
+                                    <path
+                                        d="M164.313 0.96321C165.393 0.96321 166.327 1.11747 167.115 1.42599C167.904 1.71736 168.589 2.12015 169.172 2.63435V6.23371C168.761 5.9252 168.332 5.62525 167.886 5.33387C167.441 5.0425 166.935 4.80254 166.37 4.614C165.821 4.42546 165.17 4.33119 164.416 4.33119C163.387 4.33119 162.453 4.57972 161.613 5.07677C160.773 5.57383 160.105 6.24229 159.608 7.08214C159.111 7.92199 158.862 8.88182 158.862 9.96163C158.862 11.0243 159.111 11.9841 159.608 12.8411C160.105 13.681 160.773 14.3494 161.613 14.8465C162.453 15.3264 163.387 15.5664 164.416 15.5664C165.564 15.5664 166.524 15.395 167.295 15.0522C168.084 14.6922 168.795 14.2552 169.429 13.741V17.2118C168.846 17.7431 168.118 18.1716 167.244 18.4973C166.37 18.8058 165.393 18.9601 164.313 18.9601C163.079 18.9601 161.913 18.7458 160.816 18.3173C159.719 17.8717 158.751 17.2546 157.911 16.4662C157.071 15.6606 156.411 14.7094 155.931 13.6124C155.451 12.5155 155.211 11.2985 155.211 9.96163C155.211 8.62472 155.451 7.40779 155.931 6.31084C156.411 5.21389 157.071 4.2712 157.911 3.48277C158.751 2.6772 159.719 2.06016 160.816 1.63166C161.913 1.18603 163.079 0.96321 164.313 0.96321Z"
+                                        fill="#34E8BD" />
+                                    <path d="M178.573 1.34886V15.3607H187.186V18.5744H175V1.34886H178.573Z"
+                                        fill="#34E8BD" />
+                                    <path
+                                        d="M200.052 0.96321C201.286 0.96321 202.443 1.18603 203.523 1.63166C204.603 2.06016 205.554 2.6772 206.377 3.48277C207.217 4.2712 207.868 5.21389 208.331 6.31084C208.811 7.40779 209.051 8.62472 209.051 9.96163C209.051 11.2985 208.811 12.5155 208.331 13.6124C207.868 14.7094 207.217 15.6606 206.377 16.4662C205.554 17.2546 204.603 17.8717 203.523 18.3173C202.443 18.7458 201.286 18.9601 200.052 18.9601C198.818 18.9601 197.653 18.7458 196.556 18.3173C195.476 17.8717 194.516 17.2546 193.676 16.4662C192.854 15.6606 192.202 14.7094 191.722 13.6124C191.26 12.5155 191.028 11.2985 191.028 9.96163C191.028 8.62472 191.26 7.40779 191.722 6.31084C192.202 5.21389 192.854 4.2712 193.676 3.48277C194.516 2.6772 195.476 2.06016 196.556 1.63166C197.653 1.18603 198.818 0.96321 200.052 0.96321ZM200.052 4.33119C199.024 4.33119 198.098 4.57972 197.276 5.07677C196.47 5.57383 195.836 6.24229 195.373 7.08214C194.91 7.92199 194.679 8.88182 194.679 9.96163C194.679 11.0243 194.91 11.9841 195.373 12.8411C195.836 13.681 196.47 14.3494 197.276 14.8465C198.098 15.3264 199.024 15.5664 200.052 15.5664C201.081 15.5664 201.998 15.3264 202.803 14.8465C203.609 14.3494 204.243 13.681 204.706 12.8411C205.169 11.9841 205.4 11.0243 205.4 9.96163C205.4 8.88182 205.169 7.92199 204.706 7.08214C204.243 6.24229 203.609 5.57383 202.803 5.07677C201.998 4.57972 201.081 4.33119 200.052 4.33119Z"
+                                        fill="#34E8BD" />
+                                    <path
+                                        d="M228.987 1.29744V11.7613C228.987 13.2525 228.653 14.538 227.985 15.6178C227.333 16.6805 226.442 17.5032 225.311 18.0859C224.197 18.6515 222.945 18.9343 221.557 18.9343C220.169 18.9343 218.909 18.6515 217.778 18.0859C216.647 17.5032 215.747 16.6805 215.078 15.6178C214.427 14.538 214.101 13.2525 214.101 11.7613V1.29744H217.675V11.5556C217.675 12.8754 218.026 13.8695 218.729 14.538C219.449 15.1893 220.392 15.5064 221.557 15.4892C222.705 15.4892 223.64 15.1636 224.359 14.5123C225.079 13.8609 225.439 12.8754 225.439 11.5556V1.29744H228.987Z"
+                                        fill="#34E8BD" />
+                                    <path
+                                        d="M241.873 0.9375C243.69 0.9375 245.284 1.30601 246.655 2.04302C248.026 2.78003 249.089 3.80843 249.843 5.12819C250.614 6.44796 251 7.99912 251 9.78166C251 11.4785 250.64 13.0211 249.92 14.4094C249.2 15.7806 248.172 16.869 246.835 17.6746C245.498 18.4801 243.904 18.8829 242.053 18.8829C240.87 18.8829 239.688 18.8229 238.505 18.703C237.34 18.583 236.234 18.4202 235.188 18.2145V1.60595C236.251 1.43456 237.34 1.2803 238.454 1.14318C239.568 1.00606 240.707 0.9375 241.873 0.9375ZM241.95 4.27977C241.436 4.27977 240.896 4.30548 240.33 4.3569C239.765 4.40832 239.242 4.47688 238.762 4.56258V15.2578C239.276 15.3607 239.808 15.4378 240.356 15.4892C240.922 15.5235 241.453 15.5407 241.95 15.5407C243.081 15.5407 244.05 15.3007 244.855 14.8208C245.661 14.3237 246.278 13.6467 246.706 12.7897C247.135 11.9327 247.349 10.9729 247.349 9.91021C247.349 8.81326 247.135 7.84486 246.706 7.00501C246.278 6.16515 245.661 5.50527 244.855 5.02535C244.05 4.5283 243.081 4.27977 241.95 4.27977Z"
+                                        fill="#34E8BD" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h1>From blinking cusor to deployed app in less than two minutes</h1>
+
+                        Fermyon Cloud is the easiest way to deploy and manage native WebAssembly applications
+
+                        <div class="buttons">
+                            <a class="main-button button is-outlined is-rounded" href="/cloud" target="_self">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="project-box box-right">
+                    <div class="project-content">
+                        <div class="project-logo is-vcentered columns">
+                            <div class="column">
+                                <svg width="285" height="47" viewBox="0 0 285 47" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3.71191" y="26.8613" width="13.4551" height="13.4306" fill="#EF946C" />
+                                    <rect x="3.71191" y="46.7756" width="3.71175" height="46.7757"
+                                        transform="rotate(-180 3.71191 46.7756)" fill="#253F65" />
+                                    <rect x="17.167" y="26.8613" width="13.4551" height="13.4306" fill="#EF946C" />
+                                    <rect x="30.6221" y="26.8613" width="13.4551" height="13.4306" fill="#EF946C" />
+                                    <rect x="3.71191" y="40.2919" width="13.4551" height="6.48375" fill="#EF946C" />
+                                    <rect x="17.167" y="40.2919" width="13.4551" height="6.48375" fill="#EF946C" />
+                                    <rect x="30.6221" y="40.2919" width="13.4551" height="6.48375" fill="#EF946C" />
+                                    <rect x="3.71191" y="13.4306" width="13.4551" height="13.4306" fill="#EF946C" />
+                                    <rect x="17.167" y="13.4306" width="13.4551" height="13.4306" fill="#EF946C" />
+                                    <rect x="30.6221" y="13.4306" width="13.4551" height="13.4306" fill="#EF946C" />
+                                    <rect x="3.71191" width="13.4551" height="13.4306" fill="#EF946C" />
+                                    <rect x="17.167" width="13.4551" height="13.4306" fill="#F7C9B6" />
+                                    <rect x="30.6221" width="13.4551" height="13.4306" fill="#EF946C" />
+                                    <path
+                                        d="M80.2734 15.9219C81.4922 15.9219 82.5547 16.1172 83.4609 16.5078C84.3672 16.8828 85.0703 17.4062 85.5703 18.0781C86.0859 18.75 86.3438 19.5234 86.3438 20.3984C86.3438 21.1797 86.1328 21.875 85.7109 22.4844C85.3047 23.0938 84.7891 23.5625 84.1641 23.8906C84.6328 24.0156 85.0859 24.2266 85.5234 24.5234C85.9609 24.8047 86.3203 25.1875 86.6016 25.6719C86.8828 26.1406 87.0234 26.7422 87.0234 27.4766C87.0234 28.3516 86.7578 29.1562 86.2266 29.8906C85.6953 30.6094 84.9531 31.1875 84 31.625C83.0469 32.0625 81.9375 32.2812 80.6719 32.2812C79.9844 32.2812 79.2422 32.25 78.4453 32.1875C77.6484 32.1406 76.8906 32.0703 76.1719 31.9766C75.4531 31.8672 74.8438 31.7578 74.3438 31.6484V16.5078C75.2188 16.3203 76.1641 16.1797 77.1797 16.0859C78.1953 15.9766 79.2266 15.9219 80.2734 15.9219ZM80.2734 18.8984C79.2734 18.8984 78.3828 18.9766 77.6016 19.1328V22.9297H80.5312C81.3281 22.9297 81.9531 22.7344 82.4062 22.3438C82.875 21.9531 83.1094 21.4531 83.1094 20.8438C83.1094 20.2188 82.8281 19.7422 82.2656 19.4141C81.7188 19.0703 81.0547 18.8984 80.2734 18.8984ZM77.6016 29.0703C78.0391 29.1797 78.5391 29.2578 79.1016 29.3047C79.6797 29.3359 80.1406 29.3516 80.4844 29.3516C81.3906 29.3516 82.1328 29.1719 82.7109 28.8125C83.3047 28.4531 83.6016 27.9453 83.6016 27.2891C83.6016 26.6328 83.2969 26.1484 82.6875 25.8359C82.0781 25.5078 81.3438 25.3438 80.4844 25.3438H77.6016V29.0703ZM99.4959 16.1797L106.808 32H102.988L101.793 29.0703H95.5819L94.3866 32H90.5662L97.8787 16.1797H99.4959ZM98.6991 21.5L96.7303 26.3047H100.668L98.6991 21.5ZM117.922 16.2969C118.656 16.2969 119.375 16.3984 120.078 16.6016C120.781 16.8047 121.414 17.1172 121.976 17.5391C122.554 17.9609 123.007 18.4922 123.336 19.1328C123.679 19.7578 123.851 20.5078 123.851 21.3828C123.851 22.3047 123.617 23.1016 123.148 23.7734C122.695 24.4297 122.093 24.9453 121.343 25.3203C120.593 25.6797 119.781 25.8906 118.906 25.9531L124.554 32H120.265L114.804 25.5781V32H111.547V16.2969H117.922ZM114.804 19.3438V23.3047C115.179 23.4297 115.593 23.5312 116.047 23.6094C116.515 23.6719 116.984 23.7031 117.453 23.7031C118.39 23.7031 119.132 23.5156 119.679 23.1406C120.242 22.75 120.523 22.2031 120.523 21.5C120.523 20.7344 120.226 20.1875 119.632 19.8594C119.054 19.5156 118.343 19.3438 117.5 19.3438H114.804ZM140.941 16.2969V19.2266H135.925V31.9297H132.691V19.2266H127.675V16.2969H140.941ZM149.335 16.2969V22.6953H156.624V16.2969H159.859V32H156.624V25.625H149.335V32H146.077V16.2969H149.335ZM173.644 15.9453C174.769 15.9453 175.823 16.1484 176.808 16.5547C177.792 16.9453 178.659 17.5078 179.409 18.2422C180.175 18.9609 180.769 19.8203 181.191 20.8203C181.628 21.8203 181.847 22.9297 181.847 24.1484C181.847 25.3672 181.628 26.4766 181.191 27.4766C180.769 28.4766 180.175 29.3438 179.409 30.0781C178.659 30.7969 177.792 31.3594 176.808 31.7656C175.823 32.1562 174.769 32.3516 173.644 32.3516C172.519 32.3516 171.456 32.1562 170.456 31.7656C169.472 31.3594 168.597 30.7969 167.831 30.0781C167.081 29.3438 166.488 28.4766 166.05 27.4766C165.628 26.4766 165.417 25.3672 165.417 24.1484C165.417 22.9297 165.628 21.8203 166.05 20.8203C166.488 19.8203 167.081 18.9609 167.831 18.2422C168.597 17.5078 169.472 16.9453 170.456 16.5547C171.456 16.1484 172.519 15.9453 173.644 15.9453ZM173.644 19.0156C172.706 19.0156 171.863 19.2422 171.113 19.6953C170.378 20.1484 169.8 20.7578 169.378 21.5234C168.956 22.2891 168.745 23.1641 168.745 24.1484C168.745 25.1172 168.956 25.9922 169.378 26.7734C169.8 27.5391 170.378 28.1484 171.113 28.6016C171.863 29.0391 172.706 29.2578 173.644 29.2578C174.581 29.2578 175.417 29.0391 176.152 28.6016C176.886 28.1484 177.464 27.5391 177.886 26.7734C178.308 25.9922 178.519 25.1172 178.519 24.1484C178.519 23.1641 178.308 22.2891 177.886 21.5234C177.464 20.7578 176.886 20.1484 176.152 19.6953C175.417 19.2422 174.581 19.0156 173.644 19.0156ZM190.663 16.2969V29.0703H198.515V32H187.405V16.2969H190.663ZM210.964 15.9453C212.089 15.9453 213.143 16.1484 214.128 16.5547C215.112 16.9453 215.979 17.5078 216.729 18.2422C217.495 18.9609 218.089 19.8203 218.511 20.8203C218.948 21.8203 219.167 22.9297 219.167 24.1484C219.167 25.3672 218.948 26.4766 218.511 27.4766C218.089 28.4766 217.495 29.3438 216.729 30.0781C215.979 30.7969 215.112 31.3594 214.128 31.7656C213.143 32.1562 212.089 32.3516 210.964 32.3516C209.839 32.3516 208.776 32.1562 207.776 31.7656C206.792 31.3594 205.917 30.7969 205.151 30.0781C204.401 29.3438 203.807 28.4766 203.37 27.4766C202.948 26.4766 202.737 25.3672 202.737 24.1484C202.737 22.9297 202.948 21.8203 203.37 20.8203C203.807 19.8203 204.401 18.9609 205.151 18.2422C205.917 17.5078 206.792 16.9453 207.776 16.5547C208.776 16.1484 209.839 15.9453 210.964 15.9453ZM210.964 19.0156C210.026 19.0156 209.182 19.2422 208.432 19.6953C207.698 20.1484 207.12 20.7578 206.698 21.5234C206.276 22.2891 206.065 23.1641 206.065 24.1484C206.065 25.1172 206.276 25.9922 206.698 26.7734C207.12 27.5391 207.698 28.1484 208.432 28.6016C209.182 29.0391 210.026 29.2578 210.964 29.2578C211.901 29.2578 212.737 29.0391 213.472 28.6016C214.206 28.1484 214.784 27.5391 215.206 26.7734C215.628 25.9922 215.839 25.1172 215.839 24.1484C215.839 23.1641 215.628 22.2891 215.206 21.5234C214.784 20.7578 214.206 20.1484 213.472 19.6953C212.737 19.2422 211.901 19.0156 210.964 19.0156ZM240.288 16.1797V32H237.03V22.4375L232.999 26.8438H232.061L227.983 22.4375V32H224.725V16.1797H225.827L232.53 23.1641L239.186 16.1797H240.288ZM257.331 22.6719V25.3203H250.393V29.1172H258.245V32H247.135V16.2969H258.245V19.1094H250.393V22.6719H257.331ZM284.522 16.2969L279.225 32H276.975L273.483 21.8984L269.991 32H267.741L262.514 16.2969H266.217L269.123 26.2109L272.428 16.2969H274.608L277.866 26.2109L280.819 16.2969H284.522Z" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <h1>A micro-CMS for WebAssembly and Spin </h1>
+
+                        Compiled to WebAssembly, Bartholomew can run in any Spin environment.
+
+                        <div class="buttons">
+                            <a class="main-button button is-outlined is-rounded"
+                                href="https://github.com/fermyon/bartholomew" target="_blank" rel="noopener noreferrer">
+                                <span class="icon">
+                                    <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        width="24px" height="24px">
+                                        <path
+                                            d="M10.9,2.1c-4.6,0.5-8.3,4.2-8.8,8.7c-0.5,4.7,2.2,8.9,6.3,10.5C8.7,21.4,9,21.2,9,20.8v-1.6c0,0-0.4,0.1-0.9,0.1 c-1.4,0-2-1.2-2.1-1.9c-0.1-0.4-0.3-0.7-0.6-1C5.1,16.3,5,16.3,5,16.2C5,16,5.3,16,5.4,16c0.6,0,1.1,0.7,1.3,1c0.5,0.8,1.1,1,1.4,1 c0.4,0,0.7-0.1,0.9-0.2c0.1-0.7,0.4-1.4,1-1.8c-2.3-0.5-4-1.8-4-4c0-1.1,0.5-2.2,1.2-3C7.1,8.8,7,8.3,7,7.6c0-0.4,0-0.9,0.2-1.3 C7.2,6.1,7.4,6,7.5,6c0,0,0.1,0,0.1,0C8.1,6.1,9.1,6.4,10,7.3C10.6,7.1,11.3,7,12,7s1.4,0.1,2,0.3c0.9-0.9,2-1.2,2.5-1.3 c0,0,0.1,0,0.1,0c0.2,0,0.3,0.1,0.4,0.3C17,6.7,17,7.2,17,7.6c0,0.8-0.1,1.2-0.2,1.4c0.7,0.8,1.2,1.8,1.2,3c0,2.2-1.7,3.5-4,4 c0.6,0.5,1,1.4,1,2.3v2.6c0,0.3,0.3,0.6,0.7,0.5c3.7-1.5,6.3-5.1,6.3-9.3C22,6.1,16.9,1.4,10.9,2.1z" />
+                                    </svg>
+                                </span>
+                                <span>GitHub Repo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-fermyon">
+
+        <div class="container" id="fermyon-benefits">
+            <div class="columns values values-size">
+                <div class="column is-offset-one-quarter-mobile is-three-quarters-mobile is-half-tablet is-offset-half-tablet">
+                    <div class="projects-title">
+    
+                        <h3>Why Fermyon?</h3>
+                        <h2>The next wave of cloud compute looks like this</h2>
+    
+                        <p>Architected to compile and ship your code as Wasm binaries, Fermyon is a lighter, faster and <strong>truly serverless</strong> cloud. No need to deal with images, OS layers or instance config.</p>
+    
+                        <article class="quote quote-values">
+                            <p>Finally the promise of true sustainable serverless cloud computing is here with Fermyon’s Cloud offering — a platform that allows me to use almost any language, is incredibly easy to use and blazingly fast.”</p>
+    
+                            <p>— <span>Federico Dionisi</span></p>
+                        </article>
+    
+                        <div class="second-wave">
+                            <div class="wave-label wave-label-big">
+                                <span>typical app image<br>200MB+</span>
+                            </div>
+                        </div>
+                        <div class="next-wave">
+                            <div class="wave-label wave-label-small"><span>app.wasm<br>3.2MB</span></div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+            <div id="coldStart" class="columns values values-cold-start">
+                <div class="column is-full">
+                    <section>
+                        <h1 class="spin-caption">Hello<br>
+                        supersonic.</h1>
+                        <h1 class="lamda-caption">Goodbye<br>
+                        cold starts.</h1>
+    
+                        <div class="scale">
+                            <aside>
+                                <h2>
+                                    <small>Spin</small>
+                                    <span class="fermyon-time"></span><em>ms</em>
+                                </h2>
+                                <div class="bar bar-spin"><em></em></div>
+                            </aside>
+                            <aside>
+                                <h2>
+                                    <small>AWS Lambda</small>
+                                    <span class="lamda-time"></span><em>ms</em>
+                                </h2>
+                                <div class="bar bar-lamda"><em></em></div>
+                            </aside>
+                            <span class="timing timing-0">0ms</span>
+                            <span class="timing timing-1">50ms</span>
+                            <span class="timing timing-2">100ms</span>
+                            <span class="timing timing-3">150ms</span>
+                            <span class="timing timing-4">200ms</span>
+                            <span class="timing timing-5">250ms</span>
+                        </div>
+                        <div class="source"><a href="https://mikhail.io/serverless/coldstarts/aws/" target="_blank" rel="noopener noreferrer">Data source</a>. <a href="https://www.youtube.com/watch?v=VTh1ZSo0I9g&t=15s" target="_blank" rel="noopener noreferrer">Learn more</a>.</div>
+                    </section>
+                </div>
+            </div>
+    
+            <div class="columns values values-features values-trio">
+                <div class="column is-one-third has-text-centered">
+                    <img src="/static/image/value-icon-scale.png" alt="icon" />
+                    <h2>Automatically scales-to-zero</h2>
+                    <p>Requests are so fast, services can shut back down seamlessly between requests — minimizing compute consumption.</p>
+                </div>
+                <div class="column is-one-third has-text-centered">
+                    <img src="/static/image/value-icon-secure.png" alt="icon" />
+                    <h2>Secure by <br>default</h2>
+                    <p>Every Wasm application runs in a secure sandbox — eliminating cross contamination.</p>
+                </div>
+                <div class="column is-one-third has-text-centered">
+                    <img src="/static/image/value-icon-light.png" alt="icon" />
+                    <h2>Compute less, save more</h2>
+                    <p>A lighter, faster, and more efficient model means lower cost and more sustainable for your business and our planet.</p>
+                </div>
+            </div>
+    
+            <div class="columns values values-features is-centered">
+                <div class="column is-centered is-two-thirds has-text-centered">
+                    <h2>We've got you covered.</h2>
+                    <p>Not just JavaScript &mdash; compile almost any language to Wasm.</p>
+    
+                    <div class="values-language-row">Rust, Go, Python, JavaScript, .NET, Ruby, C#</div>
+                    
+                    <p>Fermyon’s Spin works with mainstream languages like JS/TS, Python, .NET, Rust, and Go. We adhere to the WASI standard, which means dozens of languages that have support for Wasm can be compiled, built and deployed.</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="page-wrap page-showcase is-max-desktop is-max-widescreen">
+            <div class="quotes-wrapper">
+            
+            <div class="projects-title has-text-centered">
+                <h2 class="is-4">Quotes</h2>
+                <p></p>
+            </div>
+        
+            <div class="columns is-variable is-8 is-flex-wrap-wrap">
+                <article class="column is-three-fifths-desktop is-full-touch">
+                    <div class="card card-quote card-quote-hero">
+                        <div class="card-content">
+                            <p class="is-size-3-touch">“We've been able to take a Kubernetes batch process of tens of thousands of orders and cut the compute cost by 60%, without trading off performance”</p>
+        
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-64x64">
+                                        <img class="is-rounded" src="/static/image/partners/kai.jpg" alt="Kai Walter" />
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">Kai Walter</p>
+                                    <p class="subtitle is-6">Distinguished Architect, ZEISS Group</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="card card-quote card-quote-hero">
+                        <div class="card-content">
+                            <p class="is-size-3-touch">“It enabled us to build holistic service components, including smart contracts, and integrated a zero trust architecture with confidence that third-party code wouldn't introduce risk in such a critical environment”</p>
+        
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-64x64">
+                                        <img class="is-rounded" src="/static/image/partners/pj.jpg" alt="PJ Łaszkowicz" />
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">PJ Łaszkowicz</p>
+                                    <p class="subtitle is-6">Technical Director, Omnijar </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+        
+                <article class="column is-two-fifths-desktop is-full-touch">
+                    <div class="card card-quote">
+                        <div class="card-content">
+                            <p class="is-size-3-touch">“Fermyon not only reduces complexity but also continues to address enterprise cloud computing pain points head-on while also considering the growing demand for increased profitability and productivity.”</p>
+        
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <img class="is-rounded" src="/static/image/partners/paul.jpg" alt="Paul Nashawaty" />
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">Paul Nashawaty</p>
+                                    <p class="subtitle is-6">Principal Analyst at The Futurum Group</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="card card-quote">
+                        <div class="card-content">
+                            <p class="is-size-3-touch">“It took me 13 lines of code and 2 commands (spin build, spin cloud deploy) to build and deploy a simple 'chatGPT like' app with Fermyon”</p>
+        
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <img class="is-rounded" src="/static/image/partners/seb.jpg" alt="Sébastien Blanc" />
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">Sébastien Blanc</p>
+                                    <p class="subtitle is-6">Aiven.io</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="card card-quote">
+                        <div class="card-content">
+                            <p class="is-size-3-touch">“I'm getting some hands on time with WebAssembly by playing around with Fermyon and their Spin framework. I think it's extra dope.”</p>
+        
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <img class="is-rounded" src="/static/image/partners/kelsey.jpg" alt="Kelsey Hightower" />
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">Kelsey Hightower</p>
+                                    <p class="subtitle is-6">Former Distinguished Engineer, Google</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+        
+            </div>
+        </div> <!-- include partners -->
+            <div class="columns mt-2">
+                <section class="cta-landing cta-landing-bottom">
+                    <h1>Deploy and run for free</h1>
+    
+                    <p>No tricks. You can run apps on Fermyon Cloud without having to worry about an expiration date. You can opt into future, paid upgrades later on if you need to.</p>
+    
+                    <div class="buttons">
+                        <a class="main-button button is-primary is-rounded cta-login-to-cloud plausible-event-name=cta-cloud-home-signup-bottom" href="https://cloud.fermyon.com/" target="_blank" rel="noopener noreferrer">
+                            <span>Sign up for Cloud</span>
+                        </a>
+                        <a class="main-button button is-secondary is-outline is-rounded plausible-event-name=cta-cloud-docs-bottom" href="https://developer.fermyon.com" target="_blank" rel="noopener noreferrer">
+                            <span>Read the Docs</span>
+                        </a>
+    
+                    </div>
+                </section>
+    
+            </div>
+        </div>
+        <div class="bg-pattern bg-pattern-bottom"></div>
+    </section>
+</div>
+
+<section style="background-color: rgba(255,255,255,0.02);">
+    <div class="container">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <!-- examples appear here -->
+        <div class="columns is-multiline is-mobile is-0 card-example-list" id="features-and-examples">
+            <div class="column is-one-third-desktop is-half-tablet is-full-mobile ">
+                <div class="projects-title">
+                    <h3 class="has-text-left">Feature Highlights</h3>
+                </div>
+                <ul class="list list-features">
+                    <li>
+                        <a href="./serverless-ai">
+                            <img src="/static/image/feature-serverless-ai.svg" alt="Serverless AI" class="inactive" />
+                            <img src="/static/image/feature-serverless-ai-active.png" alt="Serverless AI" class="active" />
+                            Serverless AI &nbsp;
+                            <span class="tag tag-new">New</span>
+        
+                            <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.20439 0L4.55176 4.01547L0.20439 8.03095L0.20439 0Z" fill="#ffffff"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./blog/announcing-custom-domains">
+                            <img src="/static/image/feature-custom-domain.svg" alt="Custom Domains"  class="inactive" />
+                            <img src="/static/image/feature-custom-domain-active.svg" alt="Custom Domains" class="active" />
+                            Custom Domains
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./blog/announcing-noops-sql-db">
+                            <img src="/static/image/feature-noops-database.svg" alt="SQLite Databases" />
+                            <img src="/static/image/feature-noops-database-active.svg" alt="SQLite Databases" class="active" />
+                            SQLite Databases
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./blog/introducing-fermyon-cloud-key-value-store">
+                            <img src="/static/image/feature-key-value.svg" alt="Key/Value Store" class="inactive" />
+                            <img src="/static/image/feature-key-value-active.svg" alt="Key/Value Store" class="active" />
+                            Key/Value Stores
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="column is-two-thirds-desktop is-half-tablet is-full-mobile card-list">
+                <div class="projects-title has-text-left">
+                    <h3 class="has-text-left">
+                        <a href="https://developer.fermyon.com/hub" target="_blank">Start building <span><img src="/static/image/icon-external.svg" /></span></a>
+                    </h3>
+                </div>
+        
+                <div class="columns card-overflow">
+        
+                <div class="column is-one-third-desktop is-full-touch">
+                            <a class="card" href="https://developer.fermyon.com/hub/preview/sample_newsreader_ai" target="_blank">
+                                <header>
+                                    <span class="category">Sample</span>
+        
+                                    <span class="icon"><img src="/static/image/icon-github.svg" alt="GitHub" /></span>
+                                </header>
+        
+                                <article>
+                                    <h3>AI News Feeder</h3>
+        
+                                    <p class="summary">
+                                        Parses an RSS feed and builds a prompt from the results.
+                                    </p>
+        
+                                    <div class="tags">
+                                        <span>AI</span>
+                                        <span>Inferencing</span>
+                                        <span>RSS</span>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+
+                <div class="column is-one-third-desktop is-full-touch">
+                            <a class="card" href="https://developer.fermyon.com/hub/preview/template_nextjs" target="_blank">
+                                <header>
+                                    <span class="category">Template</span>
+        
+                                    <span class="icon"><img src="/static/image/icon-github.svg" alt="GitHub" /></span>
+                                </header>
+        
+                                <article>
+                                    <h3>Spin Next.js Starter</h3>
+        
+                                    <p class="summary">
+                                        Build and statically export your Next.js 13 app as a WebAssembly Spin application.
+                                    </p>
+        
+                                    <div class="tags">
+                                        <span>JS</span>
+                                        <span>Webapp</span>
+                                        <span>React</span>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+
+                <div class="column is-one-third-desktop is-full-touch">
+                            <a class="card" href="https://developer.fermyon.com/hub/preview/sample_sentiment_analysis" target="_blank">
+                                <header>
+                                    <span class="category">Sample</span>
+        
+                                    <span class="icon"><img src="/static/image/icon-github.svg" alt="GitHub" /></span>
+                                </header>
+        
+                                <article>
+                                    <h3>Sentiment Analysis API</h3>
+        
+                                    <p class="summary">
+                                        AI app with a sentiment analysis API, demonstrating how LLM inferencing and KV stores work together.
+                                    </p>
+        
+                                    <div class="tags">
+                                        <span>AI</span>
+                                        <span>Key/Value</span>
+                                        <span>JS</span>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+
+        
+        </div>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </div>
+        </div>    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <section class="footer-wrap container">
+
+            <div class="columns footer-links-wrap">
+                <div class="column is-two-thirds is-full-touch">
+                    <div class="columns is-multiline is-mobile">
+                        <div class="column is-one-quarter-desktop is-full-mobile footer-links">
+                            <h3>Open Source Projects</h3>
+                            <a href="/spin">Spin</a>
+                            <a href="https://spinkube.dev" target="_blank">SpinKube</a>
+                            <a href="/open-source-promise">Open Source Promise</a>
+                        </div>
+                        
+                        <div class="column is-one-quarter-desktop is-full-mobile footer-links">
+                            <h3>Fermyon Products</h3>
+                            <a href="/cloud">Cloud</a>
+                            <a href="/platform">Platform for Kubernetes</a>
+                            <a href="/wasm-functions">Wasm Functions</a>
+                        </div>
+
+                        <div class="column is-one-quarter-desktop is-full-mobile footer-links">
+                            <h3>Resources</h3>
+                            
+                            <a href="https://developer.fermyon.com">Developer Docs</a>
+                            <a href="/wasm-languages/webassembly-language-support/">Language Support</a>
+                            <a href="/serverless-guide/">The Serverless Guide</a>
+                        </div>
+                        <div class="column is-one-quarter-desktop is-full-mobile footer-links">
+                            <h3>Company</h3>
+                            <a href="/about">About</a>
+                            <a href="/contact">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-one-third-desktop is-full-mobile">
+                    <div class="columns">
+
+                        <div class="column footer-social has-text-centered-touch has-text-left-desktop">
+                            <h2>
+                                Building faster, denser cloud compute - powered by WebAssembly.
+                            </h2>
+
+                            <a href="/newsletter" class="button is-outline is-rounded plausible-event-name=cta-footer-newsletter">Subscribe to Updates</a>
+
+                            <p>
+                                <a href="https://discord.gg/AAFNfS7NGf" target="_blank" rel="noopener noreferrer" class="footer-discord" title="Join Fermyon's Discord Server"><img src="/static/image/icon/discord.svg" alt="Join Fermyon's Discord Server" /></a>
+                                <a href="https://github.com/fermyon" target="_blank" rel="noopener noreferrer" class="footer-github" title="Fermyon's GitHub Page"><img src="/static/image/icon/github.svg" alt="Fermyon's GitHub Page" /></a>
+                                <a href="https://www.linkedin.com/company/fermyon/" target="_blank" rel="noopener noreferrer" class="footer-linkedin" title="Follow Fermyon on LinkedIn"><img src="/static/image/icon/linkedIn.svg" alt="Follow Fermyon on LinkedIn" /></a>
+                                <a href="https://bsky.app/profile/fermyon.com" target="_blank" rel="noopener noreferrer" class="footer-bsky" title="Follow @fermyon.com on Bluesky"><img src="/static/image/icon/bsky.svg" alt="Follow @fermyon.com on Bluesky" /></a>
+                                <a href="https://twitter.com/fermyontech" target="_blank" rel="noopener noreferrer" class="footer-twitter" title="Follow @fermyontech on Twitter"><img src="/static/image/icon/twitter.svg" alt="Follow @fermyontech on Twitter" /></a>
+                                <a href="https://www.youtube.com/@fermyontech" target="_blank" rel="noopener noreferrer" class="footer-youtube" title="Subscribe to @fermyontech on YouTube"><img src="/static/image/icon/youtube.svg" alt="Subscribe to @fermyontech on YouTube" /></a>
+                                </a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="columns is-hidden-touch">
+                <div class="column is-half">
+                    <img src="/static/image/fermyon-badge.png" alt="This website runs on Fermyon Cloud" class="footer-badge plausible-event-name=cta-footer-runson">
+                </div>
+            </div>
+
+            <div class="container footer-nav is-hidden-mobile">
+                <div class="columns">
+                    <div class="column">
+                        <nav class="navbar" role="navigation" aria-label="footer navigation">
+                            <div class="navbar-start">
+                                <div class="navbar-item"><a href="/code-of-conduct">Code of Conduct</a></div>
+                                <div class="navbar-item"><a href="/legal">Legal</a></div>
+                                <div class="navbar-item"><a href="/privacy-policy">Privacy</a></div>
+                                <div class="navbar-item"><a href="/atom">RSS</a></div>
+                                <div class="navbar-item has-text-right"><a href="/sitemap">Sitemap</a></div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script defer src="/static/js/headroom.min.js"></script>
+    <script defer src="/static/js/highlight.min.js"></script>
+    <script defer src="/static/js/main.js"></script>
+    <script defer data-domain="fermyon.com" src="https://plausible.io/js/script.tagged-events.js"></script>
+    
+    <!-- embed HS widget on sales pages -->
+    <script data-type="text/javascript" id="hs-script-loader" async defer data-src="//js-na1.hs-scripts.com/21155010.js" data-name="hubspot-chat"></script>
+    
+    <!-- embed form spam protection and HS widget on contact pages -->
+
+    <div class="modal modal-connect" id="getUpdates">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="box">
+          <section class="modal-wrapper">
+            <h2 class="has-text-centered">Connect with Fermyon</h2>
+    
+            <div class="columns">
+              <div class="column is-one-third-desktop is-full-touch">
+                <a href="https://discord.gg/AAFNfS7NGf" target="_blank" rel="noopener noreferrer" class="connect-link">
+                  <h3>Chat on Discord</h3>
+                  <img src="/static/image/connect-chat.svg" class="is-hidden-touch" alt="Chat on Discord" />
+                </a>
+              </div>
+              <div class="column is-one-third-desktop is-full-touch">
+                 <a href="/demo" target="_blank" rel="noopener noreferrer" class="connect-link">
+                  <h3>Schedule a Meeting</h3>
+                  <img src="/static/image/connect-meeting.svg" class="is-hidden-touch" alt="Schedule a Meeting" />
+                </a>
+              </div>
+              <div class="column is-one-third-desktop is-full-touch">
+                <a href="/about/#cta" target="_blank" rel="noopener noreferrer" class="connect-link">
+                  <h3>Become an Insider</h3>
+                  <img src="/static/image/connect-insider.svg" class="is-hidden-touch" alt="Become an Insider" />
+                </a>
+              </div>
+            </div>
+          </section>
+    
+        </div>
+      </div>
+      <button class="modal-close is-large is-rounded" aria-label="close">Close</button>
+    </div>
+</body>
+</html>

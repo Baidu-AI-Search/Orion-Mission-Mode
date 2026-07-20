@@ -1,0 +1,29 @@
+{
+    "task_id": "task_email_triage",
+    "task_name": "Email Inbox Triage",
+    "category": "productivity",
+    "score": 0.9458181818181818,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.file_created": 1.0,
+        "automated.all_emails_covered": 1.0,
+        "automated.priorities_assigned": 1.0,
+        "automated.categories_assigned": 1.0,
+        "automated.actions_assigned": 1.0,
+        "automated.outage_is_p0": 1.0,
+        "automated.alert_linked_to_outage": 1.0,
+        "automated.client_is_high_priority": 1.0,
+        "automated.spam_is_low_priority": 1.0,
+        "automated.sorted_by_priority": 0.5,
+        "automated.has_summary_section": 1.0,
+        "llm_judge.priority_assignment_accuracy": 0.9,
+        "llm_judge.categorization_quality": 1.0,
+        "llm_judge.action_recommendations": 0.95,
+        "llm_judge.contextual_awareness_and_connections": 0.95,
+        "llm_judge.report_structure_and_usability": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent triage report. All 13 emails correctly categorized and prioritized with only minor nuance on auth-service code review (rated P1 vs P2—defensible given it blocks Thursday mobile release). Specific, actionable recommendations for every email. Exceptional contextual awareness: explicitly connected monitoring alert to DB outage, recognized $2M client value, flagged security deadline urgency. Report structure is professional, scannable, and immediately actionable with clear executive summary, logical sequencing, and visual organization. The day plan at the top effectively guides resource allocation. Minor deduction only for the single debatable priority call; otherwise near-perfect execution.",
+    "execution_time_seconds": 92.20825147628784
+}

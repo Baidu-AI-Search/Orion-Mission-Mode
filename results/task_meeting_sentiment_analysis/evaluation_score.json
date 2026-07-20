@@ -1,0 +1,24 @@
+{
+    "task_id": "task_meeting_sentiment_analysis",
+    "task_name": "Meeting Sentiment Analysis",
+    "category": "meeting_analysis",
+    "score": 0.96,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.file_created": 1.0,
+        "automated.overall_sentiment": 1.0,
+        "automated.topic_breakdown": 1.0,
+        "automated.team_dynamics": 1.0,
+        "automated.quotes_included": 1.0,
+        "automated.engagement_assessed": 1.0,
+        "automated.concerns_identified": 1.0,
+        "automated.tonal_distinction": 1.0,
+        "llm_judge.analytical_depth": 0.92,
+        "llm_judge.evidence_based_observations": 0.94,
+        "llm_judge.practical_value": 0.91
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent execution. The analysis demonstrates sophisticated understanding of team dynamics beyond surface-level sentiment labels. Topic-by-topic breakdown is nuanced and contextual—e.g., recognizing events discussion as 'practical and slightly apologetic' rather than simply 'neutral.' Team dynamics section is particularly strong, capturing psychological safety, facilitator model, and the energy arc. All major claims are grounded in specific quotes and moments; the five quotes are well-chosen and illustrative (especially the 'debbie downer' feedback and Cormac's trade-offs objection). Practical value is high: flags real coordination gaps (GTM responsiveness), process issues (template copy-paste errors), and timeline pressures that a leader could act on. The 'Potential Concerns' section is substantive, not alarmist. Minor redundancy: two identical files created. Overall, this is well above average—reserves 1.0 for perfection, but this is genuinely strong work.",
+    "execution_time_seconds": 198.0010552406311
+}

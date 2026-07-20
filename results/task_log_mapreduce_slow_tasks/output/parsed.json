@@ -1,0 +1,171 @@
+{
+  "job_start": "2015-10-17T15:37:59.481000",
+  "job_end": "2015-10-17T15:42:46.468000",
+  "job_duration_s": 286.987,
+  "maps": [
+    {
+      "task_id": "task_1445062781478_0011_m_000000",
+      "type": "map",
+      "assigned_ts": "2015-10-17T15:38:01.588000",
+      "running_ts": "2015-10-17T15:38:02.050000",
+      "succeeded_ts": "2015-10-17T15:40:34.116000",
+      "duration_assigned": 152.528,
+      "duration_running": 152.066,
+      "final_attempt_no": 0,
+      "container": "container_1445062781478_0011_01_000002",
+      "retries": []
+    },
+    {
+      "task_id": "task_1445062781478_0011_m_000001",
+      "type": "map",
+      "assigned_ts": "2015-10-17T15:38:01.591000",
+      "running_ts": "2015-10-17T15:38:02.042000",
+      "succeeded_ts": "2015-10-17T15:40:50.092000",
+      "duration_assigned": 168.501,
+      "duration_running": 168.05,
+      "final_attempt_no": 0,
+      "container": "container_1445062781478_0011_01_000003",
+      "retries": []
+    },
+    {
+      "task_id": "task_1445062781478_0011_m_000002",
+      "type": "map",
+      "assigned_ts": "2015-10-17T15:38:01.592000",
+      "running_ts": "2015-10-17T15:38:02.041000",
+      "succeeded_ts": "2015-10-17T15:40:50.266000",
+      "duration_assigned": 168.674,
+      "duration_running": 168.225,
+      "final_attempt_no": 0,
+      "container": "container_1445062781478_0011_01_000004",
+      "retries": []
+    },
+    {
+      "task_id": "task_1445062781478_0011_m_000003",
+      "type": "map",
+      "assigned_ts": "2015-10-17T15:38:01.592000",
+      "running_ts": "2015-10-17T15:38:02.045000",
+      "succeeded_ts": "2015-10-17T15:40:32.079000",
+      "duration_assigned": 150.487,
+      "duration_running": 150.034,
+      "final_attempt_no": 0,
+      "container": "container_1445062781478_0011_01_000005",
+      "retries": []
+    },
+    {
+      "task_id": "task_1445062781478_0011_m_000004",
+      "type": "map",
+      "assigned_ts": "2015-10-17T15:38:01.593000",
+      "running_ts": "2015-10-17T15:38:02.047000",
+      "succeeded_ts": "2015-10-17T15:40:50.566000",
+      "duration_assigned": 168.973,
+      "duration_running": 168.519,
+      "final_attempt_no": 0,
+      "container": "container_1445062781478_0011_01_000006",
+      "retries": []
+    },
+    {
+      "task_id": "task_1445062781478_0011_m_000005",
+      "type": "map",
+      "assigned_ts": "2015-10-17T15:38:01.593000",
+      "running_ts": "2015-10-17T15:38:02.052000",
+      "succeeded_ts": "2015-10-17T15:40:28.630000",
+      "duration_assigned": 147.037,
+      "duration_running": 146.578,
+      "final_attempt_no": 0,
+      "container": "container_1445062781478_0011_01_000007",
+      "retries": []
+    },
+    {
+      "task_id": "task_1445062781478_0011_m_000006",
+      "type": "map",
+      "assigned_ts": "2015-10-17T15:38:01.594000",
+      "running_ts": "2015-10-17T15:38:02.033000",
+      "succeeded_ts": "2015-10-17T15:41:25.713000",
+      "duration_assigned": 204.119,
+      "duration_running": 203.68,
+      "final_attempt_no": 0,
+      "container": "container_1445062781478_0011_01_000008",
+      "retries": [
+        {
+          "attempt_no": 1,
+          "assigned_ts": "2015-10-17T15:39:25.740000",
+          "running_ts": "2015-10-17T15:39:25.757000",
+          "end_status": "KILLED",
+          "end_ts": "2015-10-17T15:41:25.731000",
+          "duration_from_assigned": 119.991,
+          "speculative": true
+        }
+      ]
+    },
+    {
+      "task_id": "task_1445062781478_0011_m_000007",
+      "type": "map",
+      "assigned_ts": "2015-10-17T15:38:01.594000",
+      "running_ts": "2015-10-17T15:38:02.036000",
+      "succeeded_ts": "2015-10-17T15:41:12.316000",
+      "duration_assigned": 190.722,
+      "duration_running": 190.28,
+      "final_attempt_no": 0,
+      "container": "container_1445062781478_0011_01_000009",
+      "retries": [
+        {
+          "attempt_no": 1,
+          "assigned_ts": "2015-10-17T15:40:33.843000",
+          "running_ts": "2015-10-17T15:40:33.865000",
+          "end_status": "KILLED",
+          "end_ts": "2015-10-17T15:41:12.341000",
+          "duration_from_assigned": 38.498,
+          "speculative": true
+        }
+      ]
+    },
+    {
+      "task_id": "task_1445062781478_0011_m_000008",
+      "type": "map",
+      "assigned_ts": "2015-10-17T15:38:01.595000",
+      "running_ts": "2015-10-17T15:38:02.034000",
+      "succeeded_ts": "2015-10-17T15:40:52.232000",
+      "duration_assigned": 170.637,
+      "duration_running": 170.198,
+      "final_attempt_no": 0,
+      "container": "container_1445062781478_0011_01_000010",
+      "retries": []
+    },
+    {
+      "task_id": "task_1445062781478_0011_m_000009",
+      "type": "map",
+      "assigned_ts": "2015-10-17T15:38:01.596000",
+      "running_ts": "2015-10-17T15:38:02.035000",
+      "succeeded_ts": "2015-10-17T15:39:24.265000",
+      "duration_assigned": 82.669,
+      "duration_running": 82.23,
+      "final_attempt_no": 0,
+      "container": "container_1445062781478_0011_01_000011",
+      "retries": []
+    }
+  ],
+  "reduces": [
+    {
+      "task_id": "task_1445062781478_0011_r_000000",
+      "type": "reduce",
+      "assigned_ts": "2015-10-17T15:40:29.834000",
+      "running_ts": "2015-10-17T15:40:29.854000",
+      "succeeded_ts": "2015-10-17T15:42:46.420000",
+      "duration_assigned": 136.586,
+      "duration_running": 136.566,
+      "final_attempt_no": 0,
+      "container": "container_1445062781478_0011_01_000013",
+      "retries": []
+    }
+  ],
+  "map_stats": {
+    "min": 82.669,
+    "max": 204.119,
+    "mean": 160.4347,
+    "median": 168.5875,
+    "stdev": 32.53042074069542,
+    "min_running": 82.23,
+    "max_running": 203.68,
+    "mean_running": 159.986
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "summary": "Detected 6 brute-force attack source(s) targeting this SSH server. The most aggressive attacker was 183.62.140.253 with 149 failed attempts. Attackers primarily targeted common usernames (root, admin, etc.) indicating automated botnet/script activity. Reverse DNS mismatches detected on 1 source(s), suggesting spoofed or compromised hosts.",
+  "brute_force_sources": [
+    {
+      "ip": "183.62.140.253",
+      "total_attempts": 149,
+      "first_seen": "Dec 10 10:54:29",
+      "last_seen": "Dec 10 10:59:43",
+      "usernames_tried": [
+        "123",
+        "123456",
+        "boot",
+        "dff",
+        "git",
+        "oracle",
+        "root",
+        "test",
+        "ubuntu",
+        "zhangyan"
+      ],
+      "attack_type": "dictionary",
+      "reverse_dns_warning": false
+    },
+    {
+      "ip": "187.141.143.180",
+      "total_attempts": 80,
+      "first_seen": "Dec 10 09:12:48",
+      "last_seen": "Dec 10 09:20:02",
+      "usernames_tried": [
+        "abc",
+        "bssh",
+        "butter",
+        "cyrus",
+        "deploy",
+        "eoor",
+        "ftp",
+        "ghost",
+        "git",
+        "ingrid",
+        "jay",
+        "magnos",
+        "mysql",
+        "nagios",
+        "nagios1",
+        "oracle",
+        "oralce",
+        "postgres",
+        "postgres1",
+        "redhat",
+        "root",
+        "ted",
+        "test",
+        "test1",
+        "test2",
+        "ubuntu",
+        "vnc",
+        "www"
+      ],
+      "attack_type": "dictionary",
+      "reverse_dns_warning": true
+    },
+    {
+      "ip": "103.99.0.122",
+      "total_attempts": 30,
+      "first_seen": "Dec 10 09:11:21",
+      "last_seen": "Dec 10 09:12:44",
+      "usernames_tried": [
+        "1234",
+        "Management",
+        "PlcmSpIp",
+        "admin",
+        "anonymous",
+        "cisco",
+        "ftp",
+        "ftpuser",
+        "guest",
+        "monitor",
+        "operator",
+        "pi",
+        "root",
+        "sshd",
+        "support",
+        "test",
+        "ubnt",
+        "user",
+        "uucp"
+      ],
+      "attack_type": "dictionary",
+      "reverse_dns_warning": false
+    },
+    {
+      "ip": "112.95.230.3",
+      "total_attempts": 26,
+      "first_seen": "Dec 10 07:27:52",
+      "last_seen": "Dec 10 07:28:51",
+      "usernames_tried": [
+        "pgadmin",
+        "root",
+        "utsims"
+      ],
+      "attack_type": "targeted",
+      "reverse_dns_warning": false
+    },
+    {
+      "ip": "5.188.10.180",
+      "total_attempts": 17,
+      "first_seen": "Dec 10 08:24:45",
+      "last_seen": "Dec 10 08:26:24",
+      "usernames_tried": [
+        "0",
+        "1234",
+        "admin",
+        "default",
+        "ftp",
+        "guest"
+      ],
+      "attack_type": "dictionary",
+      "reverse_dns_warning": false
+    },
+    {
+      "ip": "185.190.58.151",
+      "total_attempts": 17,
+      "first_seen": "Dec 10 09:07:58",
+      "last_seen": "Dec 10 09:12:59",
+      "usernames_tried": [
+        "123",
+        "admin",
+        "api"
+      ],
+      "attack_type": "targeted",
+      "reverse_dns_warning": false
+    }
+  ],
+  "risk_level": "critical",
+  "recommendations": [
+    "Immediately block all identified brute-force source IPs using iptables, fail2ban, or cloud security groups",
+    "Enable fail2ban with a low threshold (e.g., 5 failures = 1 hour ban) for SSH to automatically block repeat attackers",
+    "Disable SSH password authentication entirely and enforce key-based authentication only (PasswordAuthentication no)",
+    "Disable direct root login over SSH (PermitRootLogin no) or restrict it to specific users",
+    "Move SSH to a non-standard port to reduce noise from opportunistic scanners",
+    "Implement rate-limiting on SSH connections using iptables (e.g., max 3 new connections per minute per IP)",
+    "Enable SSH logging to a remote syslog server for tamper-resistant audit trail",
+    "Consider deploying an intrusion prevention system (IPS) or using TCP wrappers (hosts.allow/hosts.deny)",
+    "Review and enforce strong password policies for any accounts that still allow password login",
+    "Monitor auth.log continuously and set up real-time alerts for repeated authentication failures"
+  ]
+}

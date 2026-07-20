@@ -1,0 +1,19 @@
+{
+    "task_id": "task_k8s_debugging",
+    "task_name": "K8s/IaC Debugging",
+    "category": "coding",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "file_exists": 1.0,
+        "valid_yaml": 1.0,
+        "selector_matches_labels": 1.0,
+        "memory_limit_valid": 1.0,
+        "secret_reference_used": 1.0,
+        "service_targetport_correct": 1.0
+    },
+    "grading_type": "automated",
+    "timed_out": false,
+    "notes": "",
+    "execution_time_seconds": 46.19110345840454
+}

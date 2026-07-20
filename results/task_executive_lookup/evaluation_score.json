@@ -1,0 +1,18 @@
+{
+    "task_id": "task_executive_lookup",
+    "task_name": "Executive Lookup",
+    "category": "research",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "file_created": 1.0,
+        "correct_name": 1.0,
+        "mentions_role": 1.0,
+        "has_date_or_source": 1.0,
+        "readable": 1.0
+    },
+    "grading_type": "automated",
+    "timed_out": false,
+    "notes": "",
+    "execution_time_seconds": 253.90232610702515
+}

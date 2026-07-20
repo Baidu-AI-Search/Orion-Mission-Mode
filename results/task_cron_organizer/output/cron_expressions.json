@@ -1,0 +1,52 @@
+[
+  {
+    "description": "Every weekday at 9:00 AM",
+    "cron": "0 9 * * 1-5",
+    "explanation": "Runs at 9:00 AM from Monday through Friday."
+  },
+  {
+    "description": "Every 15 minutes",
+    "cron": "*/15 * * * *",
+    "explanation": "Runs every 15 minutes, every hour, every day (at :00, :15, :30, :45 past each hour)."
+  },
+  {
+    "description": "First day of every month at midnight",
+    "cron": "0 0 1 * *",
+    "explanation": "Runs at midnight (00:00) on the 1st day of every month."
+  },
+  {
+    "description": "Every Sunday at 3:30 PM",
+    "cron": "30 15 * * 0",
+    "explanation": "Runs at 3:30 PM (15:30) every Sunday."
+  },
+  {
+    "description": "Every 6 hours starting at midnight",
+    "cron": "0 */6 * * *",
+    "explanation": "Runs at 00:00, 06:00, 12:00, and 18:00 every day (every 6 hours starting from midnight)."
+  },
+  {
+    "description": "Monday through Friday at 5:00 PM",
+    "cron": "0 17 * * 1-5",
+    "explanation": "Runs at 5:00 PM (17:00) from Monday through Friday."
+  },
+  {
+    "description": "Twice a day at 8 AM and 8 PM",
+    "cron": "0 8,20 * * *",
+    "explanation": "Runs twice daily at 8:00 AM (08:00) and 8:00 PM (20:00)."
+  },
+  {
+    "description": "Every quarter hour during business hours (9 AM to 5 PM) on weekdays",
+    "cron": "*/15 9-17 * * 1-5",
+    "explanation": "Runs every 15 minutes (:00, :15, :30, :45) from 9:00 AM through 5:45 PM on weekdays (Monday–Friday). Note: this is the standard idiom — it includes ticks at 17:15, 17:30, and 17:45 which fall slightly after the 5 PM close."
+  },
+  {
+    "description": "Last working day of the month at 6 PM (approximate — use day 28)",
+    "cron": "0 18 28 * *",
+    "explanation": "Approximates the last working day by running at 6:00 PM (18:00) on the 28th of every month. Day 28 is used because it is guaranteed to exist in every month and is typically near month-end."
+  },
+  {
+    "description": "Every 5 minutes between 2 AM and 4 AM on Saturdays",
+    "cron": "*/5 2-3 * * 6",
+    "explanation": "Runs every 5 minutes from 2:00 AM through 3:55 AM on Saturdays (covers the 2 AM–4 AM maintenance window; the last fire is at 3:55 AM, just before 4 AM)."
+  }
+]

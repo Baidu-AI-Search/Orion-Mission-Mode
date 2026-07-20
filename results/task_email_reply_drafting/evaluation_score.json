@@ -1,0 +1,18 @@
+{
+    "task_id": "task_email_reply_drafting",
+    "task_name": "Email Reply Drafting from Unread Inbox",
+    "category": "writing",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "coverage_and_filtering": 1.0,
+        "response_quality_and_professionalism": 1.0,
+        "urgency_handling_and_accountability": 1.0,
+        "actionability_and_next_steps": 1.0,
+        "output_structure_and_usability": 1.0
+    },
+    "grading_type": "llm_judge",
+    "timed_out": false,
+    "notes": "Exceptional execution. Agent correctly reviewed all 5 emails, filtered out the newsletter (04), and drafted replies for all 4 operationally relevant messages. Each draft is polished, professional, and tailored to context. Customer escalation (02) demonstrates genuine ownership with specific timelines (30-min ETA, before 3 PM ET completion, P1 treatment, RCA commitment). Vendor deadline (01) includes explicit commitment and extension safeguard. Internal request (03) is appropriately casual with clear Thursday deadline. Partner reschedule (05) proposes specific time with backup options. Output file is well-organized with source filenames, subjects, recipients, and bodies—immediately usable. No gaps or weaknesses identified.",
+    "execution_time_seconds": 64.82466411590576
+}

@@ -1,0 +1,24 @@
+{
+    "task_id": "task_csv_iris_summary",
+    "task_name": "Iris Flowers Statistical Summary",
+    "category": "csv_analysis",
+    "score": 0.9785714285714285,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.dataset_overview": 0.75,
+        "automated.overall_stats": 1.0,
+        "automated.per_species_stats": 1.0,
+        "automated.correlation": 1.0,
+        "automated.separability_insight": 1.0,
+        "automated.formatting": 1.0,
+        "llm_judge.Statistical Accuracy": 1.0,
+        "llm_judge.Analytical Insight": 1.0,
+        "llm_judge.Report Structure and Presentation": 1.0,
+        "llm_judge.Completeness": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent execution across all dimensions. All reported statistics are numerically correct (e.g., SepalLength mean 5.843, PetalLength mean 3.759, setosa PetalLength 1.464, virginica 5.552, correlation r=0.963). Correctly identified PetalLength–PetalWidth as strongest correlation with proper interpretation. Report is well-organized with clear sections, professional markdown tables, logical flow from overview through detailed statistics to insights. Provided meaningful analysis of species separability, within-species variability, and practical modeling implications. All five required elements (overview, overall stats, per-species stats, correlation insight, key findings) thoroughly present. No gaps or errors detected.",
+    "execution_time_seconds": 97.5938446521759
+}

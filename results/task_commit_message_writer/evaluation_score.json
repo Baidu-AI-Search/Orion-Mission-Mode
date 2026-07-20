@@ -1,0 +1,17 @@
+{
+    "task_id": "task_commit_message_writer",
+    "task_name": "Commit Message Writer",
+    "category": "writing",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "Format Compliance": 1.0,
+        "Subject Line Quality": 1.0,
+        "Body Quality — Motivation and Context": 1.0,
+        "Accuracy and Completeness": 1.0
+    },
+    "grading_type": "llm_judge",
+    "timed_out": false,
+    "notes": "Exemplary commit message. Subject line is concise (59 chars), imperative, and uses proper conventional commit format with type and scope. Body articulates clear user motivation (logout friction on repeat visits) and explains both features (rememberMe for persistence, refreshSession for TTL extension). Accurately reflects all diff changes: optional rememberMe flag, 30-day TTL, preserved 1-hour default, new refreshSession function, and test coverage including edge cases. No fabricated details, no raw diff, proper formatting throughout.",
+    "execution_time_seconds": 42.23882508277893
+}

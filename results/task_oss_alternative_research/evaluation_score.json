@@ -1,0 +1,18 @@
+{
+    "task_id": "task_oss_alternative_research",
+    "task_name": "Open Source Alternatives Research",
+    "category": "research",
+    "score": 0.96,
+    "max_score": 1.0,
+    "breakdown": {
+        "research_quality": 0.92,
+        "practical_usefulness": 0.96,
+        "coverage_breadth": 1.0,
+        "comparison_table_and_structure": 0.98,
+        "honest_assessment_of_limitations": 0.95
+    },
+    "grading_type": "llm_judge",
+    "timed_out": false,
+    "notes": "Excellent report. Covers 6 primary alternatives + 5 honorable mentions with all 8 requested dimensions consistently documented. Specific GitHub metrics (star counts, contributor counts, release dates) strongly suggest genuine research. Structured comparison table is clean and scannable. Self-hosting complexity ratings are concrete and actionable. Limitations sections are brutally honest (e.g., 'Outline is not a database/spreadsheet tool', 'AFFiNE in pre-1.0 rapid iteration'). Recommendation ranking is well-justified and tied to startup use case. Starter stacks tailored to different team profiles add practical value. Minor deductions: (1) date is fictional July 2026, though appropriate for scenario; (2) some advanced feature comparisons could be even more granular (e.g., specific formula language differences), but coverage is already exceptional. The report would genuinely help a startup make a decision.",
+    "execution_time_seconds": 517.3599610328674
+}

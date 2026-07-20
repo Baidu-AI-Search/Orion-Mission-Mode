@@ -1,0 +1,26 @@
+{
+    "task_id": "task_log_hdfs_connections",
+    "task_name": "HDFS DataNode Log - Connection Pattern Analysis",
+    "category": "log_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.output_created": 1.0,
+        "automated.ips_listed": 1.0,
+        "automated.subnets_grouped": 1.0,
+        "automated.active_nodes": 1.0,
+        "automated.components_separated": 1.0,
+        "llm_judge.report_created": 1.0,
+        "llm_judge.unique_ips_counted": 1.0,
+        "llm_judge.subnet_analysis": 1.0,
+        "llm_judge.most_active_nodes": 1.0,
+        "llm_judge.communication_patterns": 1.0,
+        "llm_judge.datanode_vs_namesystem": 1.0,
+        "llm_judge.cluster_size_estimate": 1.0,
+        "llm_judge.report_quality": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent execution. Agent parsed 2000 log lines accurately, identified 202 unique IPs, correctly grouped by /16 subnets (10.250.x.x: 38 nodes, 10.251.x.x: 164 nodes), ranked top 10 active nodes, analyzed communication patterns (62.2% intra-rack, 37.8% inter-rack), distinguished DataNode (1592 lines, 79.6%) vs FSNamesystem (408 lines, 20.4%) activity with detailed sub-component breakdowns, and estimated cluster size appropriately. Report is well-structured markdown with clear sections, comprehensive IP roster table, traffic characterization, and proper methodology explanation. All requirements met with professional quality output.",
+    "execution_time_seconds": 246.9692986011505
+}

@@ -1,0 +1,74 @@
+Calculator Code Review - calculator.py
+======================================
+
+File reviewed: /home/user/workspace/calculator.py
+
+1. FUNCTION EXISTENCE CHECK
+---------------------------
+Required functions:
+  [PRESENT] add(a, b)        - line 1
+  [PRESENT] subtract(a, b)   - line 6
+  [PRESENT] multiply(a, b)   - line 11
+  [PRESENT] divide(a, b)     - line 16
+  [PRESENT] power(a, b)      - line 23
+  [PRESENT] modulo(a, b)     - line 28
+
+All six required functions are defined in the module.
+
+2. ERROR HANDLING CHECK (Division by Zero)
+------------------------------------------
+  divide(a, b):
+    - Checks `if b == 0` on line 18
+    - Raises ValueError("Cannot divide by zero") on line 19
+    - [PASS] Error handling is present and correct
+
+  modulo(a, b):
+    - Checks `if b == 0` on line 30
+    - Raises ValueError("Cannot divide by zero") on line 31
+    - [PASS] Error handling is present and correct
+
+Both divide() and modulo() correctly raise ValueError when the second
+argument is zero, preventing a ZeroDivisionError from the underlying
+Python operation.
+
+3. FUNCTIONAL CORRECTNESS TESTS
+-------------------------------
+The following assertions were run against the module and all passed:
+
+  add(5, 3)      == 8          ... OK
+  add(-1, 1)     == 0          ... OK
+  add(0, 0)      == 0          ... OK
+  add(2.5, 3.5)  == 6.0        ... OK
+
+  subtract(5, 3) == 2          ... OK
+  subtract(3, 5) == -2         ... OK
+
+  multiply(4, 3) == 12         ... OK
+  multiply(-2, 3) == -6        ... OK
+  multiply(0, 100) == 0        ... OK
+
+  divide(10, 2)  == 5.0        ... OK
+  divide(7, 2)   == 3.5        ... OK
+  divide(5, 0)   -> ValueError ... OK (exception raised)
+
+  power(2, 10)   == 1024       ... OK
+  power(5, 0)    == 1          ... OK
+  power(2, -1)   == 0.5        ... OK
+
+  modulo(10, 3)  == 1          ... OK
+  modulo(10, 5)  == 0          ... OK
+  modulo(5, 0)   -> ValueError ... OK (exception raised)
+
+Additionally, the built-in __main__ demo block (lines 35-50) runs
+successfully and prints the expected results, including the
+division-by-zero error demonstrations.
+
+4. SUMMARY
+----------
+  Required functions present:       YES (6/6)
+  divide raises ValueError on /0:   YES
+  modulo raises ValueError on %0:   YES
+  All functions work correctly:     YES (all tests pass)
+
+OVERALL VERDICT: PASS - The calculator.py file meets all specified
+requirements.

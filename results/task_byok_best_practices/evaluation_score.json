@@ -1,0 +1,18 @@
+{
+    "task_id": "task_byok_best_practices",
+    "task_name": "BYOK Best Practices for AI Inference",
+    "category": "research",
+    "score": 0.95,
+    "max_score": 1.0,
+    "breakdown": {
+        "security_depth": 0.95,
+        "practical_applicability": 0.92,
+        "provider_specific_knowledge": 0.96,
+        "completeness": 0.98,
+        "pitfalls_and_tradeoffs": 0.94
+    },
+    "grading_type": "llm_judge",
+    "timed_out": false,
+    "notes": "Exceptional guide. Criterion 1: Envelope encryption, KMS, transmission security, and in-memory handling covered rigorously with working Python code. Criterion 2: Multiple practical code examples (FastAPI validation, structlog redaction, IAM policy JSON), real deployment patterns, and hybrid models. Criterion 3: All major providers (OpenAI, Anthropic, Vertex AI, Bedrock) covered accurately with subtle details (Anthropic custom header, Bedrock cross-account assume-role, Vertex regions). Criterion 4: All 7 topics substantively addressed, ~5800 words, clear structure with executive summary and launch checklist. Criterion 5: 10 concrete pitfalls (logging middleware leaks, CORS fallacy, rate-limit confusion, SSRF via base URL, double-charging) and nuanced trade-off analysis. Minor deductions: incident-response playbook could be more explicitly templated (mentioned but not detailed); zero-knowledge architectures mentioned but not deeply explored. Overall, this is a production-ready reference document suitable for immediate team adoption.",
+    "execution_time_seconds": 560.0613059997559
+}

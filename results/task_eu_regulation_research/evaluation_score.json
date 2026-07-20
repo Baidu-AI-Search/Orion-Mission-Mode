@@ -1,0 +1,18 @@
+{
+    "task_id": "task_eu_regulation_research",
+    "task_name": "EU AI Act Compliance Research",
+    "category": "research",
+    "score": 0.82,
+    "max_score": 1.0,
+    "breakdown": {
+        "Legal Accuracy": 0.65,
+        "Practical Relevance": 1.0,
+        "GPAI Coverage": 0.95,
+        "Timeline and Structure": 0.7,
+        "Citation Quality": 0.9
+    },
+    "grading_type": "llm_judge",
+    "timed_out": false,
+    "notes": "Excellent practical tailoring and comprehensive GPAI analysis. However, the briefing contains a significant accuracy problem: it presents a fabricated 'AI Omnibus VII' agreement with specific Council approval dates (May/June 2026, finalised 29 June 2026) and reschedules key compliance deadlines (Art. 50 to Dec 2026, high-risk systems to Dec 2027, safety components to Aug 2028) without clear indication these are speculative. The actual EU AI Act (Regulation 2024/1689) has established timelines: Feb 2 2025 (prohibited practices), Aug 2 2025 (GPAI), Aug 2 2026 (general application), Aug 2 2027 (most high-risk systems). The base legal framework described is accurate, but presenting invented future policy changes as fact undermines credibility for a compliance document. The document is otherwise well-structured, practical, with strong citations and excellent GPAI coverage. The 15-step action plan and AI literacy emphasis are valuable. For a compliance briefing, fabricating policy changes—even plausibly—is a material flaw.",
+    "execution_time_seconds": 295.8361303806305
+}

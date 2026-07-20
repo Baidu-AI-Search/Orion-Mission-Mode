@@ -1,0 +1,26 @@
+{
+    "task_id": "task_log_apache_top_errors",
+    "task_name": "Apache Error Log - Rank Top Error Types",
+    "category": "log_analysis",
+    "score": 0.995,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.output_created": 1.0,
+        "automated.directory_forbidden_top": 1.0,
+        "automated.file_not_exist_counted": 1.0,
+        "automated.invalid_method_identified": 1.0,
+        "automated.internal_errors_included": 1.0,
+        "llm_judge.file_created": 1.0,
+        "llm_judge.directory_index_identified": 1.0,
+        "llm_judge.file_not_exist_categorized": 0.95,
+        "llm_judge.invalid_method_identified": 1.0,
+        "llm_judge.server_internal_errors_included": 1.0,
+        "llm_judge.total_error_count_correct": 1.0,
+        "llm_judge.json_structure_correct": 1.0,
+        "llm_judge.security_analysis_provided": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent execution. Agent correctly identified all major error categories with precise counts (753 total). 'Directory index forbidden' at rank 1 with 224 occurrences matches expected values exactly. 'File does not exist' errors intelligently sub-grouped into 5 detailed categories (IIS/FrontPage, Nimda/CodeRed, /sumthin, /cgi, drive-letter probes) totaling 226, which aligns with expected ~200+ and follows acceptable grouping strategy per instructions. All 13 error types ranked correctly. Invalid HTTP method errors (19) and server-internal mod_jk/JNI factory errors all properly captured. JSON structure conforms to specification. Security implications clearly explained for each category. Minor point: counts on some subcategories could potentially be verified against raw log, but overall analysis is thorough and well-reasoned.",
+    "execution_time_seconds": 294.19069027900696
+}

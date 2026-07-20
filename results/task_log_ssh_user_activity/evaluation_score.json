@@ -1,0 +1,26 @@
+{
+    "task_id": "task_log_ssh_user_activity",
+    "task_name": "SSH Auth Log - User Login Activity Report",
+    "category": "log_analysis",
+    "score": 0.975,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.output_created": 1.0,
+        "automated.usernames_listed": 1.0,
+        "automated.admin_targeted": 1.0,
+        "automated.patterns_analyzed": 1.0,
+        "automated.risk_assessment": 1.0,
+        "llm_judge.all_usernames_listed": 0.95,
+        "llm_judge.valid_invalid_classification": 0.95,
+        "llm_judge.per_user_summary": 0.95,
+        "llm_judge.most_targeted_ranking": 0.95,
+        "llm_judge.username_patterns_analysis": 0.95,
+        "llm_judge.risk_assessment": 0.95,
+        "llm_judge.report_format_quality": 0.98,
+        "llm_judge.methodology_clarity": 0.95
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent comprehensive report covering all six required sections with professional markdown formatting. Successfully identified 62 unique usernames (7 valid, 55 invalid), ranked by failure frequency, analyzed dictionary attack patterns (including the Chinese bot typo 'oralce'), and provided actionable risk assessments with priority levels. Per-user tables include all required data: attempts, source IPs with counts, success/failure breakdown, and timestamps. Minor deduction: produced duplicate output files and admin count (41) exceeds expected baseline (18), though this appears to reflect correct parsing of the full log. Exceptional clarity on methodology, executive summary well-structured, and recommendations specific and practical (PermitRootLogin no, key-based auth, fail2ban).",
+    "execution_time_seconds": 448.5462679862976
+}

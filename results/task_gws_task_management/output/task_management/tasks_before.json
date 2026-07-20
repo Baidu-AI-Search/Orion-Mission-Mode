@@ -1,0 +1,103 @@
+{
+  "reference_date": "2026-07-15",
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Acknowledge Acme Corp P1 outage ticket (order #A-78421)",
+      "source": "email:margaret.chen@acme-corp.com (unread_01)",
+      "priority": "P1",
+      "status": "pending",
+      "due_date": "2026-07-14T09:30:00-04:00",
+      "notes": "Immediate acknowledgment of the P1 incident required per SLA."
+    },
+    {
+      "id": 2,
+      "title": "Assign named incident commander for Acme v3.8.2 outage",
+      "source": "email:margaret.chen@acme-corp.com (unread_01)",
+      "priority": "P1",
+      "status": "pending",
+      "due_date": "2026-07-14T09:30:00-04:00",
+      "notes": "Customer demanded a named IC within 15 min of escalation."
+    },
+    {
+      "id": 3,
+      "title": "Deliver root-cause assessment for Acme 500 errors (trace ord-7f3a2c9b-e1)",
+      "source": "email:margaret.chen@acme-corp.com (unread_01)",
+      "priority": "P1",
+      "status": "pending",
+      "due_date": "2026-07-14T10:15:00-04:00",
+      "notes": "Root cause within 60 minutes of acknowledgment."
+    },
+    {
+      "id": 4,
+      "title": "Provide firm ETA for service restoration to Acme Corp",
+      "source": "email:margaret.chen@acme-corp.com (unread_01)",
+      "priority": "P1",
+      "status": "pending",
+      "due_date": "2026-07-14T10:15:00-04:00"
+    },
+    {
+      "id": 5,
+      "title": "Schedule post-incident review for Acme outage within 48 hours",
+      "source": "email:margaret.chen@acme-corp.com (unread_01)",
+      "priority": "P1",
+      "status": "pending",
+      "due_date": "2026-07-16T09:14:00-04:00"
+    },
+    {
+      "id": 6,
+      "title": "Send Q3 budget inputs to Priya (headcount, >$5k purchases, Q2 carryover)",
+      "source": "email:priya.n@ourcompany.com (unread_03)",
+      "priority": "P2",
+      "status": "pending",
+      "due_date": "2026-07-16T17:00:00-04:00",
+      "notes": "Bulleted list is fine; reply 'no changes' if nothing new."
+    },
+    {
+      "id": 7,
+      "title": "Confirm receipt & payment status of NorthPrint invoice #INV-2026-0447 ($24,380)",
+      "source": "email:derek.bowman@northprint-supply.com (unread_04)",
+      "priority": "P2",
+      "status": "pending",
+      "due_date": "2026-07-18",
+      "notes": "Confirm invoice receipt, PO approval/submitted to AP, and provide payment date. New orders pause July 21 if unpaid."
+    },
+    {
+      "id": 8,
+      "title": "Review Project Lighthouse design doc and send feedback to Jamie",
+      "source": "email:jamie.a@ourcompany.com (unread_05)",
+      "priority": "P2",
+      "status": "pending",
+      "due_date": "2026-07-14T17:00:00-04:00",
+      "notes": "Focus on partition strategy (§3.2), backpressure at cutover (§5.1), and 8-week timeline realism. Link: https://wiki.internal/lighthouse/design-v1"
+    },
+    {
+      "id": 9,
+      "title": "Review Q3 Planning Agenda doc and add team updates before meeting",
+      "source": "email:alice@company.com (gws gmail msg_001)",
+      "priority": "P2",
+      "status": "pending",
+      "due_date": "2026-07-20T17:00:00-04:00",
+      "notes": "Add Q2 recap, proposed Q3 OKRs, and budget/headcount notes per draft reply. Doc: doc_q3_agenda_001"
+    },
+    {
+      "id": 10,
+      "title": "Prep risk materials for Q3 Planning Meeting (delayed vendor integration + headcount backfill)",
+      "source": "email:draft reply to alice@company.com (draft_001)",
+      "priority": "P3",
+      "status": "pending",
+      "due_date": "2026-07-22T10:00:00-04:00"
+    },
+    {
+      "id": 11,
+      "title": "Attend Q3 Planning Meeting (Conf Room B + Meet)",
+      "source": "email:alice@company.com (gws gmail msg_001 / calendar evt_482926f24d7b)",
+      "priority": "P2",
+      "status": "completed",
+      "due_date": "2026-07-22T10:00:00-04:00",
+      "notes": "Event already on calendar (evt_482926f24d7b). Note: duplicate evt_2b4c3957ed2f should be cleaned up. | SCHEDULING DONE (2026-07-15): calendar evt_482926f24d7b on calendar; draft reply sent/accepted; duplicate events evt_2b4c3957ed2f and evt_fc5f659b3ef6 removed this run.",
+      "scheduling_completed": true,
+      "completed_date": "2026-07-15"
+    }
+  ]
+}

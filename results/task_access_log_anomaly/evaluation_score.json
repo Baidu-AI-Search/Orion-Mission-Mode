@@ -1,0 +1,18 @@
+{
+    "task_id": "task_access_log_anomaly",
+    "task_name": "Access Control Log Anomaly Detection",
+    "category": "analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "output_created": 1.0,
+        "impossible_travel_detected": 1.0,
+        "after_hours_restricted_detected": 1.0,
+        "repeated_denials_detected": 1.0,
+        "no_false_positive_6601": 1.0
+    },
+    "grading_type": "automated",
+    "timed_out": false,
+    "notes": "",
+    "execution_time_seconds": 121.1423180103302
+}

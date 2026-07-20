@@ -1,0 +1,24 @@
+{
+    "task_id": "task_log_apache_error_summary",
+    "task_name": "Apache Error Log - Generate Error Summary Report",
+    "category": "log_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.output_created": 1.0,
+        "automated.log_level_breakdown": 1.0,
+        "automated.server_config_issues": 1.0,
+        "automated.security_threats_identified": 1.0,
+        "automated.recommendations_provided": 1.0,
+        "llm_judge.file_created": 1.0,
+        "llm_judge.date_range_and_levels": 1.0,
+        "llm_judge.server_config_issues": 1.0,
+        "llm_judge.client_error_summary": 1.0,
+        "llm_judge.security_assessment": 1.0,
+        "llm_judge.actionable_recommendations": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent work. The report comprehensively addresses all requirements: file created in correct location; accurate date range (Jun 9-16, 2005) and level breakdown (753 errors/247 notices); server config issues clearly isolated and explained with mod_jk JNI factory failures and scoreboard race conditions; client errors properly separated with 630 entries from 159 IPs and detailed category breakdown; security assessment identifies specific threats (AWStats RCE scanner, Code Red/Nimda traversal, FrontPage probes, Sumthin worm) with concrete evidence; three actionable recommendations addressing mod_jk configuration, DirectoryIndex, and mod_security hardening. Markdown formatting is professional and well-structured.",
+    "execution_time_seconds": 327.51982378959656
+}

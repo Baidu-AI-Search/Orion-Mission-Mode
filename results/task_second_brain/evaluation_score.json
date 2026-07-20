@@ -1,0 +1,20 @@
+{
+    "task_id": "task_second_brain",
+    "task_name": "Second Brain Knowledge Persistence",
+    "category": "memory",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.memory_tool_used": 1.0,
+        "automated.recall_tool_used": 1.0,
+        "llm_judge.criterion_1_memory_storage": 1.0,
+        "llm_judge.criterion_2_same_session_recall": 1.0,
+        "llm_judge.criterion_3_cross_session_retrieval": 1.0,
+        "llm_judge.criterion_4_accuracy_of_facts": 1.0,
+        "llm_judge.criterion_5_response_quality": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Perfect execution. Agent created memory/MEMORY.md with all 5 facts properly structured in Session 1, recalled information accurately in Session 2, successfully read the file in Session 3, and presented all facts correctly (Rust, Jan 15 2024, Dr. Elena Vasquez/Stanford, NeonDB/distributed key-value store, purple elephant sunrise) with clear confidence and formatting. Demonstrates reliable persistent knowledge storage and retrieval.",
+    "execution_time_seconds": 153.83312582969666
+}

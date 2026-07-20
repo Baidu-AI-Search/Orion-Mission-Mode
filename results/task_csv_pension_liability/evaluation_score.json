@@ -1,0 +1,26 @@
+{
+    "task_id": "task_csv_pension_liability",
+    "task_name": "US Pension Fund Liability Analysis",
+    "category": "csv_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.avg_payout_ranking": 1.0,
+        "automated.colorado_highest_avg": 1.0,
+        "automated.deferred_ranking": 1.0,
+        "automated.ny_highest_deferred": 1.0,
+        "automated.projected_liability": 1.0,
+        "automated.national_summary": 1.0,
+        "automated.total_projected": 1.0,
+        "automated.exposure_analysis": 1.0,
+        "llm_judge.calculation_accuracy": 1.0,
+        "llm_judge.multi_dimensional_analysis": 1.0,
+        "llm_judge.financial_insight": 1.0,
+        "llm_judge.report_quality": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional execution. All key metrics match expected values precisely: national avg $6,510/payee, projected future liability $3.15B, top 3 avg-payout states (CO $9,711, HI $9,643, WA $9,224), top 3 deferred (NY 40,592, CA 35,564, PA 34,285), top 3 projected liability (CA $285M, NY $266M, OH $227M). Report provides all three ranking dimensions with clear explanation of how high liability results from combining large deferred populations with above-average state payouts. Analysis section identifies key drivers: military presence, federal employment hubs, defense centers, population scale. Includes deferred-to-current ratio analysis (D.C. 569%, New Jersey 106.6%), methodology notes, and caveats. Professional markdown formatting with tables, logical sections (national summary → three rankings → 5-part analysis → methodology). Agent code (analyze.py, gen_report.py, check.py) demonstrates sound data parsing and calculation approach. No significant weaknesses identified.",
+    "execution_time_seconds": 322.39066886901855
+}

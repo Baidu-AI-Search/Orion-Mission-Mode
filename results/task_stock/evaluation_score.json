@@ -1,0 +1,19 @@
+{
+    "task_id": "task_stock",
+    "task_name": "Stock Price Research",
+    "category": "research",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "file_created": 1.0,
+        "ticker_present": 1.0,
+        "price_present": 1.0,
+        "date_present": 1.0,
+        "summary_present": 1.0,
+        "well_formatted": 1.0
+    },
+    "grading_type": "automated",
+    "timed_out": false,
+    "notes": "",
+    "execution_time_seconds": 117.2706356048584
+}

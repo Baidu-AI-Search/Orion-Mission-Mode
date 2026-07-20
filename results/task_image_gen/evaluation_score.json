@@ -1,0 +1,19 @@
+{
+    "task_id": "task_image_gen",
+    "task_name": "AI Image Generation",
+    "category": "skills",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "used_image_tool": 1.0,
+        "prompt_has_robot": 1.0,
+        "prompt_has_cafe": 1.0,
+        "prompt_has_book": 1.0,
+        "file_saved": 1.0,
+        "confirmed_generation": 1.0
+    },
+    "grading_type": "automated",
+    "timed_out": false,
+    "notes": "",
+    "execution_time_seconds": 290.56615710258484
+}

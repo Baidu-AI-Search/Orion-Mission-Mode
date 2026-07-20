@@ -1,0 +1,1053 @@
+{
+  "global_2007": {
+    "mean": 67.00742253521126,
+    "std": 12.03043475928947,
+    "Q1": 57.16025,
+    "Q3": 76.41325,
+    "IQR": 19.253000000000007,
+    "lower_iqr": 28.280749999999987,
+    "upper_iqr": 105.29275000000001
+  },
+  "iqr_low": [],
+  "iqr_high": [],
+  "z_low": [
+    {
+      "country": "Swaziland",
+      "continent": "Africa",
+      "lifeExp": 39.613,
+      "z": -2.27709331236415
+    },
+    {
+      "country": "Mozambique",
+      "continent": "Africa",
+      "lifeExp": 42.082,
+      "z": -2.071863821543502
+    },
+    {
+      "country": "Zambia",
+      "continent": "Africa",
+      "lifeExp": 42.384,
+      "z": -2.0467608218562456
+    },
+    {
+      "country": "Sierra Leone",
+      "continent": "Africa",
+      "lifeExp": 42.568,
+      "z": -2.0314662790004343
+    },
+    {
+      "country": "Lesotho",
+      "continent": "Africa",
+      "lifeExp": 42.592,
+      "z": -2.029471338627937
+    },
+    {
+      "country": "Angola",
+      "continent": "Africa",
+      "lifeExp": 42.731,
+      "z": -2.0179173089705573
+    }
+  ],
+  "z_high": [],
+  "cont_stats": [
+    {
+      "continent": "Africa",
+      "mean": 54.80603846153846,
+      "std": 9.630780671961793
+    },
+    {
+      "continent": "Americas",
+      "mean": 73.60812,
+      "std": 4.44094763085538
+    },
+    {
+      "continent": "Asia",
+      "mean": 70.72848484848485,
+      "std": 7.963724470690565
+    },
+    {
+      "continent": "Europe",
+      "mean": 77.6486,
+      "std": 2.9798126601608983
+    },
+    {
+      "continent": "Oceania",
+      "mean": 80.7195,
+      "std": 0.7290270914033347
+    }
+  ],
+  "continent_outliers": [
+    {
+      "country": "Tunisia",
+      "continent": "Africa",
+      "lifeExp": 73.923,
+      "cont_mean": 54.80603846153846,
+      "z_within": 2.0043518334046793,
+      "diff": 19.11696153846154
+    },
+    {
+      "country": "Libya",
+      "continent": "Africa",
+      "lifeExp": 73.952,
+      "cont_mean": 54.80603846153846,
+      "z_within": 2.0073923899832855,
+      "diff": 19.145961538461535
+    },
+    {
+      "country": "Reunion",
+      "continent": "Africa",
+      "lifeExp": 76.442,
+      "cont_mean": 54.80603846153846,
+      "z_within": 2.2684608686291488,
+      "diff": 21.63596153846153
+    },
+    {
+      "country": "Haiti",
+      "continent": "Americas",
+      "lifeExp": 60.916,
+      "cont_mean": 73.60812000000001,
+      "z_within": -2.9169091391448063,
+      "diff": -12.692120000000017
+    },
+    {
+      "country": "Afghanistan",
+      "continent": "Asia",
+      "lifeExp": 43.828,
+      "cont_mean": 70.72848484848484,
+      "z_within": -3.4302507077047966,
+      "diff": -26.900484848484837
+    },
+    {
+      "country": "Turkey",
+      "continent": "Europe",
+      "lifeExp": 71.777,
+      "cont_mean": 77.6486,
+      "z_within": -2.0041449523432324,
+      "diff": -5.871600000000001
+    }
+  ],
+  "top5_drops": [
+    {
+      "country": "Rwanda",
+      "continent": "Africa",
+      "from_year": 1987.0,
+      "to_year": 1992,
+      "prev_lifeExp": 44.02,
+      "lifeExp": 23.599,
+      "drop": 20.421000000000003,
+      "period": "1987-1992"
+    },
+    {
+      "country": "Zimbabwe",
+      "continent": "Africa",
+      "from_year": 1992.0,
+      "to_year": 1997,
+      "prev_lifeExp": 60.377,
+      "lifeExp": 46.809,
+      "drop": 13.568000000000005,
+      "period": "1992-1997"
+    },
+    {
+      "country": "Lesotho",
+      "continent": "Africa",
+      "from_year": 1997.0,
+      "to_year": 2002,
+      "prev_lifeExp": 55.558,
+      "lifeExp": 44.593,
+      "drop": 10.964999999999996,
+      "period": "1997-2002"
+    },
+    {
+      "country": "Swaziland",
+      "continent": "Africa",
+      "from_year": 1997.0,
+      "to_year": 2002,
+      "prev_lifeExp": 54.289,
+      "lifeExp": 43.869,
+      "drop": 10.420000000000002,
+      "period": "1997-2002"
+    },
+    {
+      "country": "Botswana",
+      "continent": "Africa",
+      "from_year": 1992.0,
+      "to_year": 1997,
+      "prev_lifeExp": 62.745,
+      "lifeExp": 52.556,
+      "drop": 10.189,
+      "period": "1992-1997"
+    }
+  ],
+  "all_drops": [
+    {
+      "country": "Rwanda",
+      "continent": "Africa",
+      "period": "1987-1992",
+      "drop": 20.421000000000003,
+      "prev_lifeExp": 44.02,
+      "lifeExp": 23.599
+    },
+    {
+      "country": "Zimbabwe",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 13.568000000000005,
+      "prev_lifeExp": 60.377,
+      "lifeExp": 46.809
+    },
+    {
+      "country": "Lesotho",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 10.964999999999996,
+      "prev_lifeExp": 55.558,
+      "lifeExp": 44.593
+    },
+    {
+      "country": "Swaziland",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 10.420000000000002,
+      "prev_lifeExp": 54.289,
+      "lifeExp": 43.869
+    },
+    {
+      "country": "Botswana",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 10.189,
+      "prev_lifeExp": 62.745,
+      "lifeExp": 52.556
+    },
+    {
+      "country": "Cambodia",
+      "continent": "Asia",
+      "period": "1972-1977",
+      "drop": 9.097000000000001,
+      "prev_lifeExp": 40.317,
+      "lifeExp": 31.22
+    },
+    {
+      "country": "Namibia",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 7.43,
+      "prev_lifeExp": 58.909,
+      "lifeExp": 51.479
+    },
+    {
+      "country": "South Africa",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 6.870999999999995,
+      "prev_lifeExp": 60.236,
+      "lifeExp": 53.365
+    },
+    {
+      "country": "Zimbabwe",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 6.82,
+      "prev_lifeExp": 46.809,
+      "lifeExp": 39.989
+    },
+    {
+      "country": "China",
+      "continent": "Asia",
+      "period": "1957-1962",
+      "drop": 6.047600000000003,
+      "prev_lifeExp": 50.54896,
+      "lifeExp": 44.50136
+    },
+    {
+      "country": "Botswana",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 5.921999999999997,
+      "prev_lifeExp": 52.556,
+      "lifeExp": 46.634
+    },
+    {
+      "country": "Zambia",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 5.862000000000002,
+      "prev_lifeExp": 46.1,
+      "lifeExp": 40.238
+    },
+    {
+      "country": "Iraq",
+      "continent": "Asia",
+      "period": "1987-1992",
+      "drop": 5.582999999999998,
+      "prev_lifeExp": 65.044,
+      "lifeExp": 59.461
+    },
+    {
+      "country": "Liberia",
+      "continent": "Africa",
+      "period": "1987-1992",
+      "drop": 5.225000000000001,
+      "prev_lifeExp": 46.027,
+      "lifeExp": 40.802
+    },
+    {
+      "country": "Cambodia",
+      "continent": "Asia",
+      "period": "1967-1972",
+      "drop": 5.097999999999999,
+      "prev_lifeExp": 45.415,
+      "lifeExp": 40.317
+    },
+    {
+      "country": "Kenya",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 4.878,
+      "prev_lifeExp": 59.285,
+      "lifeExp": 54.407
+    },
+    {
+      "country": "Somalia",
+      "continent": "Africa",
+      "period": "1987-1992",
+      "drop": 4.842999999999996,
+      "prev_lifeExp": 44.501,
+      "lifeExp": 39.658
+    },
+    {
+      "country": "Zambia",
+      "continent": "Africa",
+      "period": "1987-1992",
+      "drop": 4.7209999999999965,
+      "prev_lifeExp": 50.821,
+      "lifeExp": 46.1
+    },
+    {
+      "country": "Swaziland",
+      "continent": "Africa",
+      "period": "2002-2007",
+      "drop": 4.256,
+      "prev_lifeExp": 43.869,
+      "lifeExp": 39.613
+    },
+    {
+      "country": "Uganda",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 4.247,
+      "prev_lifeExp": 48.825,
+      "lifeExp": 44.578
+    },
+    {
+      "country": "Swaziland",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 4.184999999999995,
+      "prev_lifeExp": 58.474,
+      "lifeExp": 54.289
+    },
+    {
+      "country": "Lesotho",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 4.1270000000000024,
+      "prev_lifeExp": 59.685,
+      "lifeExp": 55.558
+    },
+    {
+      "country": "Cote d'Ivoire",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 4.052999999999997,
+      "prev_lifeExp": 52.044,
+      "lifeExp": 47.991
+    },
+    {
+      "country": "South Africa",
+      "continent": "Africa",
+      "period": "2002-2007",
+      "drop": 4.026000000000003,
+      "prev_lifeExp": 53.365,
+      "lifeExp": 49.339
+    },
+    {
+      "country": "Gabon",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 3.6999999999999957,
+      "prev_lifeExp": 60.461,
+      "lifeExp": 56.761
+    },
+    {
+      "country": "Burundi",
+      "continent": "Africa",
+      "period": "1987-1992",
+      "drop": 3.4750000000000014,
+      "prev_lifeExp": 48.211,
+      "lifeExp": 44.736
+    },
+    {
+      "country": "Congo, Rep.",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 3.4709999999999965,
+      "prev_lifeExp": 56.433,
+      "lifeExp": 52.962
+    },
+    {
+      "country": "Kenya",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 3.414999999999999,
+      "prev_lifeExp": 54.407,
+      "lifeExp": 50.992
+    },
+    {
+      "country": "Central African Republic",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 3.3299999999999983,
+      "prev_lifeExp": 49.396,
+      "lifeExp": 46.066
+    },
+    {
+      "country": "Namibia",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 3.0900000000000034,
+      "prev_lifeExp": 61.999,
+      "lifeExp": 58.909
+    },
+    {
+      "country": "Congo, Dem. Rep.",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 2.9609999999999985,
+      "prev_lifeExp": 45.548,
+      "lifeExp": 42.587
+    },
+    {
+      "country": "Central African Republic",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 2.7580000000000027,
+      "prev_lifeExp": 46.066,
+      "lifeExp": 43.308
+    },
+    {
+      "country": "Uganda",
+      "continent": "Africa",
+      "period": "1987-1992",
+      "drop": 2.6839999999999975,
+      "prev_lifeExp": 51.509,
+      "lifeExp": 48.825
+    },
+    {
+      "country": "Cote d'Ivoire",
+      "continent": "Africa",
+      "period": "1987-1992",
+      "drop": 2.611000000000004,
+      "prev_lifeExp": 54.655,
+      "lifeExp": 52.044
+    },
+    {
+      "country": "Malawi",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 2.485999999999997,
+      "prev_lifeExp": 47.495,
+      "lifeExp": 45.009
+    },
+    {
+      "country": "Cameroon",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 2.3429999999999964,
+      "prev_lifeExp": 52.199,
+      "lifeExp": 49.856
+    },
+    {
+      "country": "Mozambique",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 2.317999999999998,
+      "prev_lifeExp": 46.344,
+      "lifeExp": 44.026
+    },
+    {
+      "country": "Korea, Dem. Rep.",
+      "continent": "Asia",
+      "period": "1992-1997",
+      "drop": 2.2509999999999906,
+      "prev_lifeExp": 69.978,
+      "lifeExp": 67.727
+    },
+    {
+      "country": "Rwanda",
+      "continent": "Africa",
+      "period": "1982-1987",
+      "drop": 2.1980000000000004,
+      "prev_lifeExp": 46.218,
+      "lifeExp": 44.02
+    },
+    {
+      "country": "Cameroon",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 2.115000000000002,
+      "prev_lifeExp": 54.314,
+      "lifeExp": 52.199
+    },
+    {
+      "country": "Lesotho",
+      "continent": "Africa",
+      "period": "2002-2007",
+      "drop": 2.0010000000000048,
+      "prev_lifeExp": 44.593,
+      "lifeExp": 42.592
+    },
+    {
+      "country": "Zimbabwe",
+      "continent": "Africa",
+      "period": "1987-1992",
+      "drop": 1.9739999999999966,
+      "prev_lifeExp": 62.351,
+      "lifeExp": 60.377
+    },
+    {
+      "country": "Tanzania",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 1.9739999999999966,
+      "prev_lifeExp": 50.44,
+      "lifeExp": 48.466
+    },
+    {
+      "country": "Mozambique",
+      "continent": "Africa",
+      "period": "2002-2007",
+      "drop": 1.9440000000000026,
+      "prev_lifeExp": 44.026,
+      "lifeExp": 42.082
+    },
+    {
+      "country": "Malawi",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 1.9250000000000043,
+      "prev_lifeExp": 49.42,
+      "lifeExp": 47.495
+    },
+    {
+      "country": "Congo, Dem. Rep.",
+      "continent": "Africa",
+      "period": "1987-1992",
+      "drop": 1.8639999999999972,
+      "prev_lifeExp": 47.412,
+      "lifeExp": 45.548
+    },
+    {
+      "country": "Iraq",
+      "continent": "Asia",
+      "period": "1997-2002",
+      "drop": 1.7650000000000006,
+      "prev_lifeExp": 58.811,
+      "lifeExp": 57.046
+    },
+    {
+      "country": "Sierra Leone",
+      "continent": "Africa",
+      "period": "1987-1992",
+      "drop": 1.6730000000000018,
+      "prev_lifeExp": 40.006,
+      "lifeExp": 38.333
+    },
+    {
+      "country": "South Africa",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 1.652000000000001,
+      "prev_lifeExp": 61.888,
+      "lifeExp": 60.236
+    },
+    {
+      "country": "El Salvador",
+      "continent": "Americas",
+      "period": "1972-1977",
+      "drop": 1.5110000000000028,
+      "prev_lifeExp": 58.207,
+      "lifeExp": 56.696
+    },
+    {
+      "country": "Montenegro",
+      "continent": "Europe",
+      "period": "1997-2002",
+      "drop": 1.4639999999999986,
+      "prev_lifeExp": 75.445,
+      "lifeExp": 73.981
+    },
+    {
+      "country": "Cote d'Ivoire",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 1.158999999999999,
+      "prev_lifeExp": 47.991,
+      "lifeExp": 46.832
+    },
+    {
+      "country": "Tanzania",
+      "continent": "Africa",
+      "period": "1987-1992",
+      "drop": 1.0949999999999989,
+      "prev_lifeExp": 51.535,
+      "lifeExp": 50.44
+    },
+    {
+      "country": "Central African Republic",
+      "continent": "Africa",
+      "period": "1987-1992",
+      "drop": 1.0889999999999986,
+      "prev_lifeExp": 50.485,
+      "lifeExp": 49.396
+    },
+    {
+      "country": "Korea, Dem. Rep.",
+      "continent": "Asia",
+      "period": "1997-2002",
+      "drop": 1.0649999999999977,
+      "prev_lifeExp": 67.727,
+      "lifeExp": 66.662
+    },
+    {
+      "country": "Chad",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 1.0480000000000018,
+      "prev_lifeExp": 51.573,
+      "lifeExp": 50.525
+    },
+    {
+      "country": "Zambia",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 1.0450000000000017,
+      "prev_lifeExp": 40.238,
+      "lifeExp": 39.193
+    },
+    {
+      "country": "Congo, Rep.",
+      "continent": "Africa",
+      "period": "1987-1992",
+      "drop": 1.036999999999999,
+      "prev_lifeExp": 57.47,
+      "lifeExp": 56.433
+    },
+    {
+      "country": "Zambia",
+      "continent": "Africa",
+      "period": "1982-1987",
+      "drop": 1.0,
+      "prev_lifeExp": 51.821,
+      "lifeExp": 50.821
+    },
+    {
+      "country": "Gabon",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 0.9050000000000011,
+      "prev_lifeExp": 61.366,
+      "lifeExp": 60.461
+    },
+    {
+      "country": "Botswana",
+      "continent": "Africa",
+      "period": "1987-1992",
+      "drop": 0.8770000000000024,
+      "prev_lifeExp": 63.622,
+      "lifeExp": 62.745
+    },
+    {
+      "country": "Bulgaria",
+      "continent": "Europe",
+      "period": "1992-1997",
+      "drop": 0.8700000000000045,
+      "prev_lifeExp": 71.19,
+      "lifeExp": 70.32
+    },
+    {
+      "country": "Nigeria",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 0.8560000000000016,
+      "prev_lifeExp": 47.464,
+      "lifeExp": 46.608
+    },
+    {
+      "country": "Togo",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 0.8290000000000006,
+      "prev_lifeExp": 58.39,
+      "lifeExp": 57.561
+    },
+    {
+      "country": "Puerto Rico",
+      "continent": "Americas",
+      "period": "1987-1992",
+      "drop": 0.7189999999999941,
+      "prev_lifeExp": 74.63,
+      "lifeExp": 73.911
+    },
+    {
+      "country": "Cameroon",
+      "continent": "Africa",
+      "period": "1987-1992",
+      "drop": 0.6709999999999994,
+      "prev_lifeExp": 54.985,
+      "lifeExp": 54.314
+    },
+    {
+      "country": "Korea, Dem. Rep.",
+      "continent": "Asia",
+      "period": "1987-1992",
+      "drop": 0.6690000000000111,
+      "prev_lifeExp": 70.647,
+      "lifeExp": 69.978
+    },
+    {
+      "country": "Uganda",
+      "continent": "Africa",
+      "period": "1972-1977",
+      "drop": 0.6659999999999968,
+      "prev_lifeExp": 51.016,
+      "lifeExp": 50.35
+    },
+    {
+      "country": "Iraq",
+      "continent": "Asia",
+      "period": "1992-1997",
+      "drop": 0.6499999999999986,
+      "prev_lifeExp": 59.461,
+      "lifeExp": 58.811
+    },
+    {
+      "country": "Eritrea",
+      "continent": "Africa",
+      "period": "1977-1982",
+      "drop": 0.644999999999996,
+      "prev_lifeExp": 44.535,
+      "lifeExp": 43.89
+    },
+    {
+      "country": "Slovak Republic",
+      "continent": "Europe",
+      "period": "1967-1972",
+      "drop": 0.6300000000000097,
+      "prev_lifeExp": 70.98,
+      "lifeExp": 70.35
+    },
+    {
+      "country": "Hungary",
+      "continent": "Europe",
+      "period": "1977-1982",
+      "drop": 0.5600000000000023,
+      "prev_lifeExp": 69.95,
+      "lifeExp": 69.39
+    },
+    {
+      "country": "Uganda",
+      "continent": "Africa",
+      "period": "1977-1982",
+      "drop": 0.5010000000000048,
+      "prev_lifeExp": 50.35,
+      "lifeExp": 49.849
+    },
+    {
+      "country": "Trinidad and Tobago",
+      "continent": "Americas",
+      "period": "1997-2002",
+      "drop": 0.4890000000000043,
+      "prev_lifeExp": 69.465,
+      "lifeExp": 68.976
+    },
+    {
+      "country": "Myanmar",
+      "continent": "Asia",
+      "period": "1997-2002",
+      "drop": 0.4200000000000017,
+      "prev_lifeExp": 60.328,
+      "lifeExp": 59.908
+    },
+    {
+      "country": "Albania",
+      "continent": "Europe",
+      "period": "1987-1992",
+      "drop": 0.41899999999999693,
+      "prev_lifeExp": 72.0,
+      "lifeExp": 71.581
+    },
+    {
+      "country": "Hungary",
+      "continent": "Europe",
+      "period": "1987-1992",
+      "drop": 0.4099999999999966,
+      "prev_lifeExp": 69.58,
+      "lifeExp": 69.17
+    },
+    {
+      "country": "Trinidad and Tobago",
+      "continent": "Americas",
+      "period": "1992-1997",
+      "drop": 0.39699999999999136,
+      "prev_lifeExp": 69.862,
+      "lifeExp": 69.465
+    },
+    {
+      "country": "Congo, Dem. Rep.",
+      "continent": "Africa",
+      "period": "1982-1987",
+      "drop": 0.3719999999999999,
+      "prev_lifeExp": 47.784,
+      "lifeExp": 47.412
+    },
+    {
+      "country": "Benin",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 0.3710000000000022,
+      "prev_lifeExp": 54.777,
+      "lifeExp": 54.406
+    },
+    {
+      "country": "Poland",
+      "continent": "Europe",
+      "period": "1982-1987",
+      "drop": 0.3399999999999892,
+      "prev_lifeExp": 71.32,
+      "lifeExp": 70.98
+    },
+    {
+      "country": "Jamaica",
+      "continent": "Americas",
+      "period": "1997-2002",
+      "drop": 0.2150000000000034,
+      "prev_lifeExp": 72.262,
+      "lifeExp": 72.047
+    },
+    {
+      "country": "Croatia",
+      "continent": "Europe",
+      "period": "1977-1982",
+      "drop": 0.18000000000000682,
+      "prev_lifeExp": 70.64,
+      "lifeExp": 70.46
+    },
+    {
+      "country": "Poland",
+      "continent": "Europe",
+      "period": "1972-1977",
+      "drop": 0.1799999999999926,
+      "prev_lifeExp": 70.85,
+      "lifeExp": 70.67
+    },
+    {
+      "country": "Romania",
+      "continent": "Europe",
+      "period": "1987-1992",
+      "drop": 0.1700000000000017,
+      "prev_lifeExp": 69.53,
+      "lifeExp": 69.36
+    },
+    {
+      "country": "Chad",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 0.15099999999999625,
+      "prev_lifeExp": 51.724,
+      "lifeExp": 51.573
+    },
+    {
+      "country": "Bulgaria",
+      "continent": "Europe",
+      "period": "1987-1992",
+      "drop": 0.15000000000000568,
+      "prev_lifeExp": 71.34,
+      "lifeExp": 71.19
+    },
+    {
+      "country": "Serbia",
+      "continent": "Europe",
+      "period": "1977-1982",
+      "drop": 0.13799999999999102,
+      "prev_lifeExp": 70.3,
+      "lifeExp": 70.162
+    },
+    {
+      "country": "Romania",
+      "continent": "Europe",
+      "period": "1982-1987",
+      "drop": 0.12999999999999545,
+      "prev_lifeExp": 69.66,
+      "lifeExp": 69.53
+    },
+    {
+      "country": "Ghana",
+      "continent": "Africa",
+      "period": "1997-2002",
+      "drop": 0.10299999999999443,
+      "prev_lifeExp": 58.556,
+      "lifeExp": 58.453
+    },
+    {
+      "country": "El Salvador",
+      "continent": "Americas",
+      "period": "1977-1982",
+      "drop": 0.09199999999999875,
+      "prev_lifeExp": 56.696,
+      "lifeExp": 56.604
+    },
+    {
+      "country": "Bulgaria",
+      "continent": "Europe",
+      "period": "1972-1977",
+      "drop": 0.09000000000000341,
+      "prev_lifeExp": 70.9,
+      "lifeExp": 70.81
+    },
+    {
+      "country": "Czech Republic",
+      "continent": "Europe",
+      "period": "1967-1972",
+      "drop": 0.0899999999999892,
+      "prev_lifeExp": 70.38,
+      "lifeExp": 70.29
+    },
+    {
+      "country": "Norway",
+      "continent": "Europe",
+      "period": "1982-1987",
+      "drop": 0.0799999999999983,
+      "prev_lifeExp": 75.97,
+      "lifeExp": 75.89
+    },
+    {
+      "country": "Netherlands",
+      "continent": "Europe",
+      "period": "1967-1972",
+      "drop": 0.06999999999999318,
+      "prev_lifeExp": 73.82,
+      "lifeExp": 73.75
+    },
+    {
+      "country": "Denmark",
+      "continent": "Europe",
+      "period": "1977-1982",
+      "drop": 0.060000000000002274,
+      "prev_lifeExp": 74.69,
+      "lifeExp": 74.63
+    },
+    {
+      "country": "Kenya",
+      "continent": "Africa",
+      "period": "1987-1992",
+      "drop": 0.054000000000002046,
+      "prev_lifeExp": 59.339,
+      "lifeExp": 59.285
+    },
+    {
+      "country": "Angola",
+      "continent": "Africa",
+      "period": "1982-1987",
+      "drop": 0.036000000000001364,
+      "prev_lifeExp": 39.942,
+      "lifeExp": 39.906
+    },
+    {
+      "country": "Gabon",
+      "continent": "Africa",
+      "period": "2002-2007",
+      "drop": 0.026000000000003354,
+      "prev_lifeExp": 56.761,
+      "lifeExp": 56.735
+    },
+    {
+      "country": "Congo, Dem. Rep.",
+      "continent": "Africa",
+      "period": "1977-1982",
+      "drop": 0.020000000000003126,
+      "prev_lifeExp": 47.804,
+      "lifeExp": 47.784
+    },
+    {
+      "country": "Nigeria",
+      "continent": "Africa",
+      "period": "1992-1997",
+      "drop": 0.008000000000002672,
+      "prev_lifeExp": 47.472,
+      "lifeExp": 47.464
+    },
+    {
+      "country": "Jamaica",
+      "continent": "Americas",
+      "period": "1987-1992",
+      "drop": 0.003999999999990678,
+      "prev_lifeExp": 71.77,
+      "lifeExp": 71.766
+    }
+  ],
+  "drop_counts": {
+    "Congo, Dem. Rep.": 4,
+    "Zambia": 4,
+    "Uganda": 4,
+    "Botswana": 3,
+    "Gabon": 3,
+    "Cote d'Ivoire": 3,
+    "Cameroon": 3,
+    "South Africa": 3,
+    "Lesotho": 3,
+    "Iraq": 3,
+    "Bulgaria": 3,
+    "Zimbabwe": 3,
+    "Kenya": 3,
+    "Korea, Dem. Rep.": 3,
+    "Swaziland": 3,
+    "Central African Republic": 3,
+    "El Salvador": 2,
+    "Congo, Rep.": 2,
+    "Cambodia": 2,
+    "Chad": 2,
+    "Trinidad and Tobago": 2,
+    "Tanzania": 2,
+    "Rwanda": 2,
+    "Romania": 2,
+    "Hungary": 2,
+    "Jamaica": 2,
+    "Mozambique": 2,
+    "Malawi": 2,
+    "Poland": 2,
+    "Nigeria": 2,
+    "Namibia": 2,
+    "Albania": 1,
+    "Burundi": 1,
+    "China": 1,
+    "Angola": 1,
+    "Benin": 1,
+    "Eritrea": 1,
+    "Denmark": 1,
+    "Croatia": 1,
+    "Czech Republic": 1,
+    "Ghana": 1,
+    "Liberia": 1,
+    "Montenegro": 1,
+    "Myanmar": 1,
+    "Norway": 1,
+    "Netherlands": 1,
+    "Somalia": 1,
+    "Serbia": 1,
+    "Puerto Rico": 1,
+    "Slovak Republic": 1,
+    "Sierra Leone": 1,
+    "Togo": 1
+  }
+}

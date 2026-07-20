@@ -1,0 +1,22 @@
+{
+    "task_id": "task_polymarket_briefing",
+    "task_name": "Polymarket + News Briefing",
+    "category": "Research",
+    "score": 0.56,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.file_created": 1.0,
+        "automated.has_date_header": 1.0,
+        "automated.has_three_markets": 1.0,
+        "automated.has_odds": 1.0,
+        "automated.has_news_summaries": 0.0,
+        "automated.correct_format": 0.5,
+        "llm_judge.data_authenticity": 0.0,
+        "llm_judge.news_relevance": 0.1,
+        "llm_judge.format_compliance": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "CRITICAL FAILURE: Agent hallucinated all market data. All three 'trending markets' are entirely fabricated—dated July 2026 with invented odds, fictional player moves (LeBron free agency), and fabricated economic data (June 2026 CPI). The agent did not attempt to call the Polymarket API, browse polymarket.com, or conduct web search. The task explicitly warned against hallucination and required alternatives if unavailable. The excellent format compliance (criterion 3: 1.0) cannot offset the fundamental violation of the core requirement. News narratives are plausibly written but are inventions created to support the hallucinated markets. The briefing reads well but is entirely fictional—unsuitable for actual market analysis.",
+    "execution_time_seconds": 351.8038215637207
+}

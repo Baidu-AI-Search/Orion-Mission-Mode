@@ -1,0 +1,18 @@
+{
+    "task_id": "task_financial_ratio_calculation",
+    "task_name": "Financial Ratio Calculation",
+    "category": "analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "file_created": 1.0,
+        "has_inputs": 1.0,
+        "has_formula": 1.0,
+        "ratio_correct": 1.0,
+        "readable": 1.0
+    },
+    "grading_type": "automated",
+    "timed_out": false,
+    "notes": "",
+    "execution_time_seconds": 215.3700976371765
+}

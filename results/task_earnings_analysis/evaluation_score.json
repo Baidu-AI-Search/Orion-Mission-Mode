@@ -1,0 +1,18 @@
+{
+    "task_id": "task_earnings_analysis",
+    "task_name": "Earnings Analysis",
+    "category": "analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "file_created": 1.0,
+        "mentions_metric": 1.0,
+        "has_actual_and_guidance": 1.0,
+        "bp_conclusion": 1.0,
+        "readable": 1.0
+    },
+    "grading_type": "automated",
+    "timed_out": false,
+    "notes": "",
+    "execution_time_seconds": 770.162734746933
+}

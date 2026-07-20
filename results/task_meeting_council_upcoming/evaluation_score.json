@@ -1,0 +1,27 @@
+{
+    "task_id": "task_meeting_council_upcoming",
+    "task_name": "Tampa City Council – Extract Upcoming Events and Deadlines",
+    "category": "meeting_analysis",
+    "score": 0.95,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.april_16_items": 1.0,
+        "automated.april_20_townhall": 1.0,
+        "automated.may_7_ethics": 1.0,
+        "automated.fire_station_gmp": 1.0,
+        "automated.budget_workshops": 1.0,
+        "automated.march_2027_fees": 0.0,
+        "automated.rome_yard_sept2028": 1.0,
+        "automated.chronological": 1.0,
+        "automated.highlights_section": 1.0,
+        "llm_judge.Completeness": 1.0,
+        "llm_judge.Accuracy": 1.0,
+        "llm_judge.Context": 1.0,
+        "llm_judge.Prioritization": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Agent produced a comprehensive, highly organized upcoming_events.md with 40+ chronologically ordered entries covering all expected key dates (April 16 mega-meeting with Veterans Committee, Items 26-28, $650K reallocation; April 20 East Tampa Town Hall; May 7 LDC/ethics; May 15 Fire Station 24 GMP; August budget workshops; March 1 2027 capacity fee phase-in; September 2027/2028 milestones; ~60-day Rome Yard close; etc.). Each entry includes date, event, responsible party, and status. Dates are accurate. Context is rich and specific (e.g., '7 Council + 4 Mayoral appointments,' '$34.2M: $7M Phase 1 + $27.2M Phase 2,' 'accelerated from July 26'). The five-part 'What to Watch' section provides excellent synthesis of key storylines and accountability threads. No inefficiency or unnecessary verbose output detected. Meets all task requirements at high standard.",
+    "execution_time_seconds": 182.81354117393494
+}

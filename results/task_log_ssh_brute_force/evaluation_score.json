@@ -1,0 +1,24 @@
+{
+    "task_id": "task_log_ssh_brute_force",
+    "task_name": "SSH Auth Log - Brute Force Detection",
+    "category": "log_analysis",
+    "score": 0.9650000000000001,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.output_created": 1.0,
+        "automated.sources_identified": 1.0,
+        "automated.top_attacker": 1.0,
+        "automated.attack_classified": 1.0,
+        "automated.recommendations": 1.0,
+        "llm_judge.report_created": 1.0,
+        "llm_judge.minimum_ips_identified": 1.0,
+        "llm_judge.top_attacker_correct": 1.0,
+        "llm_judge.attack_type_classification": 1.0,
+        "llm_judge.recommendations_provided": 1.0,
+        "llm_judge.accuracy_to_baseline": 0.65
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Agent successfully created brute_force_report.json with proper structure. Correctly identified 6 brute-force sources exceeding 10-attempt threshold, with 183.62.140.253 as top attacker. Attack types properly classified (dictionary vs targeted). Comprehensive recommendations included. Minor deduction: attempt counts are significantly lower than expected baseline (149 vs ~307 for top attacker, 80 vs ~189 for second). This discrepancy appears due to log truncation in transcript rather than parsing error. All core requirements met; JSON structure valid.",
+    "execution_time_seconds": 172.2240071296692
+}

@@ -1,0 +1,51 @@
+U.S. Steel (United States Steel Corp., NYSE: X) — Inventory Turnover Ratio, Fiscal Year 2024
+============================================================================================
+
+Formula
+-------
+Inventory Turnover Ratio = Cost of Goods Sold (COGS) / Average Inventory
+
+  where: Average Inventory = (Beginning Inventory + Ending Inventory) / 2
+
+For a fiscal-year calculation, "beginning inventory" = inventory balance at the
+end of the prior fiscal year (Dec 31, 2023), and "ending inventory" = inventory
+balance at the end of the fiscal year in question (Dec 31, 2024).
+
+Source: U.S. Steel Form 10-K for fiscal year ended December 31, 2024, filed
+with the U.S. SEC on January 31, 2025; and comparative balance-sheet data from
+the Form 10-K for fiscal year ended December 31, 2023 (filed January 31, 2024).
+All figures in USD millions.
+
+Values used
+-----------
+Cost of sales (the income-statement line item representing COGS; on U.S. Steel's
+Consolidated Statements of Operations it is reported as "Cost of sales (excludes
+items shown below)" because SG&A, DD&A and several other operating items are
+broken out separately):
+
+   Cost of sales, FY2024 ............ $14,060 million
+
+Inventories, from the Consolidated Balance Sheets (also reconciled in Note 10,
+"Inventories"):
+
+   Inventories, Dec 31, 2023 ........ $ 2,128 million
+   Inventories, Dec 31, 2024 ........ $ 2,168 million
+   Average Inventory, FY2024 ........ ($2,128 + $2,168) / 2 = $2,148 million
+
+Note on inventory composition (Note 10, Dec 31, 2024): raw materials $959M,
+semi-finished products $828M, finished products $331M, supplies & sundry $50M
+= $2,168M total.
+
+Calculation
+-----------
+Inventory Turnover Ratio (FY2024) = $14,060M / $2,148M
+                                  ≈ 6.55 times per year
+
+Implied Days Inventory Outstanding (DIO) = 365 / 6.55 ≈ 55.8 days
+
+For reference, using ending inventory instead of average inventory:
+   Turnover = $14,060M / $2,168M ≈ 6.49×  (~56.3 days)
+
+Result
+------
+U.S. Steel inventory turnover ratio, fiscal year 2024 ≈ 6.55× (≈ 6.5 times)

@@ -1,0 +1,26 @@
+{
+    "task_id": "task_meeting_advisory_attendees",
+    "task_name": "NTIA Advisory Board Attendee List",
+    "category": "meeting_analysis",
+    "score": 0.998,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.chair_identified": 1.0,
+        "automated.member_count": 1.0,
+        "automated.remote_attendees": 1.0,
+        "automated.officials_listed": 1.0,
+        "automated.organizations_included": 1.0,
+        "automated.attendance_mode": 1.0,
+        "automated.public_participant": 1.0,
+        "automated.summary_count": 1.0,
+        "llm_judge.completeness_of_attendee_identification": 1.0,
+        "llm_judge.accuracy_of_details": 0.98,
+        "llm_judge.organization_and_structure": 1.0,
+        "llm_judge.speaking_role_assessment": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional performance. Agent identified all 24 attendees with correct names, titles, organizations, and attendance modes. Properly distinguished between in-person and remote (phone) participants using asterisk notation. Accurately categorized roles into 5 logical sections with clean table formatting. Carefully assessed speaking roles (substantive remarks vs. self-identification only vs. presiding). Correctly excluded Greg Rosston (noted as unable to attend) and unidentified participant while documenting them in notes. Provided comprehensive summary counts and reference documentation. Minor deduction (0.02) only for extremely marginal completeness considerations. Work demonstrates meticulous transcript analysis and professional documentation.",
+    "execution_time_seconds": 108.32320284843445
+}

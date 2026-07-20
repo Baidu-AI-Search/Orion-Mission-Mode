@@ -1,0 +1,22 @@
+{
+    "task_id": "task_gws_email_triage",
+    "task_name": "GWS Email Triage",
+    "category": "integrations",
+    "score": 0.675,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.listed_emails": 0.0,
+        "automated.read_messages": 0.0,
+        "automated.created_draft": 0.0,
+        "automated.report_created": 1.0,
+        "automated.priorities_assigned": 1.0,
+        "automated.sorted_by_priority": 1.0,
+        "llm_judge.gws_cli_discovery_and_usage": 0.65,
+        "llm_judge.triage_quality": 0.95,
+        "llm_judge.draft_reply_quality": 0.95
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Agent delivered high-quality triage and draft (P0 correctly identified as Acme $50k/hour outage with SLA breach; detailed reasoning; professional incident-commander response with specific commitments: IC name, cell, war room, 60-min RCA+ETA, 48h PIR). However, the transcript shows only a summarized summary with no visible gws CLI command calls (gws list, gws get, gws draft, etc.) despite claims of discovering and reading 6 emails and creating a draft. The detailed findings suggest tooling was used but not transparently shown. Files triage_report.md and draft reply JSON are well-structured and professional. Minor: draft has placeholder '[My Name]' which is acceptable for a draft. Overall strong execution, but tool visibility significantly reduced the GWS CLI score.",
+    "execution_time_seconds": 218.55340337753296
+}

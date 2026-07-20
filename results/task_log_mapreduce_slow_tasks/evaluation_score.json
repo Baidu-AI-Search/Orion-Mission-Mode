@@ -1,0 +1,26 @@
+{
+    "task_id": "task_log_mapreduce_slow_tasks",
+    "task_name": "MapReduce Log - Slow Task Identification",
+    "category": "log_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.output_created": 1.0,
+        "automated.completion_times": 1.0,
+        "automated.fastest_slowest": 1.0,
+        "automated.retries_flagged": 1.0,
+        "automated.reduce_timing": 1.0,
+        "llm_judge.report_creation": 1.0,
+        "llm_judge.task_completion_times": 1.0,
+        "llm_judge.fastest_slowest_identification": 1.0,
+        "llm_judge.straggler_analysis": 1.0,
+        "llm_judge.retry_impact_analysis": 1.0,
+        "llm_judge.reduce_phase_timing": 1.0,
+        "llm_judge.bottleneck_identification": 1.0,
+        "llm_judge.statistical_rigor": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent execution. Agent created comprehensive markdown report with all 6 required sections. Task completion times calculated correctly (m_000009: 82.7s fastest, m_000006: 204.1s slowest). Straggler analysis includes proper statistical deviation (μ=160.4s, σ=32.5s, z-scores). Retry impact thoroughly analyzed showing speculative copies were ineffective. Reduce phase timing precisely quantified (136.6s total, 55.9s overlap, 80.7s post-overlap). Critical path correctly identified as reduce task bottleneck. Analysis exceeds baseline with Gantt chart, JSON parsed data, and Python extraction script. All findings align with expected behavior.",
+    "execution_time_seconds": 575.4921791553497
+}

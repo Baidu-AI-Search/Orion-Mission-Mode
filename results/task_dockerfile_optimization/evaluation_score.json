@@ -1,0 +1,21 @@
+{
+    "task_id": "task_dockerfile_optimization",
+    "task_name": "Dockerfile Optimization",
+    "category": "coding",
+    "score": 0.875,
+    "max_score": 1.0,
+    "breakdown": {
+        "file_created": 1.0,
+        "smaller_base_image": 1.0,
+        "consolidated_run": 1.0,
+        "removed_editors": 0.0,
+        "requirements_before_source": 1.0,
+        "cache_cleanup": 1.0,
+        "no_debug_env": 1.0,
+        "preserves_port_and_cmd": 1.0
+    },
+    "grading_type": "automated",
+    "timed_out": false,
+    "notes": "",
+    "execution_time_seconds": 62.93009924888611
+}

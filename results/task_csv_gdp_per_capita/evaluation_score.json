@@ -1,0 +1,25 @@
+{
+    "task_id": "task_csv_gdp_per_capita",
+    "task_name": "World GDP Per Capita Estimation",
+    "category": "csv_analysis",
+    "score": 0.9525,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.top30_by_gdp": 1.0,
+        "automated.population_estimates": 0.5,
+        "automated.per_capita_calculated": 1.0,
+        "automated.per_capita_ranking": 1.0,
+        "automated.key_observations": 1.0,
+        "automated.outliers": 1.0,
+        "automated.methodology_note": 1.0,
+        "llm_judge.population_estimates_quality": 1.0,
+        "llm_judge.per_capita_analysis_quality": 1.0,
+        "llm_judge.insight_quality": 1.0,
+        "llm_judge.methodology_and_presentation": 0.9
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional performance. Population estimates for all 30 countries are accurate to 2014 mid-year (US 318.5M, China 1,364M, India 1,267M, etc.). Per capita calculations verified correct (US: $54.7k, China: $7.6k, Norway: $100.3k, India: $1.6k). Re-ranking properly executed with rank-shift column clearly showing outliers. Insight quality is outstanding: clearly articulates GDP-size vs per-capita-income distinction, identifies key surprises (India #10→#30, China #2→#26, Norway #27→#1), explains population's role in dilution, and notes US uniqueness as top-5 in both metrics. Methodology note is transparent about ±5% estimation accuracy and cites proper sources (UN, WB, CIA Factbook). Professional markdown formatting with clear tables and section organization. Minor deduction only: agent created two identical markdown files (gdp_per_capita_report.md and gdp_per_capita_report_1.md) rather than one, which is redundant but not a core error.",
+    "execution_time_seconds": 268.86255836486816
+}

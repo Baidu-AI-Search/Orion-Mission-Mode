@@ -1,0 +1,23 @@
+{
+    "task_id": "task_log_apache_critical",
+    "task_name": "Apache Error Log - Identify Critical Security Issues",
+    "category": "log_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.output_created": 1.0,
+        "automated.cmd_traversal_critical": 1.0,
+        "automated.awstats_scanning": 1.0,
+        "automated.multiple_categories": 1.0,
+        "automated.severity_classification": 1.0,
+        "llm_judge.json_created": 1.0,
+        "llm_judge.command_execution_critical": 1.0,
+        "llm_judge.awstats_identified": 1.0,
+        "llm_judge.distinct_categories": 1.0,
+        "llm_judge.severity_classification": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent execution. Agent correctly identified: (1) Two critical exploitation attempts (Unicode-encoded directory traversal to cmd.exe from 12 IPs; Code Red II root.exe backdoor probes from 10 IPs) with proper CVE context; (2) AWStats RCE scanning from 202.133.98.6 (~115 hits, high severity); (3) OpenWebMail, FrontPage/_vti_bin, overlong-URI buffer overflow, and directory probing attacks; (4) Eight distinct security categories total; (5) Proper severity hierarchy (critical→high→medium). JSON format fully compliant with required fields (severity, category, source_ips, evidence, sample_entry). Evidence descriptions are thorough and justify classifications. Minor: created two identical output files, but main deliverable is correct and complete.",
+    "execution_time_seconds": 149.3510501384735
+}

@@ -1,0 +1,24 @@
+{
+    "task_id": "task_meeting_searchable_index",
+    "task_name": "Meeting Searchable Index",
+    "category": "meeting_analysis",
+    "score": 0.897,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.file_created": 1.0,
+        "automated.metadata_present": 1.0,
+        "automated.topic_index": 1.0,
+        "automated.people_index": 1.0,
+        "automated.keyword_index": 1.0,
+        "automated.decisions_log": 1.0,
+        "automated.action_items_log": 0.0,
+        "automated.organized": 1.0,
+        "llm_judge.completeness_and_accuracy": 0.95,
+        "llm_judge.searchability_and_structure": 0.95,
+        "llm_judge.index_quality": 0.9
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent comprehensive index with all six required sections. Metadata complete, topic index contains 17 well-described topics (vs. 5-7 expected), people index detailed with specific contributions, keyword index alphabetized with ~90 terms and helpful context notes, decisions/action items numbered and cross-referenced to topics. Transcript accurately captured—event assignments, top-five shortlist, messaging framework, competitive methodology all correct. High searchability; someone looking for 'KubeCon,' 'Cindy,' or 'messaging' would find relevant info quickly. Entry quality is strong: concise context without verbosity, good balance of specificity. Minor deduction: agent created two identical files (meeting_index.md and meeting_index_1.md) instead of one, indicating minor inefficiency/redundancy. Core deliverable meets and exceeds requirements.",
+    "execution_time_seconds": 333.3769226074219
+}

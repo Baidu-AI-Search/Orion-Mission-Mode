@@ -1,0 +1,25 @@
+{
+    "task_id": "task_log_apache_timeline",
+    "task_name": "Apache Error Log - Create Error Timeline",
+    "category": "log_analysis",
+    "score": 0.995,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.output_created": 1.0,
+        "automated.daily_breakdown": 1.0,
+        "automated.peak_day_identified": 1.0,
+        "automated.peak_burst_identified": 1.0,
+        "automated.server_restarts_noted": 1.0,
+        "llm_judge.error_timeline_json_created": 1.0,
+        "llm_judge.daily_breakdown_coverage": 1.0,
+        "llm_judge.june_11_identified_as_peak_day": 1.0,
+        "llm_judge.peak_burst_correct_identification": 1.0,
+        "llm_judge.server_restart_events_documented": 1.0,
+        "llm_judge.accuracy_of_burst_analysis": 0.95,
+        "llm_judge.json_structure_compliance": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent execution. All required criteria met: error_timeline.json created with correct structure; all 8 days covered with accurate error counts; June 11 correctly identified as peak (305 errors); peak burst properly attributed to 202.133.98.6 at 03:03:03 with 254 errors in 11 seconds; server restarts documented for Jun 9, 10, 12. Minor deduction (0.05) for burst end time being 03:03:14 instead of closer to 03:03:10, though the 11-second window is reasonable and captures ~254 errors. The awstats/CGI scanning description is accurate and matches the log analysis.",
+    "execution_time_seconds": 309.0684621334076
+}

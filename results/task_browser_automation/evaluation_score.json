@@ -1,0 +1,25 @@
+{
+    "task_id": "task_browser_automation",
+    "task_name": "Browser Automation Workflow",
+    "category": "coding",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.file_created": 1.0,
+        "automated.uses_playwright": 1.0,
+        "automated.tests_disabled_button": 1.0,
+        "automated.tests_add_to_cart": 1.0,
+        "automated.tests_cart_total": 1.0,
+        "automated.tests_remove_item": 1.0,
+        "automated.tests_checkout": 1.0,
+        "automated.uses_assertions": 1.0,
+        "llm_judge.criterion_1_test_coverage": 1.0,
+        "llm_judge.criterion_2_code_quality": 1.0,
+        "llm_judge.criterion_3_selector_strategy": 1.0,
+        "llm_judge.criterion_4_assertion_quality": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional submission. All specified workflow steps covered with meaningful assertions. Test code is clean, idiomatic Playwright (sync API with pytest fixtures). Selectors are predominantly robust: ID-based (#cart, #total, #checkout, #order-id), role-based (get_by_role), and text-based (has_text) queries. Assertions use expect API correctly, checking exact totals ($149.97, $59.98), visibility states, counts, and text content—would catch real bugs. Both test cases pass. No unnecessary steps. HTML file properly understood before test authoring. Only trivial areas for enhancement (e.g., inline comments on regex validation), but work is genuinely excellent.",
+    "execution_time_seconds": 84.55172777175903
+}

@@ -1,0 +1,26 @@
+{
+    "task_id": "task_csv_pension_ranking",
+    "task_name": "US Pension Fund State Ranking",
+    "category": "csv_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.top_10_listed": 1.0,
+        "automated.ohio_first": 1.0,
+        "automated.pennsylvania_second": 1.0,
+        "automated.florida_third": 1.0,
+        "automated.bottom_states": 1.0,
+        "automated.grand_total": 1.0,
+        "automated.payee_count_ranking": 1.0,
+        "automated.geographic_analysis": 1.0,
+        "llm_judge.criterion_1_data_parsing_accuracy": 1.0,
+        "llm_judge.criterion_2_completeness_of_rankings": 1.0,
+        "llm_judge.criterion_3_analysis_quality": 1.0,
+        "llm_judge.criterion_4_report_structure": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional performance. All dollar amounts, payee counts, and grand totals match expected values precisely. All requested rankings (top 10 by amount, bottom 5, top 10 by payee count, grand total) are present with supporting data. Analysis section is sophisticated, connecting pension distributions to federal employment history (WWII/Cold War manufacturing, specific installations like Wright-Patterson AFB), pension system differences (CSRS vs FERS), retirement migration patterns, and demographic factors. Report structure is excellent with clear sections, formatted tables, logical flow, and markdown best practices. Minor note: two identical markdown files were created (possibly a duplicate save), but the output quality is unaffected.",
+    "execution_time_seconds": 176.38912558555603
+}

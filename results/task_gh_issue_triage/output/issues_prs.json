@@ -1,0 +1,105 @@
+{
+  "repo": "testuser/my-project",
+  "issues": [
+    {
+      "number": 42,
+      "title": "Production: Database connection pool exhaustion causing 503 errors",
+      "author": "alice-dev",
+      "state": "open",
+      "created_at": "2026-07-15T08:22:14Z",
+      "labels": ["bug", "critical", "production"],
+      "comments": 7,
+      "body": "Since deployment v2.4.1 yesterday, we're seeing intermittent 503 Service Unavailable errors across all production endpoints. Investigation shows database connections are being held open and never released back to the pool. After ~30 minutes of traffic, the pool (max 50 connections) becomes fully exhausted and new requests queue up until timeout.\n\nStack trace points to the new async query handler in `src/db/pool.ts` — it appears the connection release logic was refactored in PR #38 and the `finally` block that calls `conn.release()` was removed for the async path.\n\nImpact: All production APIs affected, ~15% error rate during peak hours (9am-11am UTC).\n\nSteps to reproduce:\n1. Deploy v2.4.1 to staging\n2. Run load test at 200 RPS for >20 minutes\n3. Observe pool exhaustion after ~8,000 requests\n\nLogs attached from prod showing connection count climbing steadily."
+    },
+    {
+      "number": 40,
+      "title": "User login fails for accounts with 2FA enabled after password reset",
+      "author": "bob-security",
+      "state": "open",
+      "created_at": "2026-07-13T16:45:02Z",
+      "labels": ["bug", "high", "security"],
+      "comments": 4,
+      "body": "After a user resets their password via the 'forgot password' flow, they are unable to log back in if their account has two-factor authentication enabled. The OTP verification step returns 'Invalid session token' and the user is stuck in a loop.\n\nRoot cause appears to be that the password reset flow invalidates all existing sessions (good), but it also invalidates the newly-issued session used for the post-reset 2FA verification. This was introduced when session rotation was added in commit a3f91b2.\n\nSecurity concern: Users are calling support saying they're locked out of their accounts. While this is a denial-of-service to the legitimate user rather than an auth bypass, it's affecting ~3% of password reset flows based on our metrics."
+    },
+    {
+      "number": 39,
+      "title": "Documentation: API reference for /v2/webhooks is out of date",
+      "author": "carol-docs",
+      "state": "open",
+      "created_at": "2026-07-10T11:00:30Z",
+      "labels": ["documentation", "medium"],
+      "comments": 2,
+      "body": "The API reference at /docs/api/webhooks.md still describes the v1 webhook payload format. The `signature` header was renamed to `x-signature-sha256` in v2, and the payload now includes a `timestamp` field at the top level. Several external integrators have filed support tickets because their signature verification is failing against the new format.\n\nExpected: Update webhooks.md to reflect v2 payload and link to the migration guide."
+    },
+    {
+      "number": 37,
+      "title": "Feature request: Add dark mode support to dashboard",
+      "author": "dave-design",
+      "state": "open",
+      "created_at": "2026-07-05T09:12:44Z",
+      "labels": ["enhancement", "low", "ui"],
+      "comments": 12,
+      "body": "The dashboard currently only supports a light theme. With OS-level dark mode becoming standard, we should add a dark theme option that follows `prefers-color-scheme: dark` and also allows manual toggle.\n\nProposed approach:\n- Use CSS custom properties for theming (we already have partial support)\n- Add a theme toggle in the user settings menu\n- Persist preference in localStorage\n\nHappy to contribute a PR if there's interest from maintainers."
+    },
+    {
+      "number": 35,
+      "title": "Memory leak in background job worker under sustained load",
+      "author": "eve-perf",
+      "state": "open",
+      "created_at": "2026-07-02T14:33:08Z",
+      "labels": ["bug", "medium", "performance"],
+      "comments": 5,
+      "body": "The background job worker (src/workers/job-runner.ts) appears to leak memory when processing a large backlog of jobs. After running for >24 hours with a queue depth of >1000 jobs, RSS memory grows from ~200MB to >2GB and the worker eventually OOM-kills.\n\nHeap snapshots suggest references to completed jobs are being retained somewhere in the retry logic — the `jobHistory` array in JobRunner may not have a cap.\n\nNot yet affecting production because workers are restarted daily via cron, but will become a problem if we increase job throughput."
+    }
+  ],
+  "pulls": [
+    {
+      "number": 41,
+      "title": "Fix: restore connection release in async query handler",
+      "author": "frank-fix",
+      "state": "open",
+      "created_at": "2026-07-16T09:15:00Z",
+      "labels": ["bug", "critical"],
+      "comments": 1,
+      "body": "## Summary\nFixes #42.\n\nThis PR restores the missing `conn.release()` call in the async query handler path that was accidentally removed during the refactor in PR #38. The synchronous path was unaffected.\n\n## Changes\n- Added `finally { conn.release() }` block back in `src/db/pool.ts` async handler\n- Added integration test that runs 1000 concurrent queries and verifies pool count returns to baseline\n- Added pool metrics (active/idle count) exposed on the health endpoint for future monitoring\n\n## Testing\n- [x] Reproduced the issue with a load test script\n- [x] Verified fix resolves connection exhaustion\n- [x] Existing unit tests pass\n- [x] Tested in staging for 1 hour at 300 RPS — no pool exhaustion\n\n## Risk\nLow risk — this restores previously-existing behavior. The new metrics endpoint adds one field to an existing JSON response, no breaking changes.",
+      "reviews": [
+        {"author": "alice-dev", "state": "APPROVED", "comment": "Looks good. Pool metrics are a nice addition. Please merge ASAP and deploy to production."}
+      ]
+    },
+    {
+      "number": 38,
+      "title": "Refactor: convert DB query handlers to async/await",
+      "author": "grace-refactor",
+      "state": "open",
+      "created_at": "2026-07-11T10:00:00Z",
+      "labels": ["refactor"],
+      "comments": 9,
+      "body": "## Summary\nConverted remaining promise-chain style DB query handlers to async/await for improved readability and error handling.\n\n## Changes\n- Rewrote `src/db/pool.ts` query handler using async/await\n- Updated call sites in 12 files\n- Added unit tests for error path handling\n\n## Testing\n- [x] All existing unit tests pass\n- [ ] Load test not yet performed\n\nNote: this was deployed to production in v2.4.1 and appears to have introduced issue #42. DNM (do not merge) additional changes here until the production issue is resolved.",
+      "reviews": [
+        {"author": "alice-dev", "state": "CHANGES_REQUESTED", "comment": "Rollback needed for production — this introduced a critical connection leak. See #42. We should coordinate with PR #41 which has the fix."}
+      ]
+    },
+    {
+      "number": 36,
+      "title": "Add CSV export feature to reporting dashboard",
+      "author": "henry-feature",
+      "state": "open",
+      "created_at": "2026-07-06T13:22:11Z",
+      "labels": ["enhancement", "medium"],
+      "comments": 3,
+      "body": "## Summary\nAdds a CSV export button to the reporting dashboard, allowing users to export the currently filtered report data.\n\n## Changes\n- New ExportButton component\n- Server endpoint `/api/reports/export` that streams CSV\n- Column selection dialog\n\n## Testing\n- [x] Unit tests for CSV formatting\n- [x] Tested with large datasets (100k rows) using streaming\n- [ ] Needs UX review for the column selection dialog\n\nReady for review, would like feedback on the UX of the column picker.",
+      "reviews": []
+    },
+    {
+      "number": 34,
+      "title": "Bump lodash from 4.17.20 to 4.17.21",
+      "author": "dependabot[bot]",
+      "state": "open",
+      "created_at": "2026-07-01T06:00:00Z",
+      "labels": ["dependencies", "security"],
+      "comments": 0,
+      "body": "Bumps lodash from 4.17.20 to 4.17.21. This addresses CVE-2021-23337 (command injection in template). Although our usage of lodash does not pass user input to _.template, it's best practice to update.\n\nRelease notes, changelog, and commits linked by Dependabot.\n\nAutomated PR. Tests passing.",
+      "reviews": []
+    }
+  ]
+}

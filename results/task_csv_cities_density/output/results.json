@@ -1,0 +1,369 @@
+{
+  "top10_avg": [
+    {
+      "State": "District of Columbia",
+      "total_pop": 646449,
+      "city_count": 1,
+      "avg_pop_per_city": 646449.0
+    },
+    {
+      "State": "New York",
+      "total_pop": 9933332,
+      "city_count": 17,
+      "avg_pop_per_city": 584313.6470588235
+    },
+    {
+      "State": "Hawaii",
+      "total_pop": 347884,
+      "city_count": 1,
+      "avg_pop_per_city": 347884.0
+    },
+    {
+      "State": "Alaska",
+      "total_pop": 300950,
+      "city_count": 1,
+      "avg_pop_per_city": 300950.0
+    },
+    {
+      "State": "Nevada",
+      "total_pop": 1481832,
+      "city_count": 6,
+      "avg_pop_per_city": 246972.0
+    },
+    {
+      "State": "Kentucky",
+      "total_pop": 1079181,
+      "city_count": 5,
+      "avg_pop_per_city": 215836.2
+    },
+    {
+      "State": "Nebraska",
+      "total_pop": 807304,
+      "city_count": 4,
+      "avg_pop_per_city": 201826.0
+    },
+    {
+      "State": "Pennsylvania",
+      "total_pop": 2598080,
+      "city_count": 13,
+      "avg_pop_per_city": 199852.3076923077
+    },
+    {
+      "State": "Arizona",
+      "total_pop": 4691466,
+      "city_count": 25,
+      "avg_pop_per_city": 187658.64
+    },
+    {
+      "State": "Texas",
+      "total_pop": 14836230,
+      "city_count": 83,
+      "avg_pop_per_city": 178749.7590361446
+    }
+  ],
+  "bot10_avg": [
+    {
+      "State": "Vermont",
+      "total_pop": 42284,
+      "city_count": 1,
+      "avg_pop_per_city": 42284.0
+    },
+    {
+      "State": "West Virginia",
+      "total_pop": 99998,
+      "city_count": 2,
+      "avg_pop_per_city": 49999.0
+    },
+    {
+      "State": "Delaware",
+      "total_pop": 108891,
+      "city_count": 2,
+      "avg_pop_per_city": 54445.5
+    },
+    {
+      "State": "Wyoming",
+      "total_pop": 122076,
+      "city_count": 2,
+      "avg_pop_per_city": 61038.0
+    },
+    {
+      "State": "Maine",
+      "total_pop": 66318,
+      "city_count": 1,
+      "avg_pop_per_city": 66318.0
+    },
+    {
+      "State": "South Carolina",
+      "total_pop": 812734,
+      "city_count": 12,
+      "avg_pop_per_city": 67727.83333333333
+    },
+    {
+      "State": "Montana",
+      "total_pop": 277392,
+      "city_count": 4,
+      "avg_pop_per_city": 69348.0
+    },
+    {
+      "State": "North Dakota",
+      "total_pop": 281945,
+      "city_count": 4,
+      "avg_pop_per_city": 70486.25
+    },
+    {
+      "State": "Mississippi",
+      "total_pop": 427944,
+      "city_count": 6,
+      "avg_pop_per_city": 71324.0
+    },
+    {
+      "State": "Utah",
+      "total_pop": 1440569,
+      "city_count": 19,
+      "avg_pop_per_city": 75819.42105263157
+    }
+  ],
+  "top5_dom": [
+    {
+      "State": "New York",
+      "largest_city": "New York",
+      "largest_pop": 8405837,
+      "total_pop": 9933332,
+      "pct_largest": 84.62253149295724,
+      "city_count": 17
+    },
+    {
+      "State": "Maryland",
+      "largest_city": "Baltimore",
+      "largest_pop": 622104,
+      "total_pop": 954852,
+      "pct_largest": 65.15187694009124,
+      "city_count": 7
+    },
+    {
+      "State": "Pennsylvania",
+      "largest_city": "Philadelphia",
+      "largest_pop": 1553165,
+      "total_pop": 2598080,
+      "pct_largest": 59.78126154698854,
+      "city_count": 13
+    },
+    {
+      "State": "New Mexico",
+      "largest_city": "Albuquerque",
+      "largest_pop": 556495,
+      "total_pop": 953296,
+      "pct_largest": 58.37588744734059,
+      "city_count": 7
+    },
+    {
+      "State": "Kentucky",
+      "largest_city": "Louisville",
+      "largest_pop": 609893,
+      "total_pop": 1079181,
+      "pct_largest": 56.5144308508026,
+      "city_count": 5
+    }
+  ],
+  "distinct_states": 51,
+  "most_cities": [
+    {
+      "State": "California",
+      "count": 212
+    },
+    {
+      "State": "Texas",
+      "count": 83
+    },
+    {
+      "State": "Florida",
+      "count": 73
+    },
+    {
+      "State": "Illinois",
+      "count": 52
+    },
+    {
+      "State": "Massachusetts",
+      "count": 36
+    },
+    {
+      "State": "Ohio",
+      "count": 33
+    },
+    {
+      "State": "Michigan",
+      "count": 31
+    },
+    {
+      "State": "Washington",
+      "count": 28
+    },
+    {
+      "State": "Arizona",
+      "count": 25
+    },
+    {
+      "State": "Minnesota",
+      "count": 24
+    }
+  ],
+  "fewest_cities": [
+    {
+      "State": "Delaware",
+      "count": 2
+    },
+    {
+      "State": "Wyoming",
+      "count": 2
+    },
+    {
+      "State": "West Virginia",
+      "count": 2
+    },
+    {
+      "State": "South Dakota",
+      "count": 2
+    },
+    {
+      "State": "Alaska",
+      "count": 1
+    },
+    {
+      "State": "Hawaii",
+      "count": 1
+    },
+    {
+      "State": "District of Columbia",
+      "count": 1
+    },
+    {
+      "State": "Maine",
+      "count": 1
+    },
+    {
+      "State": "Vermont",
+      "count": 1
+    }
+  ],
+  "most_unequal": [
+    {
+      "State": "New York",
+      "city_count": 17,
+      "largest": 8405837,
+      "smallest": 37659,
+      "ratio_large_small": 223.20924612974324,
+      "cv": 3.451357652885655
+    },
+    {
+      "State": "California",
+      "city_count": 212,
+      "largest": 3884307,
+      "smallest": 37101,
+      "ratio_large_small": 104.695479906202,
+      "cv": 2.2360812628901843
+    },
+    {
+      "State": "Illinois",
+      "city_count": 52,
+      "largest": 2718782,
+      "smallest": 37240,
+      "ratio_large_small": 73.00703544575725,
+      "cv": 3.1738862188847397
+    },
+    {
+      "State": "Texas",
+      "city_count": 83,
+      "largest": 2195914,
+      "smallest": 37093,
+      "ratio_large_small": 59.20022645782223,
+      "cv": 1.8248875101562754
+    },
+    {
+      "State": "Arizona",
+      "city_count": 25,
+      "largest": 1513367,
+      "smallest": 37130,
+      "ratio_large_small": 40.75860490169674,
+      "cv": 1.6258903349256537
+    }
+  ],
+  "least_unequal": [
+    {
+      "State": "South Carolina",
+      "city_count": 12,
+      "largest": 133358,
+      "smallest": 37647,
+      "ratio_large_small": 3.542327409886578,
+      "cv": 0.5249990450626356
+    },
+    {
+      "State": "Connecticut",
+      "city_count": 15,
+      "largest": 147216,
+      "smallest": 40347,
+      "ratio_large_small": 3.648747118744888,
+      "cv": 0.439977263585
+    },
+    {
+      "State": "Arkansas",
+      "city_count": 10,
+      "largest": 197357,
+      "smallest": 40167,
+      "ratio_large_small": 4.9134115069584485,
+      "cv": 0.5602503134701982
+    },
+    {
+      "State": "Iowa",
+      "city_count": 13,
+      "largest": 207510,
+      "smallest": 40566,
+      "ratio_large_small": 5.1153675491791155,
+      "cv": 0.5673632854554336
+    },
+    {
+      "State": "Utah",
+      "city_count": 19,
+      "largest": 191180,
+      "smallest": 36956,
+      "ratio_large_small": 5.173178915467042,
+      "cv": 0.5259776327727326
+    }
+  ],
+  "region_stats": [
+    {
+      "Region": "Midwest",
+      "total_pop": 24408828,
+      "city_count": 231,
+      "avg_city_size": 105665.92207792208,
+      "pop_share_pct": 18.613874218754546,
+      "city_share_pct": 23.1
+    },
+    {
+      "Region": "Northeast",
+      "total_pop": 19486520,
+      "city_count": 114,
+      "avg_city_size": 170934.38596491228,
+      "pop_share_pct": 14.860182235756866,
+      "city_share_pct": 11.4
+    },
+    {
+      "Region": "Southeast",
+      "total_pop": 41422799,
+      "city_count": 307,
+      "avg_city_size": 134927.68403908794,
+      "pop_share_pct": 31.58852077513724,
+      "city_share_pct": 30.7
+    },
+    {
+      "Region": "West",
+      "total_pop": 45814296,
+      "city_count": 348,
+      "avg_city_size": 131650.27586206896,
+      "pop_share_pct": 34.93742277035135,
+      "city_share_pct": 34.8
+    }
+  ],
+  "total_cities": 1000,
+  "total_pop": 131132443
+}

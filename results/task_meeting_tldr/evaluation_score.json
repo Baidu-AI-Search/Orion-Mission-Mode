@@ -1,0 +1,24 @@
+{
+    "task_id": "task_meeting_tldr",
+    "task_name": "Meeting TL;DR",
+    "category": "meeting_analysis",
+    "score": 0.984,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.file_created": 1.0,
+        "automated.one_line_summary": 1.0,
+        "automated.bullet_points": 1.0,
+        "automated.events_mentioned": 1.0,
+        "automated.messaging_decision": 1.0,
+        "automated.deadline_mentioned": 1.0,
+        "automated.word_count_ok": 1.0,
+        "automated.no_filler": 1.0,
+        "llm_judge.Information Density": 0.95,
+        "llm_judge.Conciseness": 0.95,
+        "llm_judge.Scannability": 0.98
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent execution. Agent delivered exactly what was requested: a 142-word TL;DR (under 150-word hard limit) with a one-line summary, 4 focused bullet points covering event assignments, Commit announcements, competitive sheets, and messaging, plus both deadlines. Uses effective shorthand (→, ~3, top 5) and bold headers for scanning. Every sentence carries essential information. Reads like a Slack message. Minor: could have trimmed 2-3 words further, but this is quibbling—the summary is optimally concise for the content density.",
+    "execution_time_seconds": 102.68758726119995
+}

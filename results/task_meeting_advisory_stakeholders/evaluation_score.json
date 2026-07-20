@@ -1,0 +1,26 @@
+{
+    "task_id": "task_meeting_advisory_stakeholders",
+    "task_name": "NTIA Advisory Board Stakeholder Interests",
+    "category": "meeting_analysis",
+    "score": 0.96,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.gov_stakeholders": 1.0,
+        "automated.commercial_stakeholders": 1.0,
+        "automated.sharing_preference": 1.0,
+        "automated.relocation_cost": 1.0,
+        "automated.sharing_vs_relocation": 1.0,
+        "automated.common_parameters": 1.0,
+        "automated.conflicts_identified": 1.0,
+        "automated.member_positions": 1.0,
+        "llm_judge.criterion_1_stakeholder_identification": 0.94,
+        "llm_judge.criterion_2_interest_and_position_analysis": 0.88,
+        "llm_judge.criterion_3_conflict_and_agreement_mapping": 0.91,
+        "llm_judge.criterion_4_evidence_based_analysis": 0.89
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent stakeholder analysis with comprehensive coverage of all major groups (government, industry, advisory members, public). Clear identification of nuanced positions on sharing vs. relocation, supported by transcript evidence. Well-mapped tensions and agreements with specific examples. Minor inefficiencies: (1) created two identical output files (stakeholder_analysis.md and stakeholder_analysis_1.md), (2) some positions stated as direct fact when they are reasonable inferences rather than explicit quotes, (3) a few interpretive characterizations (e.g., '$18B is too high') could be more precisely attributed. Unresolved questions section is thorough and valuable. Summary assessment frames the core dynamics effectively. Overall exceeds expectations for the task.",
+    "execution_time_seconds": 187.70927333831787
+}

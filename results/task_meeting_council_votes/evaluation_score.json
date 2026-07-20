@@ -1,0 +1,27 @@
+{
+    "task_id": "task_meeting_council_votes",
+    "task_name": "Tampa City Council – List Motions and Vote Outcomes",
+    "category": "meeting_analysis",
+    "score": 0.91,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.minutes_vote": 1.0,
+        "automated.item12_abstain": 1.0,
+        "automated.item14_15_rollcall": 1.0,
+        "automated.item19_unanimous": 1.0,
+        "automated.item22_continued": 1.0,
+        "automated.item23_first_reading": 1.0,
+        "automated.item25_carlson_no": 1.0,
+        "automated.item26_28_reconsider": 1.0,
+        "automated.summary_count": 0.0,
+        "llm_judge.vote_identification_completeness": 0.88,
+        "llm_judge.vote_detail_accuracy": 0.95,
+        "llm_judge.organization": 0.95,
+        "llm_judge.summary_accuracy": 0.9
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent work. Agent identified 35 recorded votes with comprehensive detail. All key votes correct: minutes adoption (Miranda/Maniscalco), Item 12 abstention (Carlson), Item 14-15 Rome Yard (5-2 with Carlson/Clendenin no), Item 19 unanimous rezoning, Item 22 continuation, Item 23 first reading, Item 25 (6-1 Carlson no), Items 26-28 reconsidered/moved to April 16. Chronologically organized with clear movers, seconders, results, dissents. Summary count accurate (35 total, 33 no dissent, 2 with dissent, 0 failed). Minor: possibly missed 3-5 procedural votes (e.g., some receive/file motions on written reports) but captured all substantive items. Report is professional, readable, and actionable.",
+    "execution_time_seconds": 233.40449738502502
+}

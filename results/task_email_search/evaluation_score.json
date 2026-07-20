@@ -1,0 +1,28 @@
+{
+    "task_id": "task_email_search",
+    "task_name": "Email Search and Summarization",
+    "category": "analysis",
+    "score": 0.988,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.file_created": 1.0,
+        "automated.project_identified": 1.0,
+        "automated.tech_stack": 1.0,
+        "automated.budget_tracking": 1.0,
+        "automated.timeline_tracking": 1.0,
+        "automated.security_findings": 1.0,
+        "automated.client_revenue": 1.0,
+        "automated.noise_filtered": 1.0,
+        "automated.has_required_sections": 1.0,
+        "automated.cross_referencing": 1.0,
+        "llm_judge.completeness": 1.0,
+        "llm_judge.synthesis_quality": 0.9,
+        "llm_judge.noise_filtering": 1.0,
+        "llm_judge.structure_readability": 1.0,
+        "llm_judge.accuracy": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent execution. Summary captures all 10 Project Alpha emails with zero inclusion of the 2 unrelated ones (team lunch, conference promo). Organized perfectly into the 5 requested sections with clear tables and formatting. Facts verified: budget $340K→$410K, timeline slips (Apr 21→May 6 beta, May 12→May 27 GA), Phase 1 complete on time at $78K under budget, all 5 client prospects named with exact ARR figures ($1.85M total), security findings listed with criticality levels, tech stack detailed. Synthesis connects key causalities: security findings+WebSocket gateway drove timeline slip, early frontend parallelization mitigates delay, white-labeling flagged as low-cost high-value. Minor deduction: could have made 1-2 additional cross-email connections (e.g., explicitly linking Feb 8 Kafka outage to infrastructure concerns in Jan 22 email, or tying Emily's white-labeling comment more explicitly to Jessica's feature requests). Duplicate files created (alpha_summary.md and alpha_summary_1.md are identical) represent inefficiency but don't impact grading since the core deliverable is correct.",
+    "execution_time_seconds": 99.32553005218506
+}

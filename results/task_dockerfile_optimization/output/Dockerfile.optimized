@@ -1,0 +1,57 @@
+# Optimized, production-ready Docker image for a Django web application.
+# Key optimizations vs. the original Dockerfile:
+#   1. Uses a slim Python base image (~150MB) instead of full ubuntu:22.04 (~80MB+extra).
+#   2. Consolidates RUN instructions to minimize layers.
+#   3. Installs only runtime-required system packages (libpq5) – editors (vim/nano),
+#      VCS (git), downloaders (curl/wget), node/npm and build tools are removed
+#      because they are not needed to *run* this Django app.  We use pre-built
+#      Python wheels for psycopg2-binary so no compiler/libpq-dev is required.
+#   4. Copies requirements.txt first and installs dependencies before copying the
+#      full source tree to maximize Docker layer caching.
+#   5. Cleans apt and pip caches inside the same RUN layer to reduce image size.
+#   6. Removes the DEBUG=true environment variable (production-safe defaults).
+#   7. Runs as a non-root user for better security.
+#   8. Uses `pip install --no-cache-dir` and disables pip version check.
+
+FROM python:3.11-slim
+
+# Prevent Python from writing .pyc files and enable unbuffered stdout/stderr
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
+# Install only the runtime system libraries required by the app.
+# libpq5 is the shared library needed by psycopg2 at runtime; the -dev package
+# and build toolchain are not needed because we install psycopg2-binary wheel.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends libpq5 \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+WORKDIR /app
+
+# Copy dependency specification first so this layer is cached until
+# requirements.txt changes.
+COPY requirements.txt /app/requirements.txt
+
+# Install Python dependencies. We replace the source psycopg2 package with
+# psycopg2-binary (pre-built wheel) so no C compiler is needed at build time.
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r <(sed 's/^psycopg2==/psycopg2-binary==/' requirements.txt) \
+    && find /usr/local/lib/python3.11/site-packages -name '*.pyc' -delete \
+    && find /usr/local/lib/python3.11/site-packages -type d -name '__pycache__' -exec rm -rf {} + 2>/dev/null || true
+
+# Copy the rest of the application source code after dependencies are installed
+# so code changes don't invalidate the dependency cache layer.
+COPY . /app
+
+# Create and switch to a non-root user for runtime (security best practice).
+RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app
+USER appuser
+
+EXPOSE 8000
+
+# NOTE: DEBUG=true has been intentionally removed for production safety.
+
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]

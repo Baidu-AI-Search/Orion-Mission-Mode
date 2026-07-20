@@ -1,0 +1,19 @@
+{
+    "task_id": "task_cicd_pipeline_debug",
+    "task_name": "CI/CD Pipeline Debug",
+    "category": "coding",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "file_exists": 1.0,
+        "valid_yaml": 1.0,
+        "runner_label_fixed": 1.0,
+        "coverage_condition_fixed": 1.0,
+        "deploy_downloads_artifact": 1.0,
+        "redundant_env_removed": 1.0
+    },
+    "grading_type": "automated",
+    "timed_out": false,
+    "notes": "",
+    "execution_time_seconds": 59.46375226974487
+}

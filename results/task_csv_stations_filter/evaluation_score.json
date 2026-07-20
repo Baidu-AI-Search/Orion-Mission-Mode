@@ -1,0 +1,24 @@
+{
+    "task_id": "task_csv_stations_filter",
+    "task_name": "Idaho Weather Stations Multi-Criteria Filtering",
+    "category": "csv_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.nws_high_count": 1.0,
+        "automated.nws_highest": 1.0,
+        "automated.nrcs_custer_count": 1.0,
+        "automated.nrcs_custer_top": 1.0,
+        "automated.southern_filter": 1.0,
+        "automated.cross_tabulation": 1.0,
+        "llm_judge.filter_accuracy": 1.0,
+        "llm_judge.dms_coordinate_handling": 1.0,
+        "llm_judge.cross_tabulation_quality": 1.0,
+        "llm_judge.report_organization": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Perfect execution. All four filters produce exactly the expected results: 39 NWS stations ≥5000 ft (GALENA at 7300 ft top), 4 NRCS stations in Custer County at correct elevations, 8 low-elevation southern stations with correct DMS-to-decimal parsing and 43°N threshold applied accurately, and cross-tabulation with exact counts (NWS 143, NRCS 70, total 213). DMS latitude parsing is correct. Report is excellently organized with clear sections, prominent counts, well-formatted tables, and logical flow. No errors detected.",
+    "execution_time_seconds": 85.81565189361572
+}

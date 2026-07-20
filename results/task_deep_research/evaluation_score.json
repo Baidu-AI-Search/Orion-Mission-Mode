@@ -1,0 +1,18 @@
+{
+    "task_id": "task_deep_research",
+    "task_name": "Deep Research with Citations",
+    "category": "research",
+    "score": 0.86,
+    "max_score": 1.0,
+    "breakdown": {
+        "research_depth_and_accuracy": 0.85,
+        "citation_quality": 0.88,
+        "coverage_completeness": 0.92,
+        "writing_quality_and_structure": 0.87,
+        "critical_analysis": 0.78
+    },
+    "grading_type": "llm_judge",
+    "timed_out": false,
+    "notes": "Strong report demonstrating genuine research with 21 primary-source citations covering all five requested areas. Includes 6 concrete use cases (exceeds requirement of 5), detailed WASI status with specific phases/proposals, and meaningful runtime comparison with context on sponsors and governance. Executive summary and structure are professional. Citation placement is consistent and relevant. Limitations section shows good critical thinking, particularly regarding sandboxing caveats and ecosystem fragmentation. Minor gaps: could provide slightly deeper comparative analysis (e.g., more discussion of why certain runtimes dominate specific niches), and some claims about maturity/adoption could be quantified further. Overall, a well-executed research deliverable that would serve as a useful industry overview.",
+    "execution_time_seconds": 488.3885426521301
+}

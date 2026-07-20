@@ -1,0 +1,57 @@
+What Is GPT-4? (Explained Like You're 5)
+==========================================
+
+Imagine a very smart robot friend who lives inside a computer.
+This robot has read TONS of books, stories, web pages, and computer code —
+more words than a kid could read in a thousand lifetimes. Scientists at a
+place called OpenAI built this robot and named it GPT-4. It is a bigger,
+smarter version of the chatbot grown-ups have been talking about.
+
+What Can GPT-4 Do?
+------------------
+
+GPT-4 can read words AND look at pictures, like being able to listen to a
+bedtime story and look at the pictures at the same time.
+
+The scientists gave GPT-4 lots of hard tests that grown-ups take to become
+lawyers, doctors, and teachers — and GPT-4 did really well!
+- On the big test to become a lawyer, it scored better than 9 out of 10
+  people. That is like getting an A+ on a super-hard test!
+- It can answer math problems, write stories, help with homework, explain
+  tricky ideas, write computer code, and speak many languages.
+- If you show it a funny drawing or a photo of your homework, it can look at
+  it and tell you what it sees or help solve the problem.
+
+But GPT-4 is not perfect. Sometimes it makes things up (silly robot fibs!)
+because it is just guessing the next word. It cannot really learn from your
+chat the way you can, and it can make mistakes. So grown-ups should always
+double-check important stuff it says.
+
+How Did They Build It?
+----------------------
+
+Before building the BIG robot, the scientists built lots of TINY practice
+robots first. By watching the tiny robots learn, they could guess how well
+the BIG one would do — like tasting a tiny bite of cookie dough to know if
+the whole batch will be yummy.
+
+They also taught GPT-4 to be nice and safe. Human helpers read its answers
+and said "that's good" or "that's bad," so GPT-4 learned not to help with
+mean or dangerous things — like how your parents teach you not to touch the
+hot stove.
+
+Why Does It Matter?
+-------------------
+
+GPT-4 is exciting because it is one of the first computer helpers that can
+talk with people in an almost-human way about almost anything. It can help
+kids with homework, help doctors read papers, help coders write programs,
+and help people who speak different languages talk to each other.
+
+But because it is SO powerful, grown-ups need to be careful — making sure it
+tells the truth, treats everyone fairly, and does not hurt anyone.
+
+In short: GPT-4 is like a super-smart, well-read talking robot that can
+read, write, look at pictures, and help with many hard tasks — but it is
+still just a computer program, not a real person, and it still needs grown-up
+supervision.

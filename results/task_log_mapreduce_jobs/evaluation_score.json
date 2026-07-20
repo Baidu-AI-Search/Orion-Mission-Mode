@@ -1,0 +1,26 @@
+{
+    "task_id": "task_log_mapreduce_jobs",
+    "task_name": "MapReduce Log - Job Completion Summary",
+    "category": "log_analysis",
+    "score": 0.99,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.output_created": 1.0,
+        "automated.job_id": 1.0,
+        "automated.task_counts": 1.0,
+        "automated.duration": 1.0,
+        "automated.final_status": 1.0,
+        "llm_judge.job_identification": 1.0,
+        "llm_judge.job_configuration": 1.0,
+        "llm_judge.task_summary": 1.0,
+        "llm_judge.task_completion_timeline": 1.0,
+        "llm_judge.job_duration": 1.0,
+        "llm_judge.final_status": 1.0,
+        "llm_judge.report_format_and_structure": 0.9,
+        "llm_judge.completeness_and_accuracy": 0.95
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional work. The agent parsed the 1282-line log correctly and produced a comprehensive, well-structured markdown report. All six required components are present and accurate: Job ID (job_1445062781478_0011), 10 map + 1 reduce tasks, all succeeded, precise timestamps for all task completions, correct duration (4m 47s ≈ 5 min), and SUCCEEDED status with complete state transitions. The report includes excellent supplementary details (speculative execution, detailed configuration table, visual timeline). Minor deductions: (1) two nearly identical report files were created instead of one, and (2) the expected duration is stated as '~5 minutes' while the actual calculated value is 4m 47s (acceptable variation per rubric, but worth noting).",
+    "execution_time_seconds": 192.39870953559875
+}

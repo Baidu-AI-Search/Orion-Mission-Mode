@@ -1,0 +1,18 @@
+{
+    "task_id": "task_it_procurement",
+    "task_name": "IT Procurement Research",
+    "category": "research",
+    "score": 0.98,
+    "max_score": 1.0,
+    "breakdown": {
+        "product_research_quality": 1.0,
+        "practical_procurement_value": 0.95,
+        "linux_compatibility_assessment": 0.98,
+        "fleet_recommendation": 0.98,
+        "comparison_quality": 0.99
+    },
+    "grading_type": "llm_judge",
+    "timed_out": false,
+    "notes": "Exceptional report. Specific model configs with exact specs (M4 Pro 24GB, Ryzen AI 7 PRO 350, etc.), current multi-source pricing, and deployment timelines. Linux compatibility details are precise—kernel version requirements (6.8+, 6.11+), specific distro recommendations (Ubuntu 24.04.2 HWE, Fedora 40+), and known hardware issues (MT7925 Wi-Fi driver, suspend s0ix). Fleet recommendation concrete: 25 MBP base + 3 MBP upgrade + 17 T14 + 4 P1 + 1 Framework = $110.3k all-in. Five comparison tables (model specs, scoring matrix, fleet breakdown, add-ons, budget scenarios). Repairability/warranty coverage thorough: AppleCare+ pricing, Lenovo Premier Support tiers, iFixit scores. Minor: could quantify imaging/deployment labor costs for Linux fleet more explicitly; some prices marked 'estimated' rather than live vendor quotes (acceptable given future-dated scenario). Very actionable for an IT manager making an immediate procurement decision.",
+    "execution_time_seconds": 430.0876717567444
+}

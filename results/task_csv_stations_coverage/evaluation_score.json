@@ -1,0 +1,24 @@
+{
+    "task_id": "task_csv_stations_coverage",
+    "task_name": "Idaho Weather Stations Coverage Gap Analysis",
+    "category": "csv_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.payette_identified": 1.0,
+        "automated.county_counts": 1.0,
+        "automated.elevation_bands": 1.0,
+        "automated.agency_comparison": 1.0,
+        "automated.missing_data": 1.0,
+        "automated.recommendations": 1.0,
+        "llm_judge.Coverage Analysis Accuracy": 1.0,
+        "llm_judge.Elevation Distribution Quality": 1.0,
+        "llm_judge.Agency Analysis": 1.0,
+        "llm_judge.Recommendations Quality": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional execution. Agent correctly identified 43/44 counties with Payette as the sole gap, accurately documented 5 stations with blank county data (all NRCS), provided precise station counts per county, and created a comprehensive elevation band analysis showing concentration in 4,000–6,000 ft range with sparse coverage below 2,000 ft and above 8,500 ft. Agency comparison clearly articulated the NWS-NRCS geographic split (mean elevations 3,993 ft vs 6,594 ft) with specific insights into mission differences. Recommendations were prioritized, location-specific, and directly tied to identified gaps (Payette County, Kootenai low-density, low-elevation corridor, high-alpine sparse coverage, blank-county data fixes). Report is well-structured, professionally written, includes supporting tables/metrics, and demonstrates no factual errors against expected outcomes. Deliverable includes three supporting visualizations and a complete summary table covering all 44 counties.",
+    "execution_time_seconds": 393.0584247112274
+}

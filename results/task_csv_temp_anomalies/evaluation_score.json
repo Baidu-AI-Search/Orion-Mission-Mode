@@ -1,0 +1,26 @@
+{
+    "task_id": "task_csv_temp_anomalies",
+    "task_name": "Global Temperature Anomaly Detection",
+    "category": "csv_analysis",
+    "score": 0.9,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.hottest_month": 1.0,
+        "automated.coldest_month": 0.0,
+        "automated.warmest_years": 1.0,
+        "automated.coldest_years": 0.5,
+        "automated.outlier_analysis": 1.0,
+        "automated.top_outlier_zscore": 1.0,
+        "automated.yoy_changes": 1.0,
+        "automated.summary": 1.0,
+        "llm_judge.criterion_1_accuracy": 1.0,
+        "llm_judge.criterion_2_statistical_rigor": 1.0,
+        "llm_judge.criterion_3_structure_and_interpretation": 1.0,
+        "llm_judge.criterion_4_completeness": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional performance across all criteria. All numerical values match expected results: hottest month 2023-09 at +1.48°C, coldest 1893-01 at -0.82°C, warmest years 2023–2017 correctly ranked, coldest years 1909–1910 correctly identified, most extreme z-score 3.76 for 2023-09, and YoY changes properly computed. Statistical analysis is rigorous: per-month means and standard deviations correctly calculated, z-scores properly computed with 84 outliers identified at threshold >2, top 15 outliers presented (exceeding the 10+ requirement). Report structure is professional with six well-defined sections including a per-month statistics table and top-outliers table. Summary section effectively synthesizes findings into three key insights about warming trends, statistical anomalies, and the dominance of long-term forcing over interannual variability. No errors, omissions, or structural issues detected.",
+    "execution_time_seconds": 160.95548939704895
+}

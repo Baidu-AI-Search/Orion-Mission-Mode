@@ -1,0 +1,17 @@
+{
+    "task_id": "task_csv_finance_report",
+    "task_name": "Apple Stock 2014 Comprehensive Finance Report",
+    "category": "csv_analysis",
+    "score": 1.0,
+    "max_score": 1.0,
+    "breakdown": {
+        "analytical_depth_and_accuracy": 1.0,
+        "completeness_of_sections": 1.0,
+        "professional_presentation": 1.0,
+        "insight_quality": 1.0
+    },
+    "grading_type": "llm_judge",
+    "timed_out": false,
+    "notes": "Excellent execution. All seven report sections are present and substantive. Quantitative analysis is accurate and comprehensive: start/end prices, returns, volatility, drawdown, Sharpe ratio, quarterly decomposition, daily statistics all match or exceed expected values. Presentation is professional with proper markdown formatting, numerical precision, and integrated charts. Beyond raw metrics, the report provides genuine insight: connects price movements to discrete catalysts (Q1 earnings, April split/buyback announcement, iPhone 6 launch), identifies meaningful market regimes, and offers context (e.g., Jan drawdown was 'remarkably shallow' relative to 42% full-year return, Sharpe of 1.8 is 'excellent' for a mega-cap). The conclusion synthesizes findings into actionable takeaways. All six expected key values are precisely correct, and the additional analysis (five trend regimes, observable patterns, risk-adjusted return framework) demonstrates depth beyond the minimum specification.",
+    "execution_time_seconds": 340.9569585323334
+}

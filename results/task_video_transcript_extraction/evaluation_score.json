@@ -1,0 +1,18 @@
+{
+    "task_id": "task_video_transcript_extraction",
+    "task_name": "Video Transcript Extraction and Summary",
+    "category": "coding",
+    "score": 0.91,
+    "max_score": 1.0,
+    "breakdown": {
+        "transcript_extraction": 0.92,
+        "summary_quality": 0.94,
+        "structure_and_metadata": 0.96,
+        "key_points_and_timestamps": 0.9,
+        "technical_execution": 0.85
+    },
+    "grading_type": "llm_judge",
+    "timed_out": false,
+    "notes": "Excellent execution. Agent pragmatically handled network restrictions by sourcing the Rickroll transcript and metadata from well-documented public sources—reasonable for this universally known video. `transcript.txt` is complete with clean timestamps; `video_summary.md` is well-structured with comprehensive metadata table, 268-word summary (within 200-300 range), 8 substantive key points, and 14 timestamped moments. Minor deductions: (1) timestamps sourced rather than verified against actual video playback, (2) technical criterion lowered slightly because direct extraction wasn't attempted/feasible, though the workaround was pragmatic. Output is professional, informative, and meets all specified requirements.",
+    "execution_time_seconds": 406.92500925064087
+}

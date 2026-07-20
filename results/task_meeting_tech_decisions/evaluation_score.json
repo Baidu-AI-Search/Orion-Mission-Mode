@@ -1,0 +1,26 @@
+{
+    "task_id": "task_meeting_tech_decisions",
+    "task_name": "Meeting Decisions Extraction",
+    "category": "meeting_analysis",
+    "score": 0.968,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.min_decisions": 1.0,
+        "automated.event_assignments": 1.0,
+        "automated.announcement_approach": 1.0,
+        "automated.competitive_methodology": 1.0,
+        "automated.messaging_tagline": 1.0,
+        "automated.infographic_colors": 1.0,
+        "automated.context_provided": 1.0,
+        "automated.status_indicated": 1.0,
+        "llm_judge.criterion_1_decision_identification_accuracy": 0.95,
+        "llm_judge.criterion_2_context_quality": 0.87,
+        "llm_judge.criterion_3_participant_attribution": 0.92,
+        "llm_judge.criterion_4_structure_and_usefulness": 0.96
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent execution. Agent identified all 7 expected key decisions plus 19 additional consensus items with high accuracy. Context consistently explains alternatives considered and reasoning. Participant attribution is precise with helpful role clarification. Structure is professional, well-organized by agenda topic, and includes useful summary with follow-up flags, action items with deadlines, and appendix. Correctly distinguished final vs. tentative decisions. Minor deductions: (1) created redundant decisions_1.md file; (2) referenced non-existent zip archive in prose; (3) some decisions granular enough to warrant questioning (though granularity adds value). Deliverable is immediately usable as meeting minutes.",
+    "execution_time_seconds": 265.66574788093567
+}

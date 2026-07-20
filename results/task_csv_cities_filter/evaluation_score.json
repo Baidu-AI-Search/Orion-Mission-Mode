@@ -1,0 +1,23 @@
+{
+    "task_id": "task_csv_cities_filter",
+    "task_name": "US Cities Multi-Criteria Filtering",
+    "category": "csv_analysis",
+    "score": 0.95,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.california_filter": 1.0,
+        "automated.southern_filter": 1.0,
+        "automated.texas_florida_comparison": 0.5,
+        "automated.midsize_filter": 1.0,
+        "automated.western_coastal_filter": 1.0,
+        "llm_judge.Filter Accuracy": 1.0,
+        "llm_judge.Completeness": 1.0,
+        "llm_judge.Comparison Quality": 1.0,
+        "llm_judge.Report Structure": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Excellent execution. All five filters applied correctly with exact expected values: CA large cities (21 cities, 12,343,323 pop), Southern cities (66 entries with proper lat/pop boundaries), TX vs FL comparison showing 83 vs 73 cities with accurate aggregations and key insight that TX has higher average city population (178,749 vs 101,508), mid-size cities (232 total, proper alphabetical sorting), and western coastal (254 cities, 32,548,214 pop). Report structure uses clear markdown headers and tables throughout. No errors detected in filtering logic, boundary handling, or data presentation.",
+    "execution_time_seconds": 110.37631344795227
+}

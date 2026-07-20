@@ -1,0 +1,26 @@
+{
+    "task_id": "task_meeting_gov_controversy",
+    "task_name": "NASA UAP Hearing Controversial Statements",
+    "category": "meeting_analysis",
+    "score": 0.9555555555555555,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.report_created": 1.0,
+        "automated.harassment": 1.0,
+        "automated.anomalous_pct": 1.0,
+        "automated.no_et_evidence": 1.0,
+        "automated.classified_tension": 1.0,
+        "automated.dod_sensors": 0.5,
+        "automated.debunked_case": 1.0,
+        "automated.audience_perspectives": 1.0,
+        "automated.tone_analysis": 0.5,
+        "llm_judge.identification_of_controversial_statements": 1.0,
+        "llm_judge.multi_perspective_analysis": 1.0,
+        "llm_judge.context_and_nuance": 1.0,
+        "llm_judge.tone_and_framing_analysis": 1.0
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Exceptional work. Agent identified 17 distinct controversial/debate-generating statements with precise accuracy, exceeding the minimum requirement of 7. Each item includes rigorous multi-perspective analysis segmented across scientific community, general public/media, and UFO community interpretations. Context sections demonstrate sophisticated understanding of diplomatic tensions, unstated implications, and what the panel strategically avoided discussing (e.g., classified data access limits, lack of programmatic funding despite high-profile meeting). The final 'Overall Tone and Framing Choices' section is particularly strong, offering insightful analysis of the panel's rhetorical strategy: normalizing UAP as legitimate scientific inquiry while de-emphasizing exotic hypotheses, and positioning NASA as credible civilian actor. Agent correctly noted tensions between speakers, tensions between stated commitments and actual resources, and how the panel calibrated messaging for different audiences. Minor inefficiency: created two near-identical controversy_analysis files, but content quality is irreproachable. Meets all rubric criteria at highest level.",
+    "execution_time_seconds": 460.15981245040894
+}

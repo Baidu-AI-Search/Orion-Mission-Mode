@@ -1,0 +1,21 @@
+{
+    "task_id": "task_gws_task_management",
+    "task_name": "GWS Task Management",
+    "category": "integrations",
+    "score": 0.48800000000000004,
+    "max_score": 1.0,
+    "breakdown": {
+        "automated.listed_tasks": 0.0,
+        "automated.updated_completed": 0.0,
+        "automated.read_emails": 0.0,
+        "automated.created_new_task": 0.0,
+        "automated.summary_created": 1.0,
+        "llm_judge.information_extraction": 0.85,
+        "llm_judge.task_list_management": 0.95,
+        "llm_judge.summary_quality": 0.95
+    },
+    "grading_type": "hybrid",
+    "timed_out": false,
+    "notes": "Agent executed the task effectively. Correctly reviewed 8 emails, extracted action items, and identified that most were already tracked. Created 2 logical follow-on tasks (#12 send P1 draft + execute rollback, #13 arrange invoice payment). Marked 5 existing P1 tasks as completed with valid evidence from draft_002. Task list management was thorough with before/after snapshots and proper status updates. Summary is comprehensive, well-organized with methodology, per-email analysis, completion evidence, and next steps. Minor deduction: only 2 genuinely new tasks created (though possibly correct given email content was mostly already tracked). Summary is slightly verbose but professional and clear.",
+    "execution_time_seconds": 225.5243227481842
+}
