@@ -14,7 +14,7 @@
   <a href="https://pinchibench-web.vercel.app/">
     <img src="https://img.shields.io/badge/PinchBench-全球%231-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTEyIDJMMiA3djEwYzAgNS41NSA0LjQ1IDEwIDEwIDEwczEwLTQuNDUgMTAtMTBWN2wtMTAtNXoiLz48L3N2Zz4=" alt="PinchBench排名" />
   </a>
-  <a href="./results/147_cases_evaluation.json">
+  <a href="./results/148_cases_evaluation.json">
     <img src="https://img.shields.io/badge/任务平均得分-94.4%25-success?style=for-the-badge" alt="任务平均得分" />
   </a>
   <a href="https://github.com/pinchbench/skill/tree/main/tasks">
@@ -33,7 +33,7 @@
   &nbsp;|&nbsp;
   <strong><a href="./illustration.md">评估说明</a></strong>
   &nbsp;|&nbsp;
-  <strong><a href="./results/147_cases_evaluation.json">详细结果</a></strong>
+  <strong><a href="./results/148_cases_evaluation.json">详细结果</a></strong>
 </p>
 
 <!-- <p align="center">
@@ -107,7 +107,7 @@ PinchBench从三个核心维度对智能体进行综合评估：
 
 ### 任务覆盖范围
 
-当前版本PinchBench包含**23个真实工作场景、147项任务**，覆盖以下类别：
+当前版本PinchBench包含**23个真实工作场景、148项任务**，覆盖以下类别：
 
 | 类别 | 代表任务 |
 |------|---------|
@@ -130,11 +130,31 @@ PinchBench采用**自动化检查 + LLM评审**的双轨评分机制：
 
 ## 📂 评测数据与可复现性保证
 
-为了确保评测结果的完全透明和 100% 可复现，在 `results` 目录下开源了全量 147 个任务的执行快照与评分明细。您可以深入每一个 Case，查看系统是如何理解复杂指令、调度工具并生成最终交付物的。
+### 🔬 标准化评估体系与流程
+
+为了确保评估的严谨性与客观性，我们构建了完全闭环的端到端评测流水线。整个评测过程严格遵循“零人工干预”原则，从官方标准输入直达最终多维量化得分。
+
+```mermaid
+graph TD
+    A[PinchBench 官方标准输入<br>Input & 环境上下文] -->|1. 原始注入| B(百度AI搜索 Orion-Mission-Mode)
+    B -->|2. 多智能体协作与工具调度| C[端到端交付物<br>Code / Report / Artifacts]
+    C -->|3. 自动化判分流水线| D{双轨评审引擎 Engine}
+    
+    D -->|客观量化指标| E[自动化脚本检查<br>验证文件结构/数值计算/正确性]
+    D -->|主观质量指标| F[权威大模型评审<br>Claude LLM Judge 深度质量评估]
+    
+    E -->|4. 核心维度解耦| G[全量多维得分看板<br>evaluation_score.json]
+    F -->|4. 评审理由追溯| G
+    
+    style B fill:#2b579a,stroke:#fff,stroke-width:2px,color:#fff
+    style D fill:#e8a317,stroke:#fff,stroke-width:2px,color:#fff
+```
 
 ### 目录结构说明
 
-`results/` 目录按任务 ID 划分为 147 个独立的子文件夹，每个子文件夹均采用标准化的结构：
+为了确保评测结果的完全透明和 100% 可复现，在 `results` 目录下开源了全量 148 个任务的执行快照与评分明细。您可以深入每一个 Case，查看系统是如何理解复杂指令、调度工具并生成最终交付物的。
+
+`results/` 目录按任务 ID 划分为 148 个独立的子文件夹，每个子文件夹均采用标准化的结构：
 
 ```text
 results/
@@ -233,7 +253,7 @@ results/
 
 点击查看官方完整任务描述：[👉 打开 PinchBench 官方 GitHub 仓库](https://github.com/pinchbench/skill/tree/main/tasks)
 
-点击查看开源的完整评测数据文件：[👉 打开结果记录原始文件](./results/147_cases_evaluation.json)
+点击查看开源的完整评测数据文件：[👉 打开结果记录原始文件](./results/148_cases_evaluation.json)
 
 以下为部分测试用例的简报：
 
@@ -244,7 +264,7 @@ results/
 | `task_byok_best_practices` | BYOK Best Practices for AI Inference | 0.95 | 560s | 覆盖主流云厂商，指出 10 个具体坑点与权衡 |
 | `task_meeting_council_budget` | Tampa City Council – Extract Budget Discussions | 0.95 | 361s | 从长文本中无遗漏提取 29 个财务款项 |
 
-*(为保证可读性，此处仅展示部分列表。完整细节请查阅 [JSON 源文件](./results/147_cases_evaluation.json))*
+*(为保证可读性，此处仅展示部分列表。完整细节请查阅 [JSON 源文件](./results/148_cases_evaluation.json))*
 
 </details>
 
