@@ -23,11 +23,11 @@
 </p> -->
 
 <p align="center">
-  <strong><a href="https://wenxin.baidu.com/?extParams=%7B%22enter_type%22%3A%22home_operate%22%7D">官方网站</a></strong>
+  <strong><a href="https://wenxin.baidu.com">官方网站</a></strong>
   &nbsp;|&nbsp;
   <strong><a href="https://pinchibench-web.vercel.app/">PinchBench榜单</a></strong>
   &nbsp;|&nbsp;
-  <strong><a href="https://github.com/gzq17/benchmark_public/blob/main/illustration.md">评估说明</a></strong>
+  <strong><a href="https://github.com/Baidu-AI-Search/Orion-Mission-Mode/blob/main/illustration.md">评估说明</a></strong>
   &nbsp;|&nbsp;
   <strong><a href="[Issues链接占位]">功能建议</a></strong>
 </p>
@@ -128,7 +128,7 @@ PinchBench采用**自动化检查 + LLM评审**的双轨评分机制：
 
 ### 🏆 全球第一
 
-**2026年7月17日**，百度AI搜索任务化模式正式登顶PinchBench全球榜首，超越Anthropic、OpenAI等国际厂商，成为**首个以正式产品身份获得PinchBench总榜第一的国产智能体系统**。
+**2026年7月17日**，百度AI搜索任务化模式正式登顶PinchBench全球榜首，以 94.6% 综合成功率、94.4% 平均得分拿下榜单第一，综合实力全面超越 Anthropic Claude、英伟达 Nemotron、OpenAI GPT、小米 Mimo、通义千问等海内外主流大模型，成为**首个以正式产品身份获得PinchBench总榜第一的国产智能体系统**。
 
 ### 成绩对比
 
@@ -151,12 +151,74 @@ PinchBench采用**自动化检查 + LLM评审**的双轨评分机制：
   - 评测维度：洞察深度、事实准确性、内容可读性、结构化程度
   - 技术支撑：自研Deep Search + Deep Research双引擎架构 -->
 
+### 详细评测结果与典型 Case
+
+为了保证评测的透明度与可追溯性，我们对 147 个真实工作场景任务的评估结果进行了全量开源。我们的系统在各大核心业务流中均表现出顶级的任务闭环能力。
+
+#### 📊 按核心场景能力表现
+
+在 PinchBench 评测中，任务化模式在内容创作、创意生成等多项核心指标上**斩获全球第一**。系统能力覆盖以下重点工作流（注：部分复杂任务跨越多个领域，数量存在重叠）：
+
+| 任务场景分类 | 任务数量 | 综合得分 | 典型应用范例 | 榜单表现 |
+|:---|:---:|:---:|:---|:---:|
+| **内容创作 (Writing Content)** | 12 | **96.8%** | 博客文章撰写、长文总结、README生成、文案重写 | 🥇 **全球第一** |
+| **创意与多媒体 (Creative)** | 3 | **87.5%** | AI 图像生成、图像识别分类、创意类工作流 | 🥇 **全球第一** |
+| **其他综合任务 (Other)** | 52 | - | 覆盖更多细分长尾工作流场景 | 🥇 **全球第一** |
+| **数据与财务分析 (Data Analysis)** | 32 | **96.2%** | CSV/表格数据处理、市场分析、财报与金融数据挖掘 | - |
+| **核心智能体能力 (Core Agent)** | 9 | **96.2%** | 意图健全性检查、记忆提取、文件操作、工作流理解 | - |
+| **代码与开发运维 (Code DevOps)** | 15 | **93.0%** | 编码、自动化脚本、CI/CD流水线、K8s/Docker、测试与重构 | - |
+| **安全与异常排查 (Security)** | 3 | **91.1%** | 安全漏洞 (CVE) 评级分类、日志异常检测、GitHub Issue 追踪 | - |
+| **办公与生产力 (Productivity)** | 13 | **90.3%** | 日程日历管理、邮件批处理、待办事项整理、每日工作简报 | - |
+| **研究与知识获取 (Research Knowledge)** | 14 | **79.5%** | 竞品与市场调研、信息检索、合同法务分析、前沿技术追踪 | - |
+
+*(注：以上大类基于 147 个 Case 的 `category` 聚合统计得出)*
+
+#### 🌟 高光任务展示
+
+以下选取了部分具有代表性的极高难度任务，展示百度AI搜索任务化模式在真实工作流中的思考深度与执行质量（点击任务名称可查看详细评分与亮点评估）：
+
+*   **[浏览器自动化测试编写 (Browser Automation)](./results/case_browser_automation.md)**
+    *   **能力维度**: 代码工程 / 复杂系统理解
+    *   **综合得分**: 1.0 / 1.0 (12 项评估维度全满分)
+    *   **评审亮点**: 展现了极强的“先理解再行动”的工程素养。系统能主动阅读 HTML 分析 DOM 结构，编写出不仅符合 Playwright 最佳实践，且包含严谨金额断言的端到端测试脚本。
+*   **[MapReduce 日志时间线可视化 (Log Timeline Analysis)](./results/case_mapreduce_log.md)**
+    *   **能力维度**: 深度洞察 / 复杂日志处理
+    *   **综合得分**: 1.0 / 1.0 (15 项评估维度全满分)
+    *   **评审亮点**: 对底层系统日志的极致解析。不仅能精确到毫秒级还原 27 条事件时间线，还自动生成了 ASCII Gantt 图展示并行任务，并针对性提出了底层性能优化建议。
+*   **[BYOK 安全最佳实践指南撰写 (Security Best Practices)](./results/case_byok_guide.md)**
+    *   **能力维度**: 长文写作 / 行业深度研究
+    *   **综合得分**: 0.95 / 1.0 (生产级可用文档)
+    *   **评审亮点**: 输出了长达 5800 字的专业安全指南。精准对齐主流大模型厂商（OpenAI, Anthropic 等）的底层 API 差异，指出了 10 个极易踩坑的安全陷阱，并附带可运行的代码级防护方案。
+
+#### 📂 全量 147 项评估结果明细
+
+<details>
+<summary><b>点击展开查看所有 147 个评测任务的 JSON 结果概览</b></summary>
+<br>
+
+点击查看官方完整任务描述：[👉 打开 PinchBench 官方 GitHub 仓库](https://github.com/pinchbench/skill/tree/main/tasks)
+
+您可以直接查看开源的完整评测数据文件：[👉 点击查看完整 147_cases_evaluation.json 原始文件](./results/147_cases_evaluation.json)
+
+以下为部分测试用例的简报：
+
+| 任务 ID | 任务名称 | 评分 | 耗时(秒) | 亮点评价提取 |
+|:---|:---|:---:|:---:|:---|
+| `task_csv_pension_liability` | US Pension Fund Liability Analysis | 1.0 | 322s | 计算精准，财务洞察深刻，排版极佳 |
+| `task_log_hdfs_slow_ops` | HDFS DataNode Log - Slow Operation Detection | 1.0 | 488s | 提供了相关性分析与 4 项可落地的优化建议 |
+| `task_byok_best_practices` | BYOK Best Practices for AI Inference | 0.95 | 560s | 覆盖主流云厂商，指出 10 个具体坑点与权衡 |
+| `task_meeting_council_budget` | Tampa City Council – Extract Budget Discussions | 0.95 | 361s | 从长文本中无遗漏提取 29 个财务款项 |
+
+*(为保证可读性，此处仅展示部分列表。完整细节请查阅 [JSON 源文件](./results/147_cases_evaluation.json))*
+
+</details>
+
 ---
 
 ## 榜单展示
 
 <p align="center">
-  <img width="900" src="./assets/pinchbench_leaderboard.png">
+  <img width="800" src="./assets/pinchbench_leaderboard.png">
   <br/>
   <em>图1：PinchBench全球排行榜</em>
 </p>
@@ -173,18 +235,18 @@ PinchBench采用**自动化检查 + LLM评审**的双轨评分机制：
 
 | 资源 | 链接 |
 |------|------|
-| 🌐 **PinchBench官方网站** | [榜单网站占位] |
-| 📖 **技术白皮书** | [白皮书链接占位] |
-| 🚀 **产品体验入口** | [体验入口占位] |
-| 👨‍💻 **开发者文档** | [开发者文档链接占位] |
-| 📋 **更新日志** | [更新日志占位] |
+| 🌐 **PinchBench官方网站** | <a href="https://pinchibench-web.vercel.app/">网站</a> |
+| 📖 **技术白皮书** | <a href="https://github.com/gzq17/benchmark_public/blob/main/illustration.md">白皮书（待修改）</a> |
+| 🚀 **产品体验入口** | <a href="https://wenxin.baidu.com">百度AI搜索</a> |
+<!-- | 👨‍💻 **开发者文档** | [开发者文档链接占位] |
+| 📋 **更新日志** | [更新日志占位] | -->
 <!-- | 🛡️ **安全与可信说明** | [安全说明占位] | -->
 
 ---
 
 ## pinchbench评估适配说明
 
-> **[ 适配说明区域，请在此处补充详细内容 ]**
+> **在进行pinchbench测试时，对相关的44个任务进行了评估适配，详情见<a href="https://github.com/Baidu-AI-Search/Orion-Mission-Mode/blob/main/illustration.md">评估说明</a>**
 
 ---
 
@@ -247,7 +309,7 @@ PinchBench采用**自动化检查 + LLM评审**的双轨评分机制：
 
 ## 版权说明
 
-本文档采用 [许可证占位] 许可。百度AI搜索任务化模式是百度公司的专有产品。
+百度AI搜索任务化模式是百度公司的专有产品。
 
 ---
 
