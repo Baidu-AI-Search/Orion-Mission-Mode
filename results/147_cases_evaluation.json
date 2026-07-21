@@ -3186,28 +3186,6 @@
         "execution_time_seconds": 44.54287147521973
     },
     {
-        "task_id": "task_self_json_process",
-        "task_name": "JSON Task Schedule Planning",
-        "category": "data_processing",
-        "score": 0.979,
-        "max_score": 1.0,
-        "breakdown": {
-            "automated.file_created": 1.0,
-            "automated.all_tasks_covered": 1.0,
-            "automated.priority_ordering": 1.0,
-            "automated.calendar_awareness": 1.0,
-            "automated.deadline_compliance": 1.0,
-            "automated.date_organized": 1.0,
-            "llm_judge.planning_logic_and_rationality": 0.95,
-            "llm_judge.completeness_and_detail": 0.9,
-            "llm_judge.format_and_readability": 0.95
-        },
-        "grading_type": "hybrid",
-        "timed_out": false,
-        "notes": "Excellent scheduling logic with all priorities, deadlines, and calendar conflicts properly handled. User preferences (morning focus, 15-min buffers, max tasks/day) clearly incorporated throughout. All 6 tasks scheduled with specific time slots and realistic durations. Markdown format is well-structured with date-based sections, emoji coding for priorities, and comprehensive daily tables. Summary tables provide quick overview. Minor deduction for creating duplicate files (E3_plan.md and E3_plan_1.md are identical), suggesting slight inefficiency. Core deliverable is exceptional with clear rationale for each scheduling decision.",
-        "execution_time_seconds": 224.9506344795227
-    },
-    {
         "task_id": "task_skill_search",
         "task_name": "Search and Replace in Files",
         "category": "skills",
