@@ -46,14 +46,6 @@ def grade(transcript: list, workspace_path: str) -> dict:
     """
     Grade the project structure creation task.
 
-    Evidence-source recovery only (scoring logic identical to tasks/):
-      The agent may nest the whole project under an extra ``datautils/`` project
-      root (``workspace/datautils/src/datautils/...``) instead of the workspace
-      root. When a required artifact is absent at the root, locate the SAME file
-      anywhere under the workspace via rglob (anchored: the package dir must be a
-      ``datautils`` dir whose parent is ``src``). Every existence check and the
-      pyproject metadata thresholds are byte-identical to the original grader.
-
     Args:
         transcript: Parsed JSONL transcript as list of dicts
         workspace_path: Path to the task's isolated workspace directory
@@ -66,37 +58,18 @@ def grade(transcript: list, workspace_path: str) -> dict:
     scores = {}
     workspace = Path(workspace_path)
 
-    def _first(paths):
-        for p in paths:
-            if p.exists():
-                return p
-        return None
-
-    # Check directory structure (root-level, else the same dir nested deeper)
+    # Check directory structure
     src_datautils = workspace / "src" / "datautils"
-    if not src_datautils.exists():
-        src_datautils = _first([d for d in workspace.rglob("datautils")
-                                if d.is_dir() and d.parent.name == "src"]) or src_datautils
     tests_dir = workspace / "tests"
-    if not tests_dir.exists():
-        tests_dir = _first([d for d in workspace.rglob("tests") if d.is_dir()]) or tests_dir
 
     scores["src_directory_created"] = 1.0 if src_datautils.exists() else 0.0
     scores["tests_directory_created"] = 1.0 if tests_dir.exists() else 0.0
 
-    # Check required files (root-level, else the same filename located via rglob)
+    # Check required files
     init_file = src_datautils / "__init__.py"
-    if not init_file.exists():
-        init_file = _first(list(workspace.rglob("__init__.py"))) or init_file
     test_file = tests_dir / "test_datautils.py"
-    if not test_file.exists():
-        test_file = _first(list(workspace.rglob("test_datautils.py"))) or test_file
     pyproject = workspace / "pyproject.toml"
-    if not pyproject.exists():
-        pyproject = _first(list(workspace.rglob("pyproject.toml"))) or pyproject
     readme = workspace / "README.md"
-    if not readme.exists():
-        readme = _first(list(workspace.rglob("README.md"))) or readme
 
     scores["init_file_created"] = 1.0 if init_file.exists() else 0.0
     scores["test_file_created"] = 1.0 if test_file.exists() else 0.0

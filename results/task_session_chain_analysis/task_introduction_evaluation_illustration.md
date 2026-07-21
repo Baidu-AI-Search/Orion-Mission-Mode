@@ -8,12 +8,12 @@ multi_session: true
 sessions:
   - id: structured_ingest
     prompt: |
-      You are taking over a session-chain handoff. The following 4 TypeScript source files have already been placed in your current working directory (workspace). First run `ls` to confirm your working directory, then read these files directly from the workspace root (they are right there under the working directory with the filenames below — do NOT look under /home/user/skills or any other directory):
+      你在做一次会话链路接手。请只读取以下文件，并只关注指定函数：
       1) session.ts -> resolveSession
       2) session-store.ts -> updateSessionStoreAfterAgentRun
       3) delivery.ts -> deliverAgentCommandResult
       4) agent-command.ts -> prepareAgentCommandExecution, agentCommandInternal
-      Read ONLY these 4 files and focus ONLY on the functions specified above. After reading, output strict JSON (this structure only, no extra fields):
+      输出严格 JSON（仅此结构，不要额外字段）：
       {
         "chain_map": [
           {"id":"S1","stage":"session_resolve","file":"","function":"resolveSession","input":"","output":""},
@@ -28,7 +28,7 @@ sessions:
       }
   - id: fixed_design
     prompt: |
-      Based on the previous turn, produce a minimal-change design (do NOT modify any code), with the target fixed on the issue corresponding to E2. Output strict JSON (this structure only):
+      基于上轮内容，做最小改造设计（不改代码），并固定目标为 E2 对应问题。输出严格 JSON（仅此结构）：
       {
         "target_evidence_id": "E2",
         "problem_statement": "",
@@ -41,7 +41,7 @@ sessions:
       }
   - id: review_evidence_pack
     prompt: |
-      Now prepare the design-review materials. For E2 and E3, provide one precise code-evidence snippet each (8-12 lines each, preserve indentation). Prefer building on the prior turns; if you need the exact original text, retrieve it from the references collected in the first turn. Output strict JSON:
+      现在要提交设计评审材料。请为 E2 和 E3 各提供一段精确代码证据（每段 8-12 行，保留缩进）。优先基于前文；如果需要精确原文，请从第一轮已采集引用中回取。输出严格 JSON：
       {
         "evidence_pack": [
           {"evidence_id":"E2","file":"","function":"","line_range_hint":"","code_snippet":""},
@@ -50,7 +50,7 @@ sessions:
       }
   - id: final_summary
     prompt: |
-      Output a delivery summary, strict JSON (this structure only):
+      输出交付摘要，严格 JSON（仅此结构）：
       {
         "context": "",
         "root_cause_hypothesis": "",
@@ -77,7 +77,7 @@ workspace_files:
 
 ## Prompt
 
-This is a multi-session code-analysis task. The 4 TypeScript source files (`session.ts`, `session-store.ts`, `delivery.ts`, `agent-command.ts`) have already been placed in your current working directory (workspace). First run `ls` to confirm your working directory, then read those files directly from the workspace root (do NOT look under /home/user/skills or other directories). See the `sessions` field in the frontmatter for the full sequence of prompts to follow.
+This is a multi-session task. See the `sessions` field in the frontmatter for the sequence of prompts.
 
 ## Expected Behavior
 

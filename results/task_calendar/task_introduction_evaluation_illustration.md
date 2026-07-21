@@ -97,19 +97,13 @@ def grade(transcript: list, workspace_path: str) -> dict:
     else:
         scores["time_correct"] = 0.0
 
-    # Check for date (next Tuesday). Derive the execution date from the ICS
-    # metadata when present so grading remains reproducible after the task date.
-    base_date = None
-    m = re.search(r'(?:DTSTAMP|CREATED):(\d{8})T', ics_content)
-    if m:
-        base_date = datetime.strptime(m.group(1), "%Y%m%d")
-    if base_date is None:
-        base_date = datetime.now()
-
-    days_ahead = (1 - base_date.weekday()) % 7  # Tuesday is 1
+    # Check for date (next Tuesday)
+    # Require exact next-Tuesday date
+    today = datetime.now()
+    days_ahead = (1 - today.weekday()) % 7  # Tuesday is 1
     if days_ahead == 0:
         days_ahead = 7
-    next_tuesday = base_date + timedelta(days=days_ahead)
+    next_tuesday = today + timedelta(days=days_ahead)
 
     # Format: YYYYMMDD
     expected_date = next_tuesday.strftime("%Y%m%d")

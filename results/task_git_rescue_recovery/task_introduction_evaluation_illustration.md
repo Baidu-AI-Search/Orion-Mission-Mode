@@ -44,9 +44,6 @@ Acceptable solutions may create the new branch before resetting `main`, or switc
 ```python
 def grade(transcript: list, workspace_path: str) -> dict:
     from pathlib import Path
-    import os
-    import re
-    import shutil
     import subprocess
     import tempfile
 
@@ -68,39 +65,12 @@ def grade(transcript: list, workspace_path: str) -> dict:
     scores["file_created"] = 1.0
 
     raw_lines = recovery_file.read_text(encoding="utf-8").splitlines()
-    # Some renderers/agents prepend a per-line "<digits>|" / "<digits>:" gutter
-    # (a display artifact, like `cat -n`) to every line, e.g.
-    # "1|git branch feature/login-fix". That is not part of the command the
-    # agent wrote; left in place it makes every line fail the `git `-prefix
-    # check (zeroing git_only_commands) and would corrupt script execution.
-    # Strip a leading gutter from each line before parsing.
-    def _strip_gutter(s: str) -> str:
-        return re.sub(r'^[ \t]*\d+[|:][ \t]?', '', s)
-
-    raw_lines = [_strip_gutter(l) for l in raw_lines]
     commands = [line.strip() for line in raw_lines if line.strip()]
     if not commands:
         return scores
 
     if all(line.startswith("git ") for line in commands):
         scores["git_only_commands"] = 1.0
-
-    git_bin = shutil.which("git")
-    if git_bin is None:
-        for candidate in [
-            "/home/opt/deck/1.0/git/2.32.0/bin/git",
-            "/home/opt/deck/1.0/git/2.32.0/libexec/git-core/git",
-            "/usr/bin/git",
-            "/bin/git",
-        ]:
-            if Path(candidate).exists():
-                git_bin = candidate
-                break
-    if git_bin is None:
-        return scores
-    git_dir = str(Path(git_bin).parent)
-    env = os.environ.copy()
-    env["PATH"] = git_dir + os.pathsep + env.get("PATH", "")
 
     with tempfile.TemporaryDirectory() as tmpdir:
         repo = Path(tmpdir) / "repo"
@@ -115,7 +85,6 @@ def grade(transcript: list, workspace_path: str) -> dict:
                 capture_output=True,
                 text=True,
                 timeout=15,
-                env=env,
             )
 
         setup_commands = [
@@ -159,7 +128,6 @@ def grade(transcript: list, workspace_path: str) -> dict:
             capture_output=True,
             text=True,
             timeout=20,
-            env=env,
         )
         if execution.returncode != 0:
             return scores

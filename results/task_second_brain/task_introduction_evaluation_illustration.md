@@ -97,31 +97,24 @@ def grade(transcript: list, workspace_path: str) -> dict:
     scores = {}
     workspace = Path(workspace_path)
 
-    # Check if memory file was created - try all plausible locations including subdirs
-    memory_file = None
-    for candidate in [
-        workspace / "memory" / "MEMORY.md",
-        workspace / "MEMORY.md",
-        workspace / "memory.md",
-    ]:
-        if candidate.exists():
-            memory_file = candidate
-            break
-
-    if memory_file is None:
-        # Also search recursively for any MEMORY.md or memory.md
-        for p in workspace.rglob("MEMORY.md"):
-            memory_file = p
-            break
-        if memory_file is None:
-            for p in workspace.rglob("memory.md"):
-                memory_file = p
+    # Check if memory file was created
+    memory_file = workspace / "memory" / "MEMORY.md"
+    if not memory_file.exists():
+        # Try alternative paths
+        alt_paths = [
+            workspace / "MEMORY.md",
+            workspace / "memory.md",
+        ]
+        for alt in alt_paths:
+            if alt.exists():
+                memory_file = alt
                 break
 
-    if memory_file and memory_file.exists():
+    if memory_file.exists():
         scores["memory_tool_used"] = 1.0
-        content = memory_file.read_text(errors='replace').lower()
+        content = memory_file.read_text().lower()
 
+        # Check for key facts in the file
         has_rust = "rust" in content
         has_date = "january" in content and "2024" in content
         has_mentor = "elena" in content and "vasquez" in content

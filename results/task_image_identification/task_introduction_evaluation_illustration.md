@@ -65,26 +65,10 @@ The final output should be valid JSON in `image_categories.json` with one unique
 ## Automated Checks
 
 ```python
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Adapted auto-check for task_image_identification.
-
-Ground truth (from private answer key: assets/image_classification_answer_key.json):
-    images/item_a.jpg  (img_0e5d267af744) = "iphone"           -> category "phone"
-    images/item_b.jpg  (img_128030b75c71) = "pizza"            -> category "food"
-    images/item_c.jpg  (img_ddabd275f36a) = "crumpled receipt" -> category "menu"
-
-The grader derives the answer key from a PRIVATE file pointed to by the
-global `_PINCHBENCH_PRIVATE_IMAGE_KEY_PATH`. When that file is available,
-it is used as the authoritative source. When absent, the fallback mapping
-below is used (matching the private key's ground truth).
-"""
-from pathlib import Path
-import json
-
-
 def grade(transcript: list, workspace_path: str) -> dict:
+    from pathlib import Path
+    import json
+
     scores = {
         "file_created": 0.0,
         "valid_json_shape": 0.0,
@@ -98,10 +82,6 @@ def grade(transcript: list, workspace_path: str) -> dict:
 
     workspace = Path(workspace_path)
     output_file = workspace / "image_categories.json"
-    if not output_file.exists():
-        hits = list(workspace.rglob("image_categories.json"))
-        if hits:
-            output_file = hits[0]
 
     valid_paths = {
         "images/item_a.jpg",
@@ -137,7 +117,6 @@ def grade(transcript: list, workspace_path: str) -> dict:
             return "food"
         return ""
 
-    # Preferred path: derive expected mapping from the private answer key.
     expected = {}
     key_path = globals().get("_PINCHBENCH_PRIVATE_IMAGE_KEY_PATH")
     if isinstance(key_path, str) and key_path:
@@ -153,9 +132,6 @@ def grade(transcript: list, workspace_path: str) -> dict:
         except Exception:
             expected = {}
 
-    # Fallback: when the private key is unavailable, use the correct mapping
-    # matching the private answer key's ground truth:
-    #   item_a = iphone/phone, item_b = pizza/food, item_c = crumpled receipt/menu
     if set(expected.keys()) != {"phone", "food", "menu"}:
         expected = {
             "phone": "images/item_a.jpg",
@@ -199,5 +175,4 @@ def grade(transcript: list, workspace_path: str) -> dict:
         scores["menu_correct"] = 1.0
 
     return scores
-
 ```
