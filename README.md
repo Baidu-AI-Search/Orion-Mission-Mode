@@ -7,7 +7,7 @@
 <h2 align="center">百度AI搜-任务化模式 Pinchbench 结果</h2>
 
 <p align="center">
-  <a href="https://pinchibench-web.vercel.app/">
+  <a href="https://pinchbench-web.vercel.app/">
     <img src="https://img.shields.io/badge/PinchBench-全球%231-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTEyIDJMMiA3djEwYzAgNS41NSA0LjQ1IDEwIDEwIDEwczEwLTQuNDUgMTAtMTBWN2wtMTAtNXoiLz48L3N2Zz4=" alt="PinchBench排名" />
   </a>
   <a href="./results/147_cases_evaluation.json">
@@ -22,7 +22,7 @@
 <p align="center">
   <strong><a href="https://wenxin.baidu.com">产品入口</a></strong>
   &nbsp;|&nbsp;
-  <strong><a href="https://pinchibench-web.vercel.app/">PinchBench榜单</a></strong>
+  <strong><a href="https://pinchbench-web.vercel.app/">PinchBench榜单</a></strong>
   &nbsp;|&nbsp;
   <strong><a href="./illustration.md">评估说明</a></strong>
   &nbsp;|&nbsp;
@@ -126,7 +126,9 @@ results/
 |:---|:---:|:---:|:---|:---:|
 | **内容创作 (Writing Content)** | 12 | **96.8%** | 博客文章撰写、长文总结、README生成、文案重写 | 🥇 **全球第一** |
 | **创意与多媒体 (Creative)** | 3 | **87.5%** | AI 图像生成、图像识别分类、创意类工作流 | 🥇 **全球第一** |
-| **其他综合任务 (Other)** | 53 | **92.7%** | 覆盖更多细分长尾工作流场景 | 🥇 **全球第一** |
+| **日志分析 (Log Analysis)** | 30 | **98.7%** | Apache/系统日志排查、高频错误类型统计、启动日志 (syslog) 分析 | 🥇 **全球第一** |
+| **会议文档分析  (Meeting Analysis)** | 28 | **96.5%** | 政府/技术会议纪要生成、高管摘要、待办事项 (Action Items) 提取 | 🥇 **全球第一** |
+| **技能与生态扩展  (Skills)** | 6 | **77.7%** | 插件市场交互 (ClawHub)、外部技能检索与发现、智能体工具库自我扩展 | 🥇 **全球第一** |
 | **数据与财务分析 (Data Analysis)** | 32 | **96.2%** | CSV/表格数据处理、市场分析、财报与金融数据挖掘 | - |
 | **核心智能体能力 (Core Agent)** | 9 | **96.2%** | 意图健全性检查、记忆提取、文件操作、工作流理解 | - |
 | **代码与开发运维 (Code DevOps)** | 15 | **93.0%** | 编码、自动化脚本、CI/CD流水线、K8s/Docker、测试与重构 | - |
